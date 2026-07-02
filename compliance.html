@@ -104,13 +104,15 @@
 <!-- Standardized TopNavBar -->
 <nav class="bg-surface docked full-width top-0 sticky z-50 border-b border-outline-variant">
 <div class="flex justify-between items-center w-full px-margin-desktop py-3 max-w-container-max mx-auto relative">
-<div class="flex items-center gap-4">
+
+<a class="flex items-center gap-3 shrink-0" href="index.html">
 <img alt="Shreeji Construction Logo" class="h-12 w-auto object-contain" src="images/logo.png"/>
-<div class="flex flex-col">
-<span class="font-headline-sm text-primary font-bold leading-tight" style="font-family: 'Libre Caslon Text', serif; font-size: 1.25rem;">SHREEJI CONSTRUCTION</span>
-<span class="font-label-sm text-on-surface-variant uppercase tracking-widest text-[10px] leading-none mt-1">Strength Delivered, Precision Built</span>
+<div class="flex flex-col justify-center">
+<span class="font-headline-sm text-[18px] lg:text-[20px] leading-tight font-bold text-primary tracking-tighter uppercase">SHREEJI CONSTRUCTION</span>
+<span class="font-label-sm text-[10px] lg:text-[11px] leading-tight text-on-tertiary-container tracking-widest font-semibold uppercase">Strength Delivered, Precision Built</span>
 </div>
-</div>
+</a>
+
 <div class="hidden xl:flex items-center gap-10 flex-1 justify-center">
 <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Home</a>
 <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="who_we_are.html">Who We Are</a>
@@ -125,7 +127,6 @@
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
-
 <button class="lg:hidden ml-4 text-primary focus:outline-none" id="mobileMenuBtn">
 <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
@@ -350,7 +351,7 @@
 <div class="md:col-span-1">
 <h4 class="font-label-md text-surface-bright uppercase mb-8 tracking-widest">Headquarters</h4>
 <div class="font-body-md text-outline-variant leading-relaxed">
-                R.S No. 471 -2-3-4, Plot No. B 855/A to B 859/7, Shivay Bangalow, Sardar Patel Institute Road, Bhavnagar - 364002, Gujarat, India
+                Plot No 855/859, Shivay Bungalow, Bhavnagar, Gujarat, India 
                 <div class="mt-6 flex flex-col gap-3">
 <a class="hover:text-tertiary-fixed transition-colors font-bold flex items-center gap-3" href="tel:+919687375151">
 <span class="material-symbols-outlined text-sm">smartphone</span>+91-9687375151
@@ -371,7 +372,6 @@
 <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="contact.html">Contact</a>
 <button class="bg-on-tertiary-container text-white px-8 py-4 font-label-md uppercase font-bold tracking-widest mt-4" onclick="location.href='contact.html'">Request Quote</button>
 </div>
-
 <script id="mobile-menu-script">
     (function() {
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');

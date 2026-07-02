@@ -124,10 +124,15 @@
 <!-- Standardized Top Navigation Bar -->
 <header class="bg-surface border-b border-outline-variant docked full-width top-0 sticky z-50">
 <div class="flex justify-between items-center w-full px-margin-desktop py-0 max-w-container-max mx-auto h-20">
-<div class="flex items-center gap-4 py-2">
+
+<a class="flex items-center gap-3 shrink-0" href="index.html">
 <img alt="Shreeji Construction Logo" class="h-12 w-auto object-contain" src="images/logo.png"/>
-<span class="font-headline-sm text-headline-sm font-bold text-primary uppercase leading-tight">Shreeji Construction</span>
+<div class="flex flex-col justify-center">
+<span class="font-headline-sm text-[18px] lg:text-[20px] leading-tight font-bold text-primary tracking-tighter uppercase">SHREEJI CONSTRUCTION</span>
+<span class="font-label-sm text-[10px] lg:text-[11px] leading-tight text-on-tertiary-container tracking-widest font-semibold uppercase">Strength Delivered, Precision Built</span>
 </div>
+</a>
+
 <nav class="hidden md:flex items-center gap-8 ml-auto mr-12">
 <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200" href="index.html">Home</a>
 <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200" href="who_we_are.html">Who We Are</a>
@@ -368,7 +373,6 @@
 <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="contact.html">Contact</a>
 <button class="bg-on-tertiary-container text-white px-8 py-4 font-label-md uppercase font-bold tracking-widest mt-4" onclick="location.href='contact.html'">Request Quote</button>
 </div>
-
 <script id="mobile-menu-script">
     (function() {
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');

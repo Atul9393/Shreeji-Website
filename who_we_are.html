@@ -113,13 +113,15 @@
 <nav class="bg-surface top-0 sticky z-50 border-b border-outline-variant">
 <div class="max-w-container-max mx-auto px-margin-desktop py-4 flex items-center">
 <!-- Brand Left -->
-<div class="flex items-center gap-3 shrink-0">
+
+<a class="flex items-center gap-3 shrink-0" href="index.html">
 <img alt="Shreeji Construction Logo" class="h-12 w-auto object-contain" src="images/logo.png"/>
-<div class="flex flex-col">
-<span class="font-headline-sm text-[20px] leading-tight font-bold text-primary tracking-tighter uppercase">SHREEJI CONSTRUCTION</span>
-<span class="font-label-sm text-[11px] leading-tight text-on-tertiary-container tracking-widest font-semibold">STRENGTH DELIVERED, PRECISION BUILT</span>
+<div class="flex flex-col justify-center">
+<span class="font-headline-sm text-[18px] lg:text-[20px] leading-tight font-bold text-primary tracking-tighter uppercase">SHREEJI CONSTRUCTION</span>
+<span class="font-label-sm text-[10px] lg:text-[11px] leading-tight text-on-tertiary-container tracking-widest font-semibold uppercase">Strength Delivered, Precision Built</span>
 </div>
-</div>
+</a>
+
 <!-- Navigation Links Middle-Right -->
 <div class="flex-grow flex justify-end items-center mr-8">
 <div class="hidden lg:flex items-center gap-6">
@@ -133,7 +135,6 @@
 </div>
 <!-- CTA Far Right -->
 <button class="bg-primary text-on-primary px-6 py-3 font-label-md text-label-md font-bold uppercase tracking-wider transition-all active:scale-95 whitespace-nowrap" onclick="location.href='contact.html'">Request Quote</button>
-
 <button class="lg:hidden ml-4 text-primary focus:outline-none" id="mobileMenuBtn">
 <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
@@ -290,7 +291,7 @@
 <div class="space-y-4">
 <h4 class="font-label-md text-label-md font-bold uppercase text-surface-bright tracking-widest">Corporate Info</h4>
 <nav class="flex flex-col gap-3">
-<div class="font-label-sm text-label-sm text-outline-variant">R.S No. 471 -2-3-4, Plot No. B 855/A to B 859/7, Shivay Bangalow, Sardar Patel Institute Road, Bhavnagar - 364002, Gujarat, India</div>
+<div class="font-label-sm text-label-sm text-outline-variant">Plot No 855/859, Shivay Bungalow, Bhavnagar, Gujarat, India </div>
 <a class="font-label-sm text-label-sm text-outline-variant hover:text-tertiary-fixed transition-colors" href="tel:+919687375151">+91-9687375151</a>
 <a class="font-label-sm text-label-sm text-outline-variant hover:text-tertiary-fixed transition-colors" href="mailto:shreejiconstruction2007@zohomail.in">shreejiconstruction2007@zohomail.in</a>
 </nav>
@@ -319,7 +320,6 @@
 </div>
 </div>
 </footer>
-
 <div class="fixed inset-0 z-50 bg-primary/95 backdrop-blur-md flex flex-col justify-center items-center gap-8 text-white transition-all duration-300 transform translate-x-full lg:hidden" id="mobileMenu">
 <button class="absolute top-6 right-6 text-white focus:outline-none" id="closeMobileMenu">
 <span class="material-symbols-outlined text-4xl">close</span>
@@ -332,7 +332,6 @@
 <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="contact.html">Contact</a>
 <button class="bg-on-tertiary-container text-white px-8 py-4 font-label-md uppercase font-bold tracking-widest mt-4" onclick="location.href='contact.html'">Request Quote</button>
 </div>
-
 <script id="mobile-menu-script">
     (function() {
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');

@@ -106,10 +106,15 @@
 <nav class="full-width top-0 sticky z-50 bg-surface border-b border-outline-variant">
 <div class="flex justify-between items-center w-full px-margin-desktop py-0 max-w-container-max mx-auto h-24">
 <!-- Left Brand Branding Block -->
-<div class="flex items-center gap-4">
-<img alt="Shreeji Construction Logo" class="h-14 w-auto object-contain" src="images/logo.png"/>
-<div class="flex flex-col justify-center"><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight leading-tight uppercase">SHREEJI CONSTRUCTION</span></div>
+
+<a class="flex items-center gap-3 shrink-0" href="index.html">
+<img alt="Shreeji Construction Logo" class="h-12 w-auto object-contain" src="images/logo.png"/>
+<div class="flex flex-col justify-center">
+<span class="font-headline-sm text-[18px] lg:text-[20px] leading-tight font-bold text-primary tracking-tighter uppercase">SHREEJI CONSTRUCTION</span>
+<span class="font-label-sm text-[10px] lg:text-[11px] leading-tight text-on-tertiary-container tracking-widest font-semibold uppercase">Strength Delivered, Precision Built</span>
 </div>
+</a>
+
 <!-- Navigation Links & CTA -->
 <div class="flex items-center h-full">
 <!-- Navigation Links -->
@@ -126,7 +131,6 @@
                     REQUEST QUOTE
                 </button>
 </div>
-
 <button class="lg:hidden ml-4 text-primary focus:outline-none" id="mobileMenuBtn">
 <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
@@ -296,9 +300,12 @@
 <!-- Footer -->
 <footer class="bg-primary border-t-4 border-on-tertiary-container">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto">
-<div class="col-span-1 md:col-span-1 space-y-6">
-<div class="flex items-center gap-3"><img alt="Shreeji Construction Logo" class="h-14 w-auto object-contain" src="images/logo.png"/><div class="font-headline-sm text-headline-sm text-surface-bright uppercase font-bold tracking-tight leading-tight">Shreeji Construction</div></div>
-<p class="text-outline-variant font-body-md text-body-md">Precision in Fabrication &amp; Erection. Serving India's core industrial sectors with dedication since 2007.</p>
+<div class="flex items-center gap-3 mb-6">
+<img alt="Shreeji Construction Logo" class="h-12 w-auto object-contain" src="images/logo.png"/>
+<div class="flex flex-col justify-center">
+<span class="font-headline-sm text-[18px] leading-tight font-bold text-surface-bright tracking-tighter uppercase">SHREEJI CONSTRUCTION</span>
+<span class="font-label-sm text-[10px] leading-tight text-tertiary-fixed tracking-widest font-semibold uppercase">Strength Delivered, Precision Built</span>
+</div>
 </div>
 <div class="space-y-6">
 <h4 class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold">Quick Links</h4>
@@ -321,15 +328,14 @@
 <div class="space-y-6">
 <h4 class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold">Contact</h4>
 <div class="text-outline-variant font-label-sm text-label-sm space-y-2 text-left">
-<p class="">R.S No. 471 -2-3-4, Plot No. B 855/A to B 859/7,</p>
-<p class="">Shivay Bangalow, Sardar Patel Institute Road,</p>
-<p class="">Bhavnagar - 364002, Gujarat, India</p>
+<p class="">Plot No 855/859, Shivay Bungalow,</p>
+<p class="">Bhavnagar, Gujarat, India</p>
+<p class=""></p>
 <p class="pt-2 text-surface-bright font-bold">9687375151</p>
 <p class="text-surface-bright font-bold">shreejiconstruction2007@zohomail.in</p>
 </div>
 </div>
 </div></footer>
-
 <div class="fixed inset-0 z-50 bg-primary/95 backdrop-blur-md flex flex-col justify-center items-center gap-8 text-white transition-all duration-300 transform translate-x-full lg:hidden" id="mobileMenu">
 <button class="absolute top-6 right-6 text-white focus:outline-none" id="closeMobileMenu">
 <span class="material-symbols-outlined text-4xl">close</span>
@@ -342,7 +348,6 @@
 <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="contact.html">Contact</a>
 <button class="bg-on-tertiary-container text-white px-8 py-4 font-label-md uppercase font-bold tracking-widest mt-4" onclick="location.href='contact.html'">Request Quote</button>
 </div>
-
 <script id="mobile-menu-script">
     (function() {
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');

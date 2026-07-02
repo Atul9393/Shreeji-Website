@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Work+Sans:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&amp;family=Libre+Caslon+Text:wght@100..900&amp;family=Work+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "on-tertiary-fixed": "#351000",
+                            "background": "#f8f9fa",
+                            "on-background": "#191c1d",
+                            "outline-variant": "#c4c6cf",
+                            "on-tertiary-fixed-variant": "#7c2e00",
+                            "inverse-surface": "#2e3132",
+                            "error-container": "#ffdad6",
+                            "surface-container-low": "#f3f4f5",
+                            "on-secondary-fixed-variant": "#40484c",
+                            "on-primary-container": "#708ab5",
+                            "on-secondary": "#ffffff",
+                            "on-surface": "#191c1d",
+                            "tertiary-fixed-dim": "#ffb595",
+                            "on-primary": "#ffffff",
+                            "outline": "#74777f",
+                            "surface-dim": "#d9dadb",
+                            "on-tertiary": "#ffffff",
+                            "surface": "#f8f9fa",
+                            "primary-fixed": "#d6e3ff",
+                            "surface-container-highest": "#e1e3e4",
+                            "surface-tint": "#465f88",
+                            "on-primary-fixed-variant": "#2d476f",
+                            "on-error-container": "#93000a",
+                            "inverse-on-surface": "#f0f1f2",
+                            "secondary": "#585f64",
+                            "on-tertiary-container": "#e85d00",
+                            "error": "#ba1a1a",
+                            "secondary-fixed-dim": "#c0c8cd",
+                            "tertiary-container": "#3f1400",
+                            "primary-fixed-dim": "#aec7f6",
+                            "tertiary": "#1a0500",
+                            "on-primary-fixed": "#001b3d",
+                            "surface-container-lowest": "#ffffff",
+                            "on-error": "#ffffff",
+                            "secondary-fixed": "#dce4e9",
+                            "secondary-container": "#d9e1e6",
+                            "inverse-primary": "#aec7f6",
+                            "on-surface-variant": "#44474e",
+                            "on-secondary-fixed": "#151d21",
+                            "primary-container": "#002147",
+                            "surface-container": "#edeeef",
+                            "primary": "#000a1e",
+                            "surface-bright": "#f8f9fa",
+                            "on-secondary-container": "#5c6469",
+                            "surface-container-high": "#e7e8e9",
+                            "tertiary-fixed": "#ffdbcd",
+                            "surface-variant": "#e1e3e4"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0px",
+                            "lg": "0px",
+                            "xl": "0px",
+                            "full": "9999px"
+                        },
+                        "spacing": {
+                            "margin-desktop": "64px",
+                            "base": "8px",
+                            "container-max": "1280px",
+                            "margin-mobile": "16px",
+                            "gutter": "24px"
+                        },
+                        "fontFamily": {
+                            "headline-md": ["Libre Caslon Text"],
+                            "body-md": ["Work Sans"],
+                            "headline-lg": ["Libre Caslon Text"],
+                            "body-lg": ["Work Sans"],
+                            "headline-sm": ["Libre Caslon Text"],
+                            "label-md": ["IBM Plex Sans"],
+                            "display-lg": ["Libre Caslon Text"],
+                            "label-sm": ["IBM Plex Sans"]
+                        },
+                        "fontSize": {
+                            "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                            "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                            "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                            "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+                        }
+                    }
+                }
+            }
+        } catch (_e) {}
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script></head>
+<body class="bg-background text-on-background font-body-md">
+<!-- Standardized TopNavBar -->
+<nav class="bg-surface docked full-width top-0 sticky z-50 border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-margin-desktop py-3 max-w-container-max mx-auto relative">
+<div class="flex items-center gap-4">
+<img alt="Shreeji Construction Logo" class="h-12 w-auto object-contain" src="images/logo.png"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-primary font-bold leading-tight" style="font-family: 'Libre Caslon Text', serif; font-size: 1.25rem;">SHREEJI CONSTRUCTION</span>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest text-[10px] leading-none mt-1">Strength Delivered, Precision Built</span>
+</div>
+</div>
+<div class="hidden xl:flex items-center gap-10 flex-1 justify-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="who_we_are.html">Who We Are</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="services.html">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="manpower.html">Manpower</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-on-tertiary-container py-1" href="compliance.html">Compliance</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center">
+<button class="bg-primary text-white px-8 py-3 font-label-md uppercase hover:bg-on-tertiary-container transition-all active:scale-95 hidden lg:block tracking-wider" onclick="location.href='contact.html'">Request Quote</button>
+<button class="xl:hidden text-primary ml-4">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+
+<button class="lg:hidden ml-4 text-primary focus:outline-none" id="mobileMenuBtn">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative py-24 md:py-32 overflow-hidden bg-primary text-white">
+<div class="relative max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 items-center gap-16">
+<div>
+<span class="inline-block py-1 px-4 bg-on-tertiary-container text-white font-label-sm uppercase mb-8">Built to Last</span>
+<h1 class="font-headline-lg text-headline-lg mb-8 leading-tight">Unyielding Standards in Every Structure.</h1>
+<p class="font-body-lg text-body-lg text-surface-variant/80">
+                    At Shreeji Construction, compliance isn't just a legal requirement—it's our moral foundation. We operate with radical transparency, ensuring every weld, bolt, and slab exceeds industrial safety benchmarks.
+                </p>
+</div>
+<div class="hidden md:block">
+<div class="border border-white/20 p-8 backdrop-blur-sm bg-white/5">
+<div class="flex items-center gap-6 mb-8">
+<span class="material-symbols-outlined text-on-tertiary-container text-5xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div>
+<div class="font-headline-sm text-headline-sm">Zero-Incident Goal</div>
+<div class="font-body-md opacity-70">Strict adherence to IS Codes and OSHA standards.</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="p-6 bg-white/5 border border-white/10 text-center">
+<div class="text-3xl font-bold text-on-tertiary-container mb-1">100%</div>
+<div class="font-label-sm uppercase opacity-70">GST Compliant</div>
+</div>
+<div class="p-6 bg-white/5 border border-white/10 text-center">
+<div class="text-3xl font-bold text-on-tertiary-container mb-1">MSME</div>
+<div class="font-label-sm uppercase opacity-70">Certified Entity</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Statutory Rigor -->
+<section class="py-24 bg-white">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Statutory Rigor</h2>
+<p class="font-body-md text-on-surface-variant max-w-3xl">
+                    Our administrative backbone is as robust as our steel structures. We maintain absolute compliance with state and national industrial regulations.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- GST Box -->
+<div class="md:col-span-4 border border-outline-variant p-10 bg-surface flex flex-col items-center text-center group hover:border-on-tertiary-container transition-colors duration-300">
+<span class="material-symbols-outlined text-primary text-5xl mb-8" data-icon="account_balance">account_balance</span>
+<h3 class="font-headline-sm text-headline-sm mb-6">GST Registered</h3>
+<p class="font-body-md text-on-surface-variant mb-8">Full tax transparency with timely filings. Our GST compliance ensures a seamless procurement process for partners.</p>
+<div class="mt-auto font-label-md text-on-tertiary-container uppercase tracking-wider">Verified Entity</div>
+</div>
+<!-- MSME Box -->
+<div class="md:col-span-8 border border-outline-variant p-10 bg-primary text-white flex flex-col lg:flex-row gap-10 items-center">
+<div class="flex-1">
+<h3 class="font-headline-sm text-headline-sm mb-6">MSME Enterprise (Udyam)</h3>
+<p class="font-body-md text-surface-variant/80 mb-8">As a registered Micro Enterprise, we use government-backed quality assurance frameworks to boost efficiency and support industrial growth.</p>
+<ul class="space-y-4 font-label-md">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-on-tertiary-container text-xl">check_circle</span> Quality Management Systems</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-on-tertiary-container text-xl">check_circle</span> Operational Transparency</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-on-tertiary-container text-xl">check_circle</span> Ethical Business Practices</li>
+</ul>
+</div>
+<div class="w-full lg:w-72 aspect-square bg-white/10 border border-white/20 flex items-center justify-center shrink-0">
+<img alt="MSME Registration Certificate" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPlnTOayFv2kjLBFYULvvzLry6Kec4wn2Y-yVp1glHcCnrIxx_XLDuq924L-xiyC8Av4Kshp6Ug-mY5BNJc_0RB5k-3Dbrec23XKNdvaVuUlkLjas-Rfn7LTc49sVKfVb2TUc-c-NQBMLoCOkfoNRNjNxcIY4nVYxu9V_UVlJ-s7JVuTXqeY6cX5VXV_3luy02xitd9ccNO30aoiw_NCeOMaoFzBm-X3CidknHt8FuWv0jIypUfpky"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Labor Welfare & Quality -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Labor Safety Box -->
+<div class="lg:col-span-7 border border-outline-variant p-10 bg-white flex flex-col items-center text-center">
+<h3 class="font-headline-sm text-headline-sm mb-6 uppercase tracking-tight">Labor Welfare &amp; ESIC / PF</h3>
+<p class="font-body-md text-on-surface-variant mb-10 max-w-2xl">Our workforce is our greatest asset. We strictly adhere to ESIC and PF regulations, ensuring our team is protected, insured, and motivated.</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 w-full">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 bg-surface flex items-center justify-center mb-4 border border-outline-variant">
+<span class="material-symbols-outlined text-primary">medical_services</span>
+</div>
+<div class="font-label-sm uppercase text-center">Full Insurance</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 bg-surface flex items-center justify-center mb-4 border border-outline-variant">
+<span class="material-symbols-outlined text-primary">engineering</span>
+</div>
+<div class="font-label-sm uppercase text-center">Labor Laws</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 bg-surface flex items-center justify-center mb-4 border border-outline-variant">
+<span class="material-symbols-outlined text-primary">gavel</span>
+</div>
+<div class="font-label-sm uppercase text-center">PF Registered</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 bg-surface flex items-center justify-center mb-4 border border-outline-variant">
+<span class="material-symbols-outlined text-primary">health_and_safety</span>
+</div>
+<div class="font-label-sm uppercase text-center">ESI Compliant</div>
+</div>
+</div>
+</div>
+<!-- Quality Box -->
+<div class="lg:col-span-5 border border-outline-variant p-10 bg-white flex flex-col justify-center items-center text-center group hover:bg-primary hover:text-white transition-all duration-300">
+<div class="font-headline-lg text-headline-lg text-on-tertiary-container group-hover:text-on-tertiary-container mb-4">ISO 9001:2015</div>
+<div class="font-label-md uppercase tracking-[0.2em] mb-6">Framework Equivalent</div>
+<p class="font-body-md text-on-surface-variant group-hover:text-surface-variant italic">Adopting international best practices in fabrication and erection quality control.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Safety First Culture -->
+<section class="py-24 bg-primary text-white relative">
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg italic mb-6">The Safety-First Culture</h2>
+<div class="w-24 h-1 bg-on-tertiary-container mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="flex flex-col items-center text-center group">
+<div class="w-24 h-24 border border-white/20 flex items-center justify-center mb-8 group-hover:bg-on-tertiary-container transition-all duration-300">
+<span class="material-symbols-outlined text-4xl">child_hat</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm mb-6">Mandatory PPE</h4>
+<p class="font-body-md text-surface-variant/70 leading-relaxed">Strict 100% PPE compliance for all on-site personnel, including visitors, from entry to exit.</p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="w-24 h-24 border border-white/20 flex items-center justify-center mb-8 group-hover:bg-on-tertiary-container transition-all duration-300">
+<span class="material-symbols-outlined text-4xl">school</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm mb-6">Induction Training</h4>
+<p class="font-body-md text-surface-variant/70 leading-relaxed">Every worker undergoes rigorous safety induction and hazard identification training before starting work.</p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="w-24 h-24 border border-white/20 flex items-center justify-center mb-8 group-hover:bg-on-tertiary-container transition-all duration-300">
+<span class="material-symbols-outlined text-4xl">health_and_safety</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm mb-6">Incident Reporting</h4>
+<p class="font-body-md text-surface-variant/70 leading-relaxed">A non-punitive 'Near-Miss' reporting system that allows us to evolve our protocols in real-time.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specifications -->
+<section class="py-24 bg-white">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Technical Specifications Compliance</h2>
+<p class="font-body-md text-on-surface-variant mb-12 leading-relaxed">
+                        Our engineering teams work in lockstep with the latest technical standards. We provide material test certificates (MTC) for all raw steel to ensure structural integrity and accountability.
+                    </p>
+<div class="space-y-6">
+<div class="border border-outline-variant p-8 bg-surface-container-low flex flex-col items-center text-center hover:border-on-tertiary-container transition-colors">
+<h5 class="font-label-md uppercase text-on-tertiary-container mb-3 tracking-widest">IS 800:2007</h5>
+<p class="font-body-md">General Construction in Steel — Code of Practice. Adhered to in all design and fabrication phases.</p>
+</div>
+<div class="border border-outline-variant p-8 bg-surface-container-low flex flex-col items-center text-center hover:border-on-tertiary-container transition-colors">
+<h5 class="font-label-md uppercase text-on-tertiary-container mb-3 tracking-widest">IS 7215</h5>
+<p class="font-body-md">Tolerances for Fabrication of Steel Structures. Ensuring precise fits for onsite erection.</p>
+</div>
+</div>
+</div>
+<div class="relative mt-8 lg:mt-0">
+<div class="border border-outline-variant overflow-hidden">
+<img alt="Engineering blueprints and safety gear" class="w-full grayscale hover:grayscale-0 transition-all duration-1000 aspect-square object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb4DLtvai5H7-3Hqg6NZgYZQ1N-EGgYVxURwgMyaRCBaNuv3LIrtu1z49TfiozkxhspOiGHEvmCIQNsx1QYrFHoitMn_ePzYawrsOPDDSWBkfsNcbREjiN7d1WFXg4u1Ll9UQ08R7h-JYGdBkFwa8pD__05OyhHpLyRPEC6oXr4eWbLuLEMxDDqCggERMKFzodUNbGOTxEyqDYuG9LajfUYmVkiy1USLQJWZ9nb13gfJR81CM1rkXL"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-on-tertiary-container text-white p-10 border border-white/20 hidden md:block text-center shadow-xl">
+<div class="text-5xl font-bold font-headline-sm mb-2">10+</div>
+<div class="font-label-sm uppercase tracking-widest">Years of Trust</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-20 border-t border-outline-variant bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-10 text-center md:text-left">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Need to verify our credentials?</h3>
+<p class="font-body-md text-on-surface-variant">Contact our compliance department for registration copies and safety records.</p>
+<a class="text-primary font-bold hover:underline font-body-md mt-2 inline-block" href="mailto:shreejiconstruction2007@zohomail.in">shreejiconstruction2007@zohomail.in</a>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-white px-10 py-4 font-label-md uppercase hover:bg-on-tertiary-container transition-all tracking-wider">Download Profile</button>
+<button class="border-2 border-primary text-primary px-10 py-4 font-label-md uppercase hover:bg-primary hover:text-white transition-all tracking-wider">Contact Us</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary full-width border-t-4 border-on-tertiary-container">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto items-start">
+<div class="md:col-span-1">
+<div class="font-headline-sm text-headline-sm text-surface-bright uppercase mb-8">Shreeji Construction</div>
+<p class="font-body-md text-outline-variant opacity-80 leading-relaxed">Precision engineering and robust fabrication since 2007. Delivering trust across India's industrial landscape.</p>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-md text-surface-bright uppercase mb-8 tracking-widest">Operations</h4>
+<ul class="space-y-4 font-body-md text-outline-variant">
+<li class=""><a class="hover:text-tertiary-fixed transition-colors" href="#">Bhavnagar Office</a></li>
+<li class=""><a class="hover:text-tertiary-fixed transition-colors" href="#">MSME Certified</a></li>
+<li class=""><a class="hover:text-tertiary-fixed transition-colors" href="#">GST Registered</a></li>
+<li class=""><a class="hover:text-tertiary-fixed transition-colors" href="#">PF &amp; ESI Registered</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-md text-surface-bright uppercase mb-8 tracking-widest">Information</h4>
+<ul class="space-y-4 font-body-md text-outline-variant">
+<li class=""><a class="hover:text-tertiary-fixed transition-colors" href="#">Privacy Policy</a></li>
+<li class=""><a class="hover:text-tertiary-fixed transition-colors" href="#">Terms of Service</a></li>
+<li class=""><a class="hover:text-tertiary-fixed transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-md text-surface-bright uppercase mb-8 tracking-widest">Headquarters</h4>
+<div class="font-body-md text-outline-variant leading-relaxed">
+                R.S No. 471 -2-3-4, Plot No. B 855/A to B 859/7, Shivay Bangalow, Sardar Patel Institute Road, Bhavnagar - 364002, Gujarat, India
+                <div class="mt-6 flex flex-col gap-3">
+<a class="hover:text-tertiary-fixed transition-colors font-bold flex items-center gap-3" href="tel:+919687375151">
+<span class="material-symbols-outlined text-sm">smartphone</span>+91-9687375151
+                    </a>
+<a class="hover:text-tertiary-fixed transition-colors flex items-center gap-3" href="mailto:shreejiconstruction2007@zohomail.in">
+<span class="material-symbols-outlined text-sm">mail</span>shreejiconstruction2007@zohomail
+
+</a></div></div></div></div></footer>
+<div class="fixed inset-0 z-50 bg-primary/95 backdrop-blur-md flex flex-col justify-center items-center gap-8 text-white transition-all duration-300 transform translate-x-full lg:hidden" id="mobileMenu">
+<button class="absolute top-6 right-6 text-white focus:outline-none" id="closeMobileMenu">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="index.html">Home</a>
+<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="who_we_are.html">Who We Are</a>
+<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="services.html">Services</a>
+<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="manpower.html">Manpower</a>
+<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="compliance.html">Compliance</a>
+<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="contact.html">Contact</a>
+<button class="bg-on-tertiary-container text-white px-8 py-4 font-label-md uppercase font-bold tracking-widest mt-4" onclick="location.href='contact.html'">Request Quote</button>
+</div>
+
+<script id="mobile-menu-script">
+    (function() {
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-full');
+            });
+        }
+        if (closeMobileMenu && mobileMenu) {
+            closeMobileMenu.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        }
+    })();
+</script>
+</body></html>

@@ -1,0 +1,379 @@
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Work+Sans:wght@400;500&amp;family=IBM+Plex+Sans:wght@500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        try {
+            try {
+                tailwind.config = {
+                    darkMode: "class",
+                    theme: {
+                        extend: {
+                            "colors": {
+                                "on-tertiary-fixed": "#351000",
+                                "background": "#f8f9fa",
+                                "on-background": "#191c1d",
+                                "outline-variant": "#c4c6cf",
+                                "on-tertiary-fixed-variant": "#7c2e00",
+                                "inverse-surface": "#2e3132",
+                                "error-container": "#ffdad6",
+                                "surface-container-low": "#f3f4f5",
+                                "on-secondary-fixed-variant": "#40484c",
+                                "on-primary-container": "#708ab5",
+                                "on-secondary": "#ffffff",
+                                "on-surface": "#191c1d",
+                                "tertiary-fixed-dim": "#ffb595",
+                                "on-primary": "#ffffff",
+                                "outline": "#74777f",
+                                "surface-dim": "#d9dadb",
+                                "on-tertiary": "#ffffff",
+                                "surface": "#f8f9fa",
+                                "primary-fixed": "#d6e3ff",
+                                "surface-container-highest": "#e1e3e4",
+                                "surface-tint": "#465f88",
+                                "on-primary-fixed-variant": "#2d476f",
+                                "on-error-container": "#93000a",
+                                "inverse-on-surface": "#f0f1f2",
+                                "secondary": "#585f64",
+                                "on-tertiary-container": "#e85d00",
+                                "error": "#ba1a1a",
+                                "secondary-fixed-dim": "#c0c8cd",
+                                "tertiary-container": "#3f1400",
+                                "primary-fixed-dim": "#aec7f6",
+                                "tertiary": "#1a0500",
+                                "on-primary-fixed": "#001b3d",
+                                "surface-container-lowest": "#ffffff",
+                                "on-error": "#ffffff",
+                                "secondary-fixed": "#dce4e9",
+                                "secondary-container": "#d9e1e6",
+                                "inverse-primary": "#aec7f6",
+                                "on-surface-variant": "#44474e",
+                                "on-secondary-fixed": "#151d21",
+                                "primary-container": "#002147",
+                                "surface-container": "#edeeef",
+                                "primary": "#000a1e",
+                                "surface-bright": "#f8f9fa",
+                                "on-secondary-container": "#5c6469",
+                                "surface-container-high": "#e7e8e9",
+                                "tertiary-fixed": "#ffdbcd",
+                                "surface-variant": "#e1e3e4"
+                            },
+                            "borderRadius": {
+                                "DEFAULT": "0.25rem",
+                                "lg": "0.5rem",
+                                "xl": "0.75rem",
+                                "full": "9999px"
+                            },
+                            "spacing": {
+                                "margin-desktop": "64px",
+                                "base": "8px",
+                                "container-max": "1280px",
+                                "margin-mobile": "16px",
+                                "gutter": "24px"
+                            },
+                            "fontFamily": {
+                                "headline-md": ["Libre Caslon Text"],
+                                "body-md": ["Work Sans"],
+                                "headline-lg": ["Libre Caslon Text"],
+                                "body-lg": ["Work Sans"],
+                                "headline-sm": ["Libre Caslon Text"],
+                                "label-md": ["IBM Plex Sans"],
+                                "display-lg": ["Libre Caslon Text"],
+                                "label-sm": ["IBM Plex Sans"]
+                            },
+                            "fontSize": {
+                                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                                "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                                "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                                "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+                            }
+                        },
+                    },
+                }
+            } catch (_e) {}
+        } catch (_e) {}
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script></head>
+<body class="bg-background text-on-surface font-body-md text-body-md selection:bg-on-tertiary-container selection:text-white">
+<!-- TopNavBar -->
+<header class="bg-surface docked full-width top-0 sticky z-50 border-b border-outline-variant flat no-shadows">
+<div class="flex justify-between items-center w-full px-margin-desktop py-3 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Shreeji Construction Logo" class="h-14 w-auto object-contain" src="images/logo.png"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[20px] font-bold text-primary whitespace-nowrap uppercase tracking-wider">SHREEJI CONSTRUCTION</span>
+<span class="font-label-sm text-[11px] text-on-tertiary-container font-bold tracking-[0.2em] uppercase">Strength Delivered, Precision Built</span>
+</div>
+</div>
+<div class="flex items-center gap-10">
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200" href="index.html">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200" href="who_we_are.html">Who We Are</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200" href="services.html">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200" href="manpower.html">Manpower</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200" href="compliance.html">Compliance</a>
+<a class="font-label-md text-label-md text-on-tertiary-container font-bold border-b-2 border-on-tertiary-container hover:text-on-tertiary-container transition-colors duration-200" href="contact.html">Contact</a>
+</nav>
+<button class="bg-primary text-white font-label-md text-label-md px-8 py-3 uppercase tracking-widest font-bold transition-all hover:bg-on-tertiary-container active:opacity-80 active:scale-95 shadow-lg" onclick="location.href='contact.html'">Request Quote</button>
+</div>
+</div>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="bg-primary-container text-white py-24 px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<h1 class="font-display-lg text-display-lg leading-[1.1]">Get in touch with precision experts and your trusted Manpower provider!</h1>
+<p class="font-body-lg text-body-lg text-outline-variant max-w-xl opacity-90">
+                    Whether it's a large-scale industrial fabrication project or structural erection, our team in Bhavnagar is ready to discuss your requirements with technical rigor.
+                </p>
+</div>
+<div class="hidden md:block">
+<div class="relative aspect-[4/3] w-full bg-surface-container border border-outline-variant flex items-center justify-center overflow-hidden">
+<img alt="Industrial steel construction" class="w-full h-full object-cover opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSN-nPWwesBpuFBbDt2SuO1wa8NYwq07S88vRyhvHKzW5nInBu7EeLyhUVtmuhvpm43ySfZE0WEC0JfsHFBIsS4_XVcGDnG-vqF3LLwLZV9SfbXgXyAF-sjZoHqDrAR-aCfUM573OM0KLRu7DvbHQ5hABA54hqZUKQCs7QFIL7bX32axx4OuQ1s47za21azlqqnXoF004p7IpNZO_e1URsURHHEwdnqk9kXDuTVh1br1klb_6itd_y"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Content -->
+<section class="py-24 px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Contact Details & Map -->
+<div class="lg:col-span-5 space-y-16">
+<div class="space-y-10">
+<div>
+<h2 class="font-label-md text-label-md text-on-tertiary-container uppercase tracking-widest mb-6">Location Details</h2>
+<div class="border-l-4 border-on-tertiary-container pl-8 space-y-8">
+<div>
+<p class="font-label-sm text-label-sm text-outline uppercase mb-2">Headquarters</p>
+<p class="font-headline-sm text-headline-sm text-primary leading-snug">R.S No. 471 -2-3-4, Plot No. B 855/A to B 859/7, Shivay Bangalow, Sardar Patel Institute Road, Bhavnagar - 364002, Gujarat, India</p>
+</div>
+<div class="space-y-8">
+<div>
+<p class="font-label-sm text-label-sm text-outline uppercase mb-2">Contact Channels</p>
+<div class="space-y-2">
+<p class="font-headline-sm text-headline-sm text-primary">+91-9687375151</p>
+<p class="font-body-lg text-body-lg font-medium text-primary">shreejiconstruction2007@zohomail.in</p>
+</div>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-outline uppercase mb-4">Compliance &amp; Registration</p>
+<div class="flex flex-wrap gap-6 pt-1">
+<span class="inline-flex items-center gap-2 text-primary font-bold font-label-md"><span class="material-symbols-outlined text-lg">verified</span> GST</span>
+<span class="inline-flex items-center gap-2 text-primary font-bold font-label-md"><span class="material-symbols-outlined text-lg">verified</span> MSME</span>
+<span class="inline-flex items-center gap-2 text-primary font-bold font-label-md"><span class="material-symbols-outlined text-lg">verified</span> PF</span>
+<span class="inline-flex items-center gap-2 text-primary font-bold font-label-md"><span class="material-symbols-outlined text-lg">verified</span> ESI</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Representation -->
+<div class="space-y-6">
+<h2 class="font-label-md text-label-md text-on-tertiary-container uppercase tracking-widest">Global Operations</h2>
+<div class="aspect-video bg-surface-container-high border border-outline-variant relative overflow-hidden group">
+<div class="absolute inset-0 grayscale contrast-125 opacity-40 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+<div class="w-full h-full flex items-center justify-center" data-location="Bhavnagar">
+<div class="text-center z-10">
+<span class="material-symbols-outlined text-on-tertiary-container text-6xl mb-3" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<p class="font-label-md text-label-md text-primary bg-white/95 px-6 py-3 border border-outline uppercase shadow-sm">BHAVNAGAR, GUJARAT</p>
+</div>
+</div>
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewbox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 50 L400 50 M0 100 L400 100 M0 150 L400 150 M100 0 L100 200 M200 0 L200 200 M300 0 L300 200" stroke="#000" stroke-width="0.5"></path>
+</svg>
+</div>
+<p class="font-label-sm text-label-sm text-outline italic">Precision Logistics Hub &amp; Administrative Office</p>
+</div>
+</div>
+</div>
+<!-- Inquiry Form -->
+<div class="lg:col-span-7 bg-white border border-outline-variant p-10 md:p-16 shadow-lg">
+<div class="space-y-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Project Inquiry</h2>
+<p class="font-body-lg text-body-lg text-outline">Submit your project specifications below. Our technical procurement team will respond within 24 hours.</p>
+</div>
+<form class="space-y-10" id="contactForm">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-3">
+<label class="font-label-md text-label-md text-primary uppercase block">Full Name</label>
+<input class="w-full border border-outline-variant px-5 py-4 focus:ring-0 focus:border-on-tertiary-container outline-none transition-all placeholder:text-outline-variant font-body-md bg-white" name="name" placeholder="E.G. RAJESH SHAH" required="" type="text"/>
+</div>
+<div class="space-y-3">
+<label class="font-label-md text-label-md text-primary uppercase block">Company / Entity</label>
+<input class="w-full border border-outline-variant px-5 py-4 focus:ring-0 focus:border-on-tertiary-container outline-none transition-all placeholder:text-outline-variant font-body-md bg-white" name="company" placeholder="E.G. RELIANCE INDUSTRIES" type="text"/>
+</div>
+<div class="space-y-3">
+<label class="font-label-md text-label-md text-primary uppercase block">Phone Number</label>
+<input class="w-full border border-outline-variant px-5 py-4 focus:ring-0 focus:border-on-tertiary-container outline-none transition-all placeholder:text-outline-variant font-body-md bg-white" name="phone" placeholder="E.G. 9687375151" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-3">
+<label class="font-label-md text-label-md text-primary uppercase block">Work Email</label>
+<input class="w-full border border-outline-variant px-5 py-4 focus:ring-0 focus:border-on-tertiary-container outline-none transition-all placeholder:text-outline-variant font-body-md bg-white" name="email" placeholder="EMAIL@COMPANY.COM" required="" type="email"/>
+</div>
+<div class="space-y-3">
+<label class="font-label-md text-label-md text-primary uppercase block">Project Type</label>
+<select class="w-full border border-outline-variant px-5 py-4 focus:ring-0 focus:border-on-tertiary-container outline-none transition-all bg-white font-body-md appearance-none" name="project_type">
+<option>Industrial Fabrication</option>
+<option>Structural Erection</option>
+<option>Civil Construction</option>
+<option>Manpower Supply</option>
+<option>Technical Consultancy</option>
+</select>
+</div>
+</div>
+<div class="space-y-3 w-full">
+<label class="font-label-md text-label-md text-primary uppercase block">Project Brief / Requirements</label>
+<textarea class="w-full border border-outline-variant px-5 py-4 focus:ring-0 focus:border-on-tertiary-container outline-none transition-all placeholder:text-outline-variant font-body-md resize-none bg-white" name="message" placeholder="PLEASE DESCRIBE THE SCALE AND TECHNICAL REQUIREMENTS..." required="" rows="6"></textarea>
+</div>
+<div class="pt-6">
+<button class="w-full bg-on-tertiary-container text-white font-label-md text-label-md py-6 uppercase tracking-widest font-bold hover:bg-primary transition-all flex items-center justify-center gap-3 group shadow-xl active:scale-[0.98]" type="submit">
+                    Initiate Consultation
+                    <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="hidden font-label-md text-center p-4" id="contactFeedback"></div>
+</form>
+</div></div></div></div></section></main>
+<div class="fixed inset-0 z-50 bg-primary/95 backdrop-blur-md flex flex-col justify-center items-center gap-8 text-white transition-all duration-300 transform translate-x-full lg:hidden" id="mobileMenu">
+<button class="absolute top-6 right-6 text-white focus:outline-none" id="closeMobileMenu">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="index.html">Home</a>
+<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="who_we_are.html">Who We Are</a>
+<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="services.html">Services</a>
+<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="manpower.html">Manpower</a>
+<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="compliance.html">Compliance</a>
+<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="contact.html">Contact</a>
+<button class="bg-on-tertiary-container text-white px-8 py-4 font-label-md uppercase font-bold tracking-widest mt-4" onclick="location.href='contact.html'">Request Quote</button>
+</div>
+
+<script id="mobile-menu-script">
+    (function() {
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-full');
+            });
+        }
+        if (closeMobileMenu && mobileMenu) {
+            closeMobileMenu.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        }
+    })();
+</script>
+</body></html>
+<!-- MSME & Certification Section-->
+<section class="bg-surface-container py-24 px-margin-desktop border-t border-outline-variant">
+<div class="max-w-container-max mx-auto flex flex-wrap justify-between items-center gap-12 opacity-80">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-5xl text-on-tertiary-container">verified</span>
+<div>
+<p class="font-label-md text-label-md font-bold uppercase text-primary">MSME &amp; GST Certified</p>
+<p class="font-label-sm text-label-sm text-outline">Udyam &amp; Compliance Verified</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-5xl text-on-tertiary-container">security</span>
+<div>
+<p class="font-label-md text-label-md font-bold uppercase text-primary">PF &amp; ESI Registered</p>
+<p class="font-label-sm text-label-sm text-outline">Labor Compliance Verified</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-5xl text-on-tertiary-container">engineering</span>
+<div>
+<p class="font-label-md text-label-md font-bold uppercase text-primary">Manpower Supplier</p>
+<p class="font-label-sm text-label-sm text-outline">Skilled Industrial Workforce</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary full-width border-t-4 border-on-tertiary-container">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="space-y-8">
+<div class="font-headline-sm text-headline-sm text-surface-bright uppercase font-bold leading-tight">
+                Shreeji Construction
+            </div>
+<p class="font-body-md text-body-md text-outline-variant leading-relaxed">
+                Precision in Fabrication &amp; Erection and Manpower Supplier. Building India's industrial backbone since 2007.
+            </p>
+</div>
+<div class="space-y-6">
+<h3 class="font-label-md text-label-md text-surface-bright uppercase tracking-widest border-b border-outline-variant/30 pb-2">Office</h3>
+<ul class="space-y-6 font-label-sm text-label-sm">
+<li class="text-outline-variant leading-relaxed">R.S No. 471 -2-3-4, Plot No. B 855/A to B 859/7, Shivay Bangalow, Sardar Patel Institute Road, Bhavnagar - 364002, Gujarat, India</li>
+<li class="flex flex-col gap-2">
+<a class="text-surface-bright font-bold hover:text-tertiary-fixed transition-colors text-[14px]" href="tel:+919687375151">+91-9687375151</a>
+<a class="text-outline-variant hover:text-tertiary-fixed transition-colors" href="mailto:shreejiconstruction2007@zohomail.in">shreejiconstruction2007@zohomail.in</a>
+</li>
+</ul>
+</div>
+<div class="space-y-6">
+<h3 class="font-label-md text-label-md text-surface-bright uppercase tracking-widest border-b border-outline-variant/30 pb-2">Compliance</h3>
+<ul class="space-y-4 font-label-sm text-label-sm">
+<li class="text-outline-variant flex items-center gap-2"><span class="material-symbols-outlined text-xs">check_circle</span> MSME Certified</li>
+<li class="text-outline-variant flex items-center gap-2"><span class="material-symbols-outlined text-xs">check_circle</span> GST Registered</li>
+<li class="text-outline-variant flex items-center gap-2"><span class="material-symbols-outlined text-xs">check_circle</span> PF Compliant</li>
+<li class="text-outline-variant flex items-center gap-2"><span class="material-symbols-outlined text-xs">check_circle</span> ESI Registered</li>
+</ul>
+</div>
+<div class="space-y-6">
+<h3 class="font-label-md text-label-md text-surface-bright uppercase tracking-widest border-b border-outline-variant/30 pb-2">Connect</h3>
+<div class="flex gap-4">
+<a class="w-12 h-12 border border-outline-variant flex items-center justify-center hover:bg-on-tertiary-container transition-all group" href="mailto:shreejiconstruction2007@zohomail.in">
+<span class="material-symbols-outlined text-surface-bright group-hover:scale-110 transition-transform">mail</span>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/20 py-8 px-margin-desktop max-w-container-max mx-auto text-center">
+<p class="font-label-sm text-label-sm text-outline-variant opacity-60">© 2024 Shreeji Construction, Precision in fabrication &amp; Erection and Manpower Supplier</p>
+</div>
+</footer>
+<script>
+            document.getElementById('contactForm').addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const feedbackEl = document.getElementById('contactFeedback');
+                feedbackEl.className = 'text-center font-label-md p-4 text-primary';
+                feedbackEl.innerText = 'Submitting your inquiry...';
+                feedbackEl.classList.remove('hidden');
+                
+                const data = {
+                    name: this.elements['name'].value,
+                    email: this.elements['email'].value,
+                    phone: this.elements['phone'].value,
+                    subject: this.elements['project_type'].value + ' (Company: ' + (this.elements['company'].value || 'None') + ')',
+                    message: this.elements['message'].value
+                };
+                
+                try {
+                    const res = await window.submitContactForm(data);
+                    if (res.success) {
+                        feedbackEl.className = 'text-center font-label-md p-4 text-green-600 font-bold';
+                        feedbackEl.innerText = res.mode === 'supabase' 
+                            ? 'Inquiry submitted successfully! Deployed to Database.' 
+                            : 'Inquiry saved successfully! (Demo Mode - Local Storage).';
+                        this.reset();
+                    }
+                } catch (err) {
+                    feedbackEl.className = 'text-center font-label-md p-4 text-red-600 font-bold';
+                    feedbackEl.innerText = 'Failed to submit: ' + err.message;
+                }
+            });
+        </script>

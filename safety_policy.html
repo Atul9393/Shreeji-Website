@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+  <title>Safety Policy | Shreeji Construction</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Shreeji Construction's formal Safety Policy — our commitment to a Zero-Incident working environment across all industrial fabrication, erection, and maintenance shutdown projects." />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Work+Sans:wght@400;500&family=IBM+Plex+Sans:wght@500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&family=Libre+Caslon+Text:wght@100..900&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    try {
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "on-tertiary-fixed": "#351000","background": "#f8f9fa","on-background": "#191c1d",
+              "outline-variant": "#c4c6cf","on-tertiary-fixed-variant": "#7c2e00","inverse-surface": "#2e3132",
+              "error-container": "#ffdad6","surface-container-low": "#f3f4f5","on-secondary-fixed-variant": "#40484c",
+              "on-primary-container": "#708ab5","on-secondary": "#ffffff","on-surface": "#191c1d",
+              "tertiary-fixed-dim": "#ffb595","on-primary": "#ffffff","outline": "#74777f",
+              "surface-dim": "#d9dadb","on-tertiary": "#ffffff","surface": "#f8f9fa",
+              "primary-fixed": "#d6e3ff","surface-container-highest": "#e1e3e4","surface-tint": "#465f88",
+              "on-primary-fixed-variant": "#2d476f","on-error-container": "#93000a","inverse-on-surface": "#f0f1f2",
+              "secondary": "#585f64","on-tertiary-container": "#e85d00","error": "#ba1a1a",
+              "secondary-fixed-dim": "#c0c8cd","tertiary-container": "#3f1400","primary-fixed-dim": "#aec7f6",
+              "tertiary": "#1a0500","on-primary-fixed": "#001b3d","surface-container-lowest": "#ffffff",
+              "on-error": "#ffffff","secondary-fixed": "#dce4e9","secondary-container": "#d9e1e6",
+              "inverse-primary": "#aec7f6","on-surface-variant": "#44474e","on-secondary-fixed": "#151d21",
+              "primary-container": "#002147","surface-container": "#edeeef","primary": "#000a1e",
+              "surface-bright": "#f8f9fa","on-secondary-container": "#5c6469","surface-container-high": "#e7e8e9",
+              "tertiary-fixed": "#ffdbcd","surface-variant": "#e1e3e4"
+            },
+            "borderRadius": {"DEFAULT": "0.25rem","lg": "0.5rem","xl": "0.75rem","full": "9999px"},
+            "spacing": {"margin-desktop": "64px","base": "8px","container-max": "1280px","margin-mobile": "16px","gutter": "24px"},
+            "fontFamily": {
+              "headline-md": ["Libre Caslon Text"],"body-md": ["Work Sans"],"headline-lg": ["Libre Caslon Text"],
+              "body-lg": ["Work Sans"],"headline-sm": ["Libre Caslon Text"],"label-md": ["IBM Plex Sans"],
+              "display-lg": ["Libre Caslon Text"],"label-sm": ["IBM Plex Sans"]
+            },
+            "fontSize": {
+              "headline-md": ["32px", {"lineHeight": "40px","fontWeight": "600"}],
+              "body-md": ["16px", {"lineHeight": "24px","fontWeight": "400"}],
+              "headline-lg": ["48px", {"lineHeight": "56px","fontWeight": "700"}],
+              "body-lg": ["18px", {"lineHeight": "28px","fontWeight": "400"}],
+              "headline-sm": ["24px", {"lineHeight": "32px","fontWeight": "600"}],
+              "label-md": ["14px", {"lineHeight": "20px","letterSpacing": "0.05em","fontWeight": "600"}],
+              "display-lg": ["64px", {"lineHeight": "72px","letterSpacing": "-0.02em","fontWeight": "700"}],
+              "label-sm": ["12px", {"lineHeight": "16px","fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    } catch (_e) {}
+  </script>
+  <style>
+    .industrial-pattern {
+      background-color: #f8f9fa;
+      background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+    }
+    .policy-card {
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .policy-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background-color: #e85d00;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.35s ease;
+    }
+    .policy-card:hover::before { transform: scaleY(1); }
+    .policy-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.10); transform: translateY(-2px); }
+    .ppe-badge { transition: background-color 0.25s, color 0.25s, transform 0.25s; }
+    .ppe-badge:hover { background-color: #e85d00; color: #fff; transform: translateY(-2px); }
+    @keyframes fadeUp { from {opacity:0;transform:translateY(20px);} to {opacity:1;transform:translateY(0);} }
+    .fade-up { animation: fadeUp 0.7s ease both; }
+    .fade-up-1 { animation-delay: 0.05s; }
+    .fade-up-2 { animation-delay: 0.15s; }
+    .fade-up-3 { animation-delay: 0.25s; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+</head>
+
+<body class="bg-background text-on-surface font-body-md industrial-pattern min-h-screen">
+
+  <!-- NAV -->
+  <nav class="w-full sticky top-0 z-50 bg-surface border-b border-outline-variant">
+    <div class="flex justify-between items-center w-full px-margin-desktop py-0 max-w-container-max mx-auto h-20">
+      <a class="flex items-center gap-2.5 shrink-0" href="index.html">
+        <img alt="Shreeji Construction Logo" class="h-10 w-auto object-contain" src="images/logo.png" />
+        <div class="flex flex-col justify-center -space-y-0.5">
+          <span class="font-headline-sm text-[17px] lg:text-[19px] leading-tight font-bold text-primary tracking-tighter uppercase">SHREEJI CONSTRUCTION</span>
+          <span class="font-label-sm text-[9px] lg:text-[10px] leading-none text-on-tertiary-container tracking-widest font-bold uppercase">STRENGTH DELIVERED, PRECISION BUILT</span>
+        </div>
+      </a>
+      <div class="flex items-center h-full">
+        <div class="hidden lg:flex items-center gap-6 lg:gap-8 mr-8">
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="index.html">Home</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="who_we_are.html">Who We Are</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="services.html">Services</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="manpower.html">Manpower</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="compliance.html">Compliance</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="contact.html">Contact</a>
+        </div>
+        <button class="bg-primary text-white py-3 px-6 font-label-md text-label-md uppercase tracking-wider hover:bg-on-tertiary-container hover:text-white transition-all font-bold hidden sm:block whitespace-nowrap" onclick="location.href='contact.html'">REQUEST QUOTE</button>
+        <button class="lg:hidden ml-4 text-primary focus:outline-none" id="mobileMenuBtn">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative py-24 md:py-32 overflow-hidden bg-primary text-white">
+      <div class="absolute inset-0 opacity-10" style="background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:28px 28px;"></div>
+      <div class="absolute left-0 top-0 bottom-0 w-2 bg-on-tertiary-container"></div>
+      <div class="relative max-w-container-max mx-auto px-margin-desktop">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
+          <div class="space-y-6 max-w-3xl">
+            <span class="inline-flex items-center gap-2 py-1.5 px-4 bg-on-tertiary-container text-white font-label-sm uppercase tracking-widest">
+              <span class="material-symbols-outlined text-base" style='font-variation-settings:"FILL" 1;'>health_and_safety</span>
+              EHS &amp; Site Safety
+            </span>
+            <h1 class="font-headline-lg text-headline-lg leading-tight">Safety Policy</h1>
+            <p class="font-body-lg text-body-lg text-surface-variant/80 max-w-2xl">
+              Shreeji Construction operates with an unwavering commitment to a <strong class="text-white">Zero-Incident</strong> working environment. The safety and well-being of every individual on our sites is non-negotiable.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-0 shrink-0">
+            <div class="bg-white/10 border border-white/20 px-8 py-6 text-center fade-up fade-up-1">
+              <div class="font-headline-md text-headline-md text-on-tertiary-container font-bold">Zero</div>
+              <div class="font-label-sm text-label-sm uppercase tracking-widest mt-1">LTI Target</div>
+            </div>
+            <div class="bg-white/10 border border-white/20 px-8 py-6 text-center fade-up fade-up-2">
+              <div class="font-headline-md text-headline-md text-on-tertiary-container font-bold">100%</div>
+              <div class="font-label-sm text-label-sm uppercase tracking-widest mt-1">PPE Compliance</div>
+            </div>
+            <div class="bg-white/10 border border-white/20 px-8 py-6 text-center fade-up fade-up-3">
+              <div class="font-headline-md text-headline-md text-on-tertiary-container font-bold">Daily</div>
+              <div class="font-label-sm text-label-sm uppercase tracking-widest mt-1">Toolbox Talks</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section id="safety-policy-details" class="py-24 max-w-container-max mx-auto px-margin-desktop">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+
+        <!-- Main Doc -->
+        <div class="lg:col-span-8 space-y-8">
+
+          <!-- Meta banner -->
+          <div class="bg-surface-container border border-outline-variant px-6 py-3 flex flex-wrap items-center justify-between gap-4">
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Effective Date: <strong class="text-on-surface">July 2025</strong></span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Ref: <strong class="text-on-surface">SJC/EHS/POL-01</strong></span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Review: <strong class="text-on-surface">Annual</strong></span>
+          </div>
+
+          <!-- S1 Commitment -->
+          <div class="policy-card bg-white border border-outline-variant p-8 md:p-12 shadow-sm space-y-5">
+            <div class="flex items-center gap-4 mb-2">
+              <div class="w-12 h-12 bg-primary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>verified_user</span>
+              </div>
+              <div>
+                <span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-widest">Section 1</span>
+                <h2 class="font-headline-md text-headline-md text-primary">Commitment to Safety</h2>
+              </div>
+            </div>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">Shreeji Construction is unequivocally committed to protecting the health, safety, and welfare of every worker, contractor, visitor, and stakeholder present on our project sites. The prevention of workplace injuries and occupational illnesses is a core business objective — not an afterthought.</p>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">Our overarching goal is the execution of every project — be it structural fabrication, erection, or maintenance shutdown — with <strong class="text-on-surface">zero Lost Time Incidents (LTI)</strong>. This goal is achieved through a proactive safety culture that places individual responsibility and collective vigilance at its centre.</p>
+            <ul class="space-y-3 pt-2">
+              <li class="flex items-start gap-3 font-body-md text-on-surface-variant">
+                <span class="material-symbols-outlined text-on-tertiary-container text-lg mt-0.5 shrink-0">check_circle</span>
+                Full compliance with the <em>Factories Act, 1948</em> and the <em>Building and Other Construction Workers (BOCW) Act, 1996</em>.
+              </li>
+              <li class="flex items-start gap-3 font-body-md text-on-surface-variant">
+                <span class="material-symbols-outlined text-on-tertiary-container text-lg mt-0.5 shrink-0">check_circle</span>
+                Adherence to OSHA-aligned and IS-standard safe work practices across all disciplines.
+              </li>
+              <li class="flex items-start gap-3 font-body-md text-on-surface-variant">
+                <span class="material-symbols-outlined text-on-tertiary-container text-lg mt-0.5 shrink-0">check_circle</span>
+                Senior management commitment — safety performance is reviewed at every project milestone.
+              </li>
+            </ul>
+          </div>
+
+          <!-- S2 SOPs -->
+          <div class="policy-card bg-white border border-outline-variant p-8 md:p-12 shadow-sm space-y-5">
+            <div class="flex items-center gap-4 mb-2">
+              <div class="w-12 h-12 bg-primary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>rule_folder</span>
+              </div>
+              <div>
+                <span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-widest">Section 2</span>
+                <h2 class="font-headline-md text-headline-md text-primary">Standard Operating Procedures</h2>
+              </div>
+            </div>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">All work activities are governed by formally documented SOPs specific to each work domain. These are mandatory reference documents for all site supervisors and tradespeople.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-outline-variant mt-4">
+              <div class="p-6 border-r border-outline-variant space-y-3">
+                <div class="text-on-tertiary-container font-label-md uppercase tracking-widest text-label-md">Structural Fabrication</div>
+                <ul class="space-y-2 font-label-sm text-label-sm text-on-surface-variant">
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Pre-task Job Safety Analysis (JSA)</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Hot-work permit (welding &amp; grinding)</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Hazardous material handling controls</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Machine guarding &amp; LOTO</li>
+                </ul>
+              </div>
+              <div class="p-6 border-r border-outline-variant space-y-3 bg-surface-container-low">
+                <div class="text-on-tertiary-container font-label-md uppercase tracking-widest text-label-md">Erection &amp; Rigging</div>
+                <ul class="space-y-2 font-label-sm text-label-sm text-on-surface-variant">
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Lift plans &amp; crane inspection</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Exclusion zone management</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>WAH permit &amp; fall arrest system</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Sling &amp; rigging certification</li>
+                </ul>
+              </div>
+              <div class="p-6 space-y-3">
+                <div class="text-on-tertiary-container font-label-md uppercase tracking-widest text-label-md">Maintenance Shutdowns</div>
+                <ul class="space-y-2 font-label-sm text-label-sm text-on-surface-variant">
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Permit to Work (PTW) system</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Confined Space Entry (CSE)</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Energy isolation (LOTO) checks</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>HIRA documentation</li>
+                </ul>
+              </div>
+            </div>
+            <div class="bg-primary/5 border-l-4 border-on-tertiary-container px-6 py-4 mt-2">
+              <p class="font-label-sm text-label-sm text-on-surface-variant"><strong class="text-on-surface">Daily Toolbox Talks (TBT)</strong> are mandatory at every site start-up. All personnel must attend and acknowledge safe work requirements before commencing any task.</p>
+            </div>
+          </div>
+
+          <!-- S3 PPE -->
+          <div class="policy-card bg-white border border-outline-variant p-8 md:p-12 shadow-sm space-y-5">
+            <div class="flex items-center gap-4 mb-2">
+              <div class="w-12 h-12 bg-primary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>construction</span>
+              </div>
+              <div>
+                <span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-widest">Section 3</span>
+                <h2 class="font-headline-md text-headline-md text-primary">Personal Protective Equipment</h2>
+              </div>
+            </div>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">The use of appropriate, certified PPE is <strong class="text-on-surface">mandatory for all personnel</strong> — including direct employees, sub-contractors, and site visitors — on every project without exception.</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mt-4">
+              <div class="ppe-badge bg-surface-container border border-outline-variant p-4 text-center space-y-2 cursor-default">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>safety_check</span>
+                <div class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">Safety Helmet</div>
+                <div class="font-label-sm text-[10px] text-on-surface-variant">IS 2925 Certified</div>
+              </div>
+              <div class="ppe-badge bg-surface-container border border-outline-variant p-4 text-center space-y-2 cursor-default">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>visibility</span>
+                <div class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">Safety Goggles</div>
+                <div class="font-label-sm text-[10px] text-on-surface-variant">Welding / General</div>
+              </div>
+              <div class="ppe-badge bg-surface-container border border-outline-variant p-4 text-center space-y-2 cursor-default">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>do_not_touch</span>
+                <div class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">Safety Gloves</div>
+                <div class="font-label-sm text-[10px] text-on-surface-variant">Leather / Cut-Resist</div>
+              </div>
+              <div class="ppe-badge bg-surface-container border border-outline-variant p-4 text-center space-y-2 cursor-default">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>emergency</span>
+                <div class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">Safety Harness</div>
+                <div class="font-label-sm text-[10px] text-on-surface-variant">WAH / &gt;1.8 m height</div>
+              </div>
+              <div class="ppe-badge bg-surface-container border border-outline-variant p-4 text-center space-y-2 cursor-default">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>steps</span>
+                <div class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">Safety Boots</div>
+                <div class="font-label-sm text-[10px] text-on-surface-variant">Steel-Toed, IS 15298</div>
+              </div>
+              <div class="ppe-badge bg-surface-container border border-outline-variant p-4 text-center space-y-2 cursor-default">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>hearing</span>
+                <div class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">Ear Protection</div>
+                <div class="font-label-sm text-[10px] text-on-surface-variant">High Noise Zones</div>
+              </div>
+              <div class="ppe-badge bg-surface-container border border-outline-variant p-4 text-center space-y-2 cursor-default">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>air</span>
+                <div class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">Respirator / Mask</div>
+                <div class="font-label-sm text-[10px] text-on-surface-variant">Dust / Fume Areas</div>
+              </div>
+              <div class="ppe-badge bg-surface-container border border-outline-variant p-4 text-center space-y-2 cursor-default">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>dry_cleaning</span>
+                <div class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">Hi-Vis Vest</div>
+                <div class="font-label-sm text-[10px] text-on-surface-variant">All Active Sites</div>
+              </div>
+            </div>
+            <p class="font-label-sm text-label-sm text-on-surface-variant pt-2">All PPE must carry valid BIS certification. Non-compliance results in immediate removal from site pending corrective action.</p>
+          </div>
+
+          <!-- S4 Training -->
+          <div class="policy-card bg-white border border-outline-variant p-8 md:p-12 shadow-sm space-y-5">
+            <div class="flex items-center gap-4 mb-2">
+              <div class="w-12 h-12 bg-primary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>school</span>
+              </div>
+              <div>
+                <span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-widest">Section 4</span>
+                <h2 class="font-headline-md text-headline-md text-primary">Safety Training</h2>
+              </div>
+            </div>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">A well-trained workforce is our primary line of defence. Shreeji Construction mandates structured safety education for all personnel, from new recruit induction through to advanced skill-specific certifications.</p>
+            <div class="space-y-0 border border-outline-variant divide-y divide-outline-variant mt-4">
+              <div class="flex items-start gap-6 p-6 bg-surface-container-low">
+                <div class="w-10 h-10 bg-on-tertiary-container text-white flex items-center justify-center font-label-md text-label-md font-bold shrink-0">01</div>
+                <div>
+                  <div class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-1">New Hire Safety Orientation</div>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">Mandatory induction for every new employee or sub-contractor before site access is granted. Covers site layout, evacuation routes, fire safety, and basic hazard awareness.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-6 p-6">
+                <div class="w-10 h-10 bg-on-tertiary-container text-white flex items-center justify-center font-label-md text-label-md font-bold shrink-0">02</div>
+                <div>
+                  <div class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-1">Skill-Specific Safety Training</div>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">Targeted modules for welders, fitters, riggers, and supervisors. Includes hot-work safety, rigging load calculations, confined space entry, and scaffolding inspection.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-6 p-6 bg-surface-container-low">
+                <div class="w-10 h-10 bg-on-tertiary-container text-white flex items-center justify-center font-label-md text-label-md font-bold shrink-0">03</div>
+                <div>
+                  <div class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-1">First Aid &amp; Emergency Response</div>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">Certified first aider(s) present on every active site. Periodic mock drills for fire, medical emergencies, and spill response are conducted across all concurrent sites.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-6 p-6">
+                <div class="w-10 h-10 bg-on-tertiary-container text-white flex items-center justify-center font-label-md text-label-md font-bold shrink-0">04</div>
+                <div>
+                  <div class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-1">Periodic Refresher &amp; Audit Training</div>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">Quarterly safety refreshers for all site personnel. Annual external EHS audits validate compliance and identify improvement areas aligned with IS/OSHA benchmarks.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- S5 Contact -->
+          <div class="policy-card bg-primary text-white border border-primary p-8 md:p-12 shadow-sm space-y-5">
+            <div class="flex items-center gap-4 mb-2">
+              <div class="w-12 h-12 bg-on-tertiary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl text-white" style='font-variation-settings:"FILL" 1;'>contact_support</span>
+              </div>
+              <div>
+                <span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-widest">Section 5</span>
+                <h2 class="font-headline-md text-headline-md text-white">Report a Safety Concern</h2>
+              </div>
+            </div>
+            <p class="font-body-md text-surface-variant leading-relaxed">Shreeji Construction maintains an open and transparent reporting culture. Any safety-related concern, near-miss event, or hazardous condition observed on our sites should be reported without delay. All submissions are reviewed by our EHS management team.</p>
+            <p class="font-body-md text-surface-variant leading-relaxed">For all safety-related inquiries, incident reports, or policy clarifications, please contact us at:</p>
+            <div class="pt-2">
+              <a id="safety-contact-email" class="inline-flex items-center gap-3 bg-on-tertiary-container text-white px-8 py-4 font-label-md text-label-md uppercase tracking-wider hover:brightness-110 transition-all" href="mailto:shreejiconstruction2007@zohomail.in">
+                <span class="material-symbols-outlined text-xl">mail</span>
+                shreejiconstruction2007@zohomail.in
+              </a>
+            </div>
+            <p class="font-label-sm text-label-sm text-surface-variant/70 pt-2">We are committed to acknowledging every safety communication within 2 working days.</p>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="lg:col-span-4 space-y-8 lg:sticky lg:top-28">
+          <div class="border border-outline-variant p-8 bg-white shadow-sm">
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-6 pb-4 border-b border-outline-variant">Policy Sections</h3>
+            <nav id="policy-nav" class="flex flex-col gap-3">
+              <a href="#" class="policy-nav-link flex items-center gap-3 text-on-surface-variant hover:text-on-tertiary-container transition-colors font-label-sm text-label-sm group" data-index="0">
+                <span class="material-symbols-outlined text-base">verified_user</span> Commitment to Safety
+              </a>
+              <a href="#" class="policy-nav-link flex items-center gap-3 text-on-surface-variant hover:text-on-tertiary-container transition-colors font-label-sm text-label-sm group" data-index="1">
+                <span class="material-symbols-outlined text-base">rule_folder</span> Standard Operating Procedures
+              </a>
+              <a href="#" class="policy-nav-link flex items-center gap-3 text-on-surface-variant hover:text-on-tertiary-container transition-colors font-label-sm text-label-sm group" data-index="2">
+                <span class="material-symbols-outlined text-base">construction</span> PPE Requirements
+              </a>
+              <a href="#" class="policy-nav-link flex items-center gap-3 text-on-surface-variant hover:text-on-tertiary-container transition-colors font-label-sm text-label-sm group" data-index="3">
+                <span class="material-symbols-outlined text-base">school</span> Safety Training
+              </a>
+              <a href="#" class="policy-nav-link flex items-center gap-3 text-on-surface-variant hover:text-on-tertiary-container transition-colors font-label-sm text-label-sm group" data-index="4">
+                <span class="material-symbols-outlined text-base">contact_support</span> Report a Concern
+              </a>
+            </nav>
+          </div>
+          <div class="bg-primary text-white p-8 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-3xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>shield_lock</span>
+              <div class="font-headline-sm text-headline-sm text-white">Zero-Incident Goal</div>
+            </div>
+            <p class="font-body-md text-surface-variant leading-relaxed text-sm">Every project we undertake carries the commitment that every worker returns home safely. Zero Lost Time Incidents is not merely a target — it is our professional standard.</p>
+          </div>
+          <div class="border border-outline-variant p-8 bg-white shadow-sm">
+            <h3 class="font-label-md text-label-md text-primary uppercase tracking-widest mb-6">Related Policies</h3>
+            <div class="flex flex-col gap-3">
+              <a href="compliance.html" class="flex items-center gap-2 text-on-surface-variant hover:text-on-tertiary-container font-label-sm text-label-sm transition-colors">
+                <span class="material-symbols-outlined text-base">arrow_forward</span> MSME Compliance
+              </a>
+              <a href="privacy_policy.html" class="flex items-center gap-2 text-on-surface-variant hover:text-on-tertiary-container font-label-sm text-label-sm transition-colors">
+                <span class="material-symbols-outlined text-base">arrow_forward</span> Privacy Policy
+              </a>
+              <a href="contact.html" class="flex items-center gap-2 text-on-surface-variant hover:text-on-tertiary-container font-label-sm text-label-sm transition-colors">
+                <span class="material-symbols-outlined text-base">arrow_forward</span> Contact Us
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary border-t-4 border-on-tertiary-container mt-24">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-margin-desktop py-20 max-w-container-max mx-auto items-start text-white">
+      <!-- Centered Company Name Branding -->
+      <div class="space-y-6 flex flex-col items-center justify-center text-center">
+        <img alt="Shreeji Construction Logo" class="h-12 w-auto object-contain mb-2" src="images/logo.png"/>
+        <span class="block font-headline-sm text-surface-bright uppercase font-bold text-2xl tracking-widest leading-none">SHREEJI</span>
+        <span class="block font-headline-sm text-on-tertiary-container uppercase font-bold text-2xl tracking-widest leading-none">CONSTRUCTION</span>
+        <p class="font-label-sm text-label-sm text-outline-variant leading-relaxed mt-4 max-w-xs">Strength Delivered, Precision Built. Building India's industrial backbone since 2007.</p>
+      </div>
+
+      <!-- CORPORATE HEADQUARTERS Section -->
+      <div class="space-y-6">
+        <h4 class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold border-b border-outline-variant/30 pb-2">CORPORATE HEADQUARTERS</h4>
+        <div class="text-outline-variant font-label-sm text-label-sm space-y-3 text-left">
+          <p class="leading-relaxed">R.S No - 471/2-3-4, Plot No 855/A to B-859/7, Shivay Bungalow, Sardar Patel Institute Road, Kaliya Bid, Bhavnagar - 346002, Gujarat, India</p>
+          <div class="pt-2 flex flex-col gap-2">
+            <a class="text-surface-bright font-bold hover:text-tertiary-fixed transition-colors flex items-center gap-2" href="tel:+919687375151">📱 +91-9687375151</a>
+            <a class="text-surface-bright font-bold hover:text-tertiary-fixed transition-colors flex items-center gap-2" href="mailto:shreejiconstruction2007@zohomail.in">✉ shreejiconstruction2007@zohomail.in</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPLIANCE Section -->
+      <div class="space-y-6">
+        <h4 class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold border-b border-outline-variant/30 pb-2">COMPLIANCE</h4>
+        <div class="flex flex-col gap-4">
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="https://udyamregistration.gov.in/" target="_blank" rel="noopener noreferrer">MSME Certified</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="https://services.gst.gov.in/services/searchtp" target="_blank" rel="noopener noreferrer">GST Registered</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm cursor-pointer" onclick="openComplianceModal('pf')">PF &amp; ESI Compliant</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm cursor-pointer" onclick="openComplianceModal('safety')">Safety Standards</a>
+        </div>
+      </div>
+
+      <!-- QUICK LINKS Section -->
+      <div class="space-y-6">
+        <h4 class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold border-b border-outline-variant/30 pb-2">QUICK LINKS</h4>
+        <div class="flex flex-col gap-4">
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="index.html">Home</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="who_we_are.html">Who We Are</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="services.html">Services</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="manpower.html">Manpower</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="compliance.html#compliance-details">MSME Compliance</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="safety_policy.html#safety-policy-details">Safety Policy</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="quality_control.html#quality-control-details">Quality Control</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="project_gallery.html">Project Gallery</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-outline-variant/20 py-8 px-margin-desktop max-w-container-max mx-auto text-center">
+      <p class="font-label-sm text-label-sm text-outline-variant opacity-60">© 2024 Shreeji Construction. Precision in Fabrication &amp; Erection and Manpower Supplier. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu -->
+  <div class="fixed inset-0 z-50 bg-primary/95 backdrop-blur-md flex flex-col justify-center items-center gap-8 text-white transition-all duration-300 transform translate-x-full lg:hidden" id="mobileMenu">
+    <button class="absolute top-6 right-6 text-white focus:outline-none" id="closeMobileMenu">
+      <span class="material-symbols-outlined text-4xl">close</span>
+    </button>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="index.html">Home</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="who_we_are.html">Who We Are</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="services.html">Services</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="manpower.html">Manpower</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="compliance.html">Compliance</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="contact.html">Contact</a>
+    <button class="bg-on-tertiary-container text-white px-8 py-4 font-label-md uppercase font-bold tracking-widest mt-4" onclick="location.href='contact.html'">Request Quote</button>
+  </div>
+
+  <script id="mobile-menu-script">
+    (function () {
+      const btn = document.getElementById('mobileMenuBtn');
+      const close = document.getElementById('closeMobileMenu');
+      const menu = document.getElementById('mobileMenu');
+      if (btn && menu) btn.addEventListener('click', () => menu.classList.remove('translate-x-full'));
+      if (close && menu) close.addEventListener('click', () => menu.classList.add('translate-x-full'));
+    })();
+
+    // Sidebar nav smooth scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.policy-card');
+      document.querySelectorAll('.policy-nav-link').forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const idx = parseInt(link.dataset.index);
+          if (cards[idx]) cards[idx].scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    });
+  </script>
+
+  <!-- Compliance Modal -->
+  <div id="complianceModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/60 backdrop-blur-sm">
+    <div class="bg-surface border border-outline-variant max-w-lg w-full mx-4 p-8 relative shadow-2xl">
+      <button class="absolute top-4 right-4 text-secondary hover:text-primary focus:outline-none" onclick="closeModal()">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+      <div id="complianceModalContent" class="text-on-surface"></div>
+    </div>
+  </div>
+  <script>
+    function openComplianceModal(type) {
+      const modal = document.getElementById('complianceModal');
+      const content = document.getElementById('complianceModalContent');
+      if (!modal || !content) return;
+      let html = '';
+      if (type === 'pf') {
+        html = `<div class="flex items-center gap-3 mb-6 text-primary"><span class="material-symbols-outlined text-3xl text-on-tertiary-container">verified_user</span><h3 class="font-headline-sm text-headline-sm font-bold uppercase tracking-tight">PF &amp; ESI Compliance</h3></div><div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed text-left"><p><strong>Shreeji Construction</strong> is fully registered and compliant with EPFO and ESIC.</p><p>We adhere to the <em>Employees' Provident Funds and Miscellaneous Provisions Act, 1952</em> and <em>ESI Act, 1948</em>.</p><p>All contributions are filed monthly, ensuring full statutory protection for our workforce.</p></div><div class="mt-8 flex justify-end"><button onclick="closeModal()" class="bg-primary text-white px-6 py-2.5 font-label-md uppercase tracking-wider text-sm hover:bg-on-tertiary-container transition-colors">Close</button></div>`;
+      } else if (type === 'safety') {
+        html = `<div class="flex items-center gap-3 mb-6 text-primary"><span class="material-symbols-outlined text-3xl text-on-tertiary-container">security</span><h3 class="font-headline-sm text-headline-sm font-bold uppercase tracking-tight">Safety Standards</h3></div><div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed text-left"><p>Our operations are guided by a zero-incident safety culture aligned to the <em>Factories Act, 1948</em> and <em>BOCW Act, 1996</em>.</p><p>We execute mandatory TBT, HIRA, and JSA on every project.</p><p>All personnel use BIS-certified PPE supported by active EHS training.</p></div><div class="mt-8 flex justify-end"><button onclick="closeModal()" class="bg-primary text-white px-6 py-2.5 font-label-md uppercase tracking-wider text-sm hover:bg-on-tertiary-container transition-colors">Close</button></div>`;
+      } else if (type === 'terms') {
+        html = `<div class="flex items-center gap-3 mb-6 text-primary"><span class="material-symbols-outlined text-3xl text-on-tertiary-container">description</span><h3 class="font-headline-sm text-headline-sm font-bold uppercase tracking-tight">Terms of Service</h3></div><div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed text-left max-h-[350px] overflow-y-auto pr-2"><p><strong>1. Service Scope</strong><br>Integrated industrial solutions including workforce supply and structural engineering services.</p><p><strong>2. Compliance</strong><br>Full GST, Labour Law, MSME, PF &amp; ESI compliance.</p><p><strong>3. Safety &amp; Quality</strong><br>Rigorous safety protocols enforced across all sites.</p><p><strong>4. Confidentiality</strong><br>All client data treated with the highest confidentiality.</p><p><strong>5. Payment</strong><br>Services subject to terms in individual work/purchase orders.</p></div><div class="mt-8 flex justify-end"><button onclick="closeModal()" class="bg-primary text-white px-6 py-2.5 font-label-md uppercase tracking-wider text-sm hover:bg-on-tertiary-container transition-colors">Close</button></div>`;
+      }
+      content.innerHTML = html;
+      modal.classList.remove('hidden');
+    }
+    function closeModal() {
+      const modal = document.getElementById('complianceModal');
+      if (modal) modal.classList.add('hidden');
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('complianceModal');
+      if (modal) modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+  <title>Quality Control | Shreeji Construction</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Shreeji Construction's Quality Control framework — our engineering-grade commitment to precision inspection, documentation, and continuous improvement across all industrial fabrication and erection projects." />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Work+Sans:wght@400;500&family=IBM+Plex+Sans:wght@500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&family=Libre+Caslon+Text:wght@100..900&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    try {
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "on-tertiary-fixed": "#351000","background": "#f8f9fa","on-background": "#191c1d",
+              "outline-variant": "#c4c6cf","on-tertiary-fixed-variant": "#7c2e00","inverse-surface": "#2e3132",
+              "error-container": "#ffdad6","surface-container-low": "#f3f4f5","on-secondary-fixed-variant": "#40484c",
+              "on-primary-container": "#708ab5","on-secondary": "#ffffff","on-surface": "#191c1d",
+              "tertiary-fixed-dim": "#ffb595","on-primary": "#ffffff","outline": "#74777f",
+              "surface-dim": "#d9dadb","on-tertiary": "#ffffff","surface": "#f8f9fa",
+              "primary-fixed": "#d6e3ff","surface-container-highest": "#e1e3e4","surface-tint": "#465f88",
+              "on-primary-fixed-variant": "#2d476f","on-error-container": "#93000a","inverse-on-surface": "#f0f1f2",
+              "secondary": "#585f64","on-tertiary-container": "#e85d00","error": "#ba1a1a",
+              "secondary-fixed-dim": "#c0c8cd","tertiary-container": "#3f1400","primary-fixed-dim": "#aec7f6",
+              "tertiary": "#1a0500","on-primary-fixed": "#001b3d","surface-container-lowest": "#ffffff",
+              "on-error": "#ffffff","secondary-fixed": "#dce4e9","secondary-container": "#d9e1e6",
+              "inverse-primary": "#aec7f6","on-surface-variant": "#44474e","on-secondary-fixed": "#151d21",
+              "primary-container": "#002147","surface-container": "#edeeef","primary": "#000a1e",
+              "surface-bright": "#f8f9fa","on-secondary-container": "#5c6469","surface-container-high": "#e7e8e9",
+              "tertiary-fixed": "#ffdbcd","surface-variant": "#e1e3e4"
+            },
+            "borderRadius": {"DEFAULT": "0.25rem","lg": "0.5rem","xl": "0.75rem","full": "9999px"},
+            "spacing": {"margin-desktop": "64px","base": "8px","container-max": "1280px","margin-mobile": "16px","gutter": "24px"},
+            "fontFamily": {
+              "headline-md": ["Libre Caslon Text"],"body-md": ["Work Sans"],"headline-lg": ["Libre Caslon Text"],
+              "body-lg": ["Work Sans"],"headline-sm": ["Libre Caslon Text"],"label-md": ["IBM Plex Sans"],
+              "display-lg": ["Libre Caslon Text"],"label-sm": ["IBM Plex Sans"]
+            },
+            "fontSize": {
+              "headline-md": ["32px", {"lineHeight": "40px","fontWeight": "600"}],
+              "body-md": ["16px", {"lineHeight": "24px","fontWeight": "400"}],
+              "headline-lg": ["48px", {"lineHeight": "56px","fontWeight": "700"}],
+              "body-lg": ["18px", {"lineHeight": "28px","fontWeight": "400"}],
+              "headline-sm": ["24px", {"lineHeight": "32px","fontWeight": "600"}],
+              "label-md": ["14px", {"lineHeight": "20px","letterSpacing": "0.05em","fontWeight": "600"}],
+              "display-lg": ["64px", {"lineHeight": "72px","letterSpacing": "-0.02em","fontWeight": "700"}],
+              "label-sm": ["12px", {"lineHeight": "16px","fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    } catch (_e) {}
+  </script>
+  <style>
+    .industrial-pattern {
+      background-color: #f8f9fa;
+      background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+    }
+    .policy-card {
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .policy-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background-color: #e85d00;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.35s ease;
+    }
+    .policy-card:hover::before { transform: scaleY(1); }
+    .policy-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.10); transform: translateY(-2px); }
+    .qc-badge { transition: background-color 0.25s, color 0.25s, transform 0.25s; }
+    .qc-badge:hover { background-color: #e85d00; color: #fff; transform: translateY(-2px); }
+    @keyframes fadeUp { from {opacity:0;transform:translateY(20px);} to {opacity:1;transform:translateY(0);} }
+    .fade-up { animation: fadeUp 0.7s ease both; }
+    .fade-up-1 { animation-delay: 0.05s; }
+    .fade-up-2 { animation-delay: 0.15s; }
+    .fade-up-3 { animation-delay: 0.25s; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+</head>
+
+<body class="bg-background text-on-surface font-body-md industrial-pattern min-h-screen">
+
+  <!-- NAV -->
+  <nav class="w-full sticky top-0 z-50 bg-surface border-b border-outline-variant">
+    <div class="flex justify-between items-center w-full px-margin-desktop py-0 max-w-container-max mx-auto h-20">
+      <a class="flex items-center gap-2.5 shrink-0" href="index.html">
+        <img alt="Shreeji Construction Logo" class="h-10 w-auto object-contain" src="images/logo.png" />
+        <div class="flex flex-col justify-center -space-y-0.5">
+          <span class="font-headline-sm text-[17px] lg:text-[19px] leading-tight font-bold text-primary tracking-tighter uppercase">SHREEJI CONSTRUCTION</span>
+          <span class="font-label-sm text-[9px] lg:text-[10px] leading-none text-on-tertiary-container tracking-widest font-bold uppercase">STRENGTH DELIVERED, PRECISION BUILT</span>
+        </div>
+      </a>
+      <div class="flex items-center h-full">
+        <div class="hidden lg:flex items-center gap-6 lg:gap-8 mr-8">
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="index.html">Home</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="who_we_are.html">Who We Are</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="services.html">Services</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="manpower.html">Manpower</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="compliance.html">Compliance</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="contact.html">Contact</a>
+        </div>
+        <button class="bg-primary text-white py-3 px-6 font-label-md text-label-md uppercase tracking-wider hover:bg-on-tertiary-container hover:text-white transition-all font-bold hidden sm:block whitespace-nowrap" onclick="location.href='contact.html'">REQUEST QUOTE</button>
+        <button class="lg:hidden ml-4 text-primary focus:outline-none" id="mobileMenuBtn">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative py-24 md:py-32 overflow-hidden bg-primary text-white">
+      <div class="absolute inset-0 opacity-10" style="background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:28px 28px;"></div>
+      <div class="absolute left-0 top-0 bottom-0 w-2 bg-on-tertiary-container"></div>
+      <div class="relative max-w-container-max mx-auto px-margin-desktop">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
+          <div class="space-y-6 max-w-3xl">
+            <span class="inline-flex items-center gap-2 py-1.5 px-4 bg-on-tertiary-container text-white font-label-sm uppercase tracking-widest">
+              <span class="material-symbols-outlined text-base" style='font-variation-settings:"FILL" 1;'>precision_manufacturing</span>
+              Engineering Quality Assurance
+            </span>
+            <h1 class="font-headline-lg text-headline-lg leading-tight">Quality Control</h1>
+            <p class="font-body-lg text-body-lg text-surface-variant/80 max-w-2xl">
+              Shreeji Construction's quality framework ensures that every weld, every joint, and every structure we deliver meets or exceeds the <strong class="text-white">highest engineering standards</strong> expected by India's leading industrial operators.
+            </p>
+          </div>
+          <!-- Hero stats -->
+          <div class="flex flex-wrap gap-0 shrink-0">
+            <div class="bg-white/10 border border-white/20 px-8 py-6 text-center fade-up fade-up-1">
+              <div class="font-headline-md text-headline-md text-on-tertiary-container font-bold">100%</div>
+              <div class="font-label-sm text-label-sm uppercase tracking-widest mt-1">Weld Inspection</div>
+            </div>
+            <div class="bg-white/10 border border-white/20 px-8 py-6 text-center fade-up fade-up-2">
+              <div class="font-headline-md text-headline-md text-on-tertiary-container font-bold">IS / AWS</div>
+              <div class="font-label-sm text-label-sm uppercase tracking-widest mt-1">Code Compliance</div>
+            </div>
+            <div class="bg-white/10 border border-white/20 px-8 py-6 text-center fade-up fade-up-3">
+              <div class="font-headline-md text-headline-md text-on-tertiary-container font-bold">NDT</div>
+              <div class="font-label-sm text-label-sm uppercase tracking-widest mt-1">Tested Welds</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section id="quality-control-details" class="py-24 max-w-container-max mx-auto px-margin-desktop">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+
+        <!-- Main Document -->
+        <div class="lg:col-span-8 space-y-8">
+
+          <!-- Meta banner -->
+          <div class="bg-surface-container border border-outline-variant px-6 py-3 flex flex-wrap items-center justify-between gap-4">
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Effective Date: <strong class="text-on-surface">July 2025</strong></span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Ref: <strong class="text-on-surface">SJC/QA/POL-01</strong></span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Review: <strong class="text-on-surface">Annual</strong></span>
+          </div>
+
+          <!-- Section 1: Commitment to Precision -->
+          <div class="policy-card bg-white border border-outline-variant p-8 md:p-12 shadow-sm space-y-5">
+            <div class="flex items-center gap-4 mb-2">
+              <div class="w-12 h-12 bg-primary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>workspace_premium</span>
+              </div>
+              <div>
+                <span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-widest">Section 1</span>
+                <h2 class="font-headline-md text-headline-md text-primary">Commitment to Precision</h2>
+              </div>
+            </div>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">
+              At Shreeji Construction, quality is not an audit function — it is a foundational engineering discipline embedded at every stage of our project lifecycle. We are unequivocally committed to delivering structural and fabrication work that conforms to the technical specifications, dimensional tolerances, and material standards agreed upon with our industrial partners.
+            </p>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">
+              Our Quality Assurance (QA) and Quality Control (QC) framework applies to all project scopes — from raw material procurement and structural fabrication through to erection, alignment, and final handover. No component leaves our fabrication bay without satisfying the applicable acceptance criteria.
+            </p>
+            <ul class="space-y-3 pt-2">
+              <li class="flex items-start gap-3 font-body-md text-on-surface-variant">
+                <span class="material-symbols-outlined text-on-tertiary-container text-lg mt-0.5 shrink-0">check_circle</span>
+                Compliance with IS 2062, IS 800 (structural steel), and applicable AWS D1.1 welding codes.
+              </li>
+              <li class="flex items-start gap-3 font-body-md text-on-surface-variant">
+                <span class="material-symbols-outlined text-on-tertiary-container text-lg mt-0.5 shrink-0">check_circle</span>
+                Material test certificates (MTCs) verified and retained for every steel consignment received on-site.
+              </li>
+              <li class="flex items-start gap-3 font-body-md text-on-surface-variant">
+                <span class="material-symbols-outlined text-on-tertiary-container text-lg mt-0.5 shrink-0">check_circle</span>
+                Senior QC Engineers assigned to each project for independent oversight and approval authority.
+              </li>
+              <li class="flex items-start gap-3 font-body-md text-on-surface-variant">
+                <span class="material-symbols-outlined text-on-tertiary-container text-lg mt-0.5 shrink-0">check_circle</span>
+                Client and third-party inspector access facilitated at all stages of fabrication and erection.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Section 2: Inspection Protocols -->
+          <div class="policy-card bg-white border border-outline-variant p-8 md:p-12 shadow-sm space-y-5">
+            <div class="flex items-center gap-4 mb-2">
+              <div class="w-12 h-12 bg-primary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>fact_check</span>
+              </div>
+              <div>
+                <span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-widest">Section 2</span>
+                <h2 class="font-headline-md text-headline-md text-primary">Inspection Protocols</h2>
+              </div>
+            </div>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">
+              Shreeji Construction enforces a multi-stage inspection regime across the full fabrication and erection cycle. Inspection hold points and witness points are formally scheduled and logged, ensuring that no work proceeds past a critical stage without approved sign-off.
+            </p>
+
+            <!-- Inspection Phase Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-0 border border-outline-variant mt-4">
+              <div class="p-6 border-r border-b border-outline-variant space-y-3">
+                <div class="flex items-center gap-2 text-on-tertiary-container font-label-md uppercase tracking-widest text-label-md">
+                  <span class="material-symbols-outlined text-base" style='font-variation-settings:"FILL" 1;'>inventory_2</span> Incoming Material
+                </div>
+                <ul class="space-y-2 font-label-sm text-label-sm text-on-surface-variant">
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Visual inspection &amp; dimensional verification</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>MTC / Mill Certificate review &amp; archival</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Heat number traceability logging</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Non-conformance tagging &amp; quarantine</li>
+                </ul>
+              </div>
+              <div class="p-6 border-b border-outline-variant space-y-3 bg-surface-container-low">
+                <div class="flex items-center gap-2 text-on-tertiary-container font-label-md uppercase tracking-widest text-label-md">
+                  <span class="material-symbols-outlined text-base" style='font-variation-settings:"FILL" 1;'>hardware</span> Fabrication Stage
+                </div>
+                <ul class="space-y-2 font-label-sm text-label-sm text-on-surface-variant">
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Weld qualification &amp; welder certification records</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Fit-up inspection prior to welding</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Visual Weld Examination (VWE) per AWS D1.1</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Dimensional check against approved GA drawings</li>
+                </ul>
+              </div>
+              <div class="p-6 border-r border-outline-variant space-y-3">
+                <div class="flex items-center gap-2 text-on-tertiary-container font-label-md uppercase tracking-widest text-label-md">
+                  <span class="material-symbols-outlined text-base" style='font-variation-settings:"FILL" 1;'>biotech</span> NDT Testing
+                </div>
+                <ul class="space-y-2 font-label-sm text-label-sm text-on-surface-variant">
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Ultrasonic Testing (UT) for butt welds</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Magnetic Particle Testing (MPT) for fillet welds</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Dye Penetrant Testing (DPT) where specified</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Radiographic Testing (RT) for pressure-rated joints</li>
+                </ul>
+              </div>
+              <div class="p-6 space-y-3 bg-surface-container-low">
+                <div class="flex items-center gap-2 text-on-tertiary-container font-label-md uppercase tracking-widest text-label-md">
+                  <span class="material-symbols-outlined text-base" style='font-variation-settings:"FILL" 1;'>domain_verification</span> Erection &amp; Handover
+                </div>
+                <ul class="space-y-2 font-label-sm text-label-sm text-on-surface-variant">
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Alignment &amp; plumb checks using survey instruments</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Bolt torquing verification &amp; punch-list clearance</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Final as-built dimensional survey</li>
+                  <li class="flex gap-2 items-start"><span class="material-symbols-outlined text-sm text-on-tertiary-container mt-0.5">arrow_right</span>Client joint-inspection &amp; formal sign-off</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-primary/5 border-l-4 border-on-tertiary-container px-6 py-4 mt-2">
+              <p class="font-label-sm text-label-sm text-on-surface-variant"><strong class="text-on-surface">Hold Points &amp; Witness Points</strong> are formally defined in the project-specific Inspection and Test Plan (ITP), which is issued to and acknowledged by the client before fabrication commences.</p>
+            </div>
+          </div>
+
+          <!-- Section 3: Documentation -->
+          <div class="policy-card bg-white border border-outline-variant p-8 md:p-12 shadow-sm space-y-5">
+            <div class="flex items-center gap-4 mb-2">
+              <div class="w-12 h-12 bg-primary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>folder_open</span>
+              </div>
+              <div>
+                <span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-widest">Section 3</span>
+                <h2 class="font-headline-md text-headline-md text-primary">Documentation &amp; Traceability</h2>
+              </div>
+            </div>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">
+              Complete, auditable quality documentation is maintained for every project from the issue of the purchase order through to project close-out. All quality records are prepared, reviewed, and retained in a structured Document Control system, available for client audit at any time during or after project execution.
+            </p>
+
+            <!-- Document type badge grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-4">
+              <div class="qc-badge bg-surface-container border border-outline-variant p-4 text-center space-y-2 cursor-default">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>assignment</span>
+                <div class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">Inspection &amp; Test Plan</div>
+                <div class="font-label-sm text-[10px] text-on-surface-variant">ITP per Project</div>
+              </div>
+              <div class="qc-badge bg-surface-container border border-outline-variant p-4 text-center space-y-2 cursor-default">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>lab_research</span>
+                <div class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">Material Test Certs</div>
+                <div class="font-label-sm text-[10px] text-on-surface-variant">MTCs / Mill Certs</div>
+              </div>
+              <div class="qc-badge bg-surface-container border border-outline-variant p-4 text-center space-y-2 cursor-default">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>badge</span>
+                <div class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">Welder Qualifications</div>
+                <div class="font-label-sm text-[10px] text-on-surface-variant">WPS / PQR Records</div>
+              </div>
+              <div class="qc-badge bg-surface-container border border-outline-variant p-4 text-center space-y-2 cursor-default">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>query_stats</span>
+                <div class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">NDT Reports</div>
+                <div class="font-label-sm text-[10px] text-on-surface-variant">UT / MPT / DPT / RT</div>
+              </div>
+              <div class="qc-badge bg-surface-container border border-outline-variant p-4 text-center space-y-2 cursor-default">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>straighten</span>
+                <div class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">Dimensional Reports</div>
+                <div class="font-label-sm text-[10px] text-on-surface-variant">As-Built Surveys</div>
+              </div>
+              <div class="qc-badge bg-surface-container border border-outline-variant p-4 text-center space-y-2 cursor-default">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>task_alt</span>
+                <div class="font-label-sm text-label-sm text-on-surface uppercase tracking-wide">NCR &amp; Close-Out</div>
+                <div class="font-label-sm text-[10px] text-on-surface-variant">Non-Conformance Log</div>
+              </div>
+            </div>
+
+            <div class="space-y-4 pt-2">
+              <div class="flex items-start gap-4 p-5 border border-outline-variant bg-surface-container-low">
+                <span class="material-symbols-outlined text-on-tertiary-container text-2xl shrink-0 mt-0.5" style='font-variation-settings:"FILL" 1;'>security</span>
+                <div>
+                  <div class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-1">Document Retention Policy</div>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">All quality records are retained for a minimum of <strong class="text-on-surface">5 years</strong> post project completion and are available for client or third-party audit upon written request. Records are maintained in both digital and hard-copy format as applicable.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 p-5 border border-outline-variant bg-surface-container-low">
+                <span class="material-symbols-outlined text-on-tertiary-container text-2xl shrink-0 mt-0.5" style='font-variation-settings:"FILL" 1;'>manage_search</span>
+                <div>
+                  <div class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-1">Non-Conformance Management</div>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">Any deviation from specified requirements is documented in a formal <strong class="text-on-surface">Non-Conformance Report (NCR)</strong>. Each NCR is reviewed by the QC Engineer, dispositioned with a corrective action plan, and closed only after verified rework acceptance.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 4: Continuous Improvement -->
+          <div class="policy-card bg-white border border-outline-variant p-8 md:p-12 shadow-sm space-y-5">
+            <div class="flex items-center gap-4 mb-2">
+              <div class="w-12 h-12 bg-primary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>autorenew</span>
+              </div>
+              <div>
+                <span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-widest">Section 4</span>
+                <h2 class="font-headline-md text-headline-md text-primary">Continuous Improvement</h2>
+              </div>
+            </div>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">
+              Shreeji Construction operates under a culture of structured, evidence-based improvement. Quality performance data gathered across all concurrent projects is systematically reviewed to identify trends, root causes, and opportunities to raise our engineering standards project after project.
+            </p>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">
+              Our improvement process follows a structured Plan–Do–Check–Act (PDCA) cycle, applied at the project level and reinforced by periodic management reviews.
+            </p>
+
+            <!-- PDCA Steps -->
+            <div class="space-y-0 border border-outline-variant divide-y divide-outline-variant mt-4">
+              <div class="flex items-start gap-6 p-6 bg-surface-container-low">
+                <div class="w-10 h-10 bg-on-tertiary-container text-white flex items-center justify-center font-label-md text-label-md font-bold shrink-0 uppercase tracking-widest text-xs">Plan</div>
+                <div>
+                  <div class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-1">Pre-Project Quality Planning</div>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">A project-specific Quality Plan and ITP is issued for every contract. Lessons learned from prior projects are formally embedded into procedures before works commence.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-6 p-6">
+                <div class="w-10 h-10 bg-on-tertiary-container text-white flex items-center justify-center font-label-md text-label-md font-bold shrink-0 uppercase tracking-widest text-xs">Do</div>
+                <div>
+                  <div class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-1">Execution with Built-In Quality Gates</div>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">Inspection hold points, witness points, and daily QC supervisor rounds ensure quality is verified in real time during fabrication and erection — not retrospectively.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-6 p-6 bg-surface-container-low">
+                <div class="w-10 h-10 bg-on-tertiary-container text-white flex items-center justify-center font-label-md text-label-md font-bold shrink-0 uppercase tracking-widest text-xs">Check</div>
+                <div>
+                  <div class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-1">Performance Monitoring &amp; NCR Analysis</div>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">NCR frequency, weld rejection rates, and rework hours are tracked per project. Monthly QC performance reports are prepared and reviewed by senior management and shared with clients on request.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-6 p-6">
+                <div class="w-10 h-10 bg-on-tertiary-container text-white flex items-center justify-center font-label-md text-label-md font-bold shrink-0 uppercase tracking-widest text-xs">Act</div>
+                <div>
+                  <div class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-1">Corrective &amp; Preventive Actions</div>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">Root cause analysis is conducted for all significant non-conformances. Corrective and Preventive Actions (CAPAs) are formally documented, assigned, and verified for effectiveness before closure.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Improvement Initiatives -->
+            <div class="bg-primary/5 border-l-4 border-on-tertiary-container px-6 py-4 mt-2">
+              <p class="font-label-sm text-label-sm text-on-surface-variant"><strong class="text-on-surface">Welder Skill Enhancement Programme:</strong> All welders undergo periodic re-qualification and guided upskilling to maintain and advance their certification grades, directly reducing weld rejection rates across our projects.</p>
+            </div>
+          </div>
+
+          <!-- Contact / Queries -->
+          <div class="policy-card bg-primary text-white border border-primary p-8 md:p-12 shadow-sm space-y-5">
+            <div class="flex items-center gap-4 mb-2">
+              <div class="w-12 h-12 bg-on-tertiary-container flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl text-white" style='font-variation-settings:"FILL" 1;'>contact_support</span>
+              </div>
+              <div>
+                <span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-widest">Quality Queries</span>
+                <h2 class="font-headline-md text-headline-md text-white">Partner with Us on Quality</h2>
+              </div>
+            </div>
+            <p class="font-body-md text-surface-variant leading-relaxed">For client-specific QA/QC requirements, requests for project documentation, or to discuss our quality framework in the context of your upcoming project, please reach out to our engineering team directly.</p>
+            <div class="pt-2">
+              <a id="qc-contact-email" class="inline-flex items-center gap-3 bg-on-tertiary-container text-white px-8 py-4 font-label-md text-label-md uppercase tracking-wider hover:brightness-110 transition-all" href="mailto:shreejiconstruction2007@zohomail.in">
+                <span class="material-symbols-outlined text-xl">mail</span>
+                shreejiconstruction2007@zohomail.in
+              </a>
+            </div>
+            <p class="font-label-sm text-label-sm text-surface-variant/70 pt-2">All quality-related communications are acknowledged within 2 working days by our senior QC team.</p>
+          </div>
+
+        </div><!-- /main col -->
+
+        <!-- Sidebar -->
+        <aside class="lg:col-span-4 space-y-8 lg:sticky lg:top-28">
+
+          <!-- Quick Nav -->
+          <div class="border border-outline-variant p-8 bg-white shadow-sm">
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-6 pb-4 border-b border-outline-variant">Document Sections</h3>
+            <nav class="flex flex-col gap-3">
+              <a href="#" class="qc-nav-link flex items-center gap-3 text-on-surface-variant hover:text-on-tertiary-container transition-colors font-label-sm text-label-sm group" data-index="0">
+                <span class="material-symbols-outlined text-base">workspace_premium</span> Commitment to Precision
+              </a>
+              <a href="#" class="qc-nav-link flex items-center gap-3 text-on-surface-variant hover:text-on-tertiary-container transition-colors font-label-sm text-label-sm group" data-index="1">
+                <span class="material-symbols-outlined text-base">fact_check</span> Inspection Protocols
+              </a>
+              <a href="#" class="qc-nav-link flex items-center gap-3 text-on-surface-variant hover:text-on-tertiary-container transition-colors font-label-sm text-label-sm group" data-index="2">
+                <span class="material-symbols-outlined text-base">folder_open</span> Documentation &amp; Traceability
+              </a>
+              <a href="#" class="qc-nav-link flex items-center gap-3 text-on-surface-variant hover:text-on-tertiary-container transition-colors font-label-sm text-label-sm group" data-index="3">
+                <span class="material-symbols-outlined text-base">autorenew</span> Continuous Improvement
+              </a>
+              <a href="#" class="qc-nav-link flex items-center gap-3 text-on-surface-variant hover:text-on-tertiary-container transition-colors font-label-sm text-label-sm group" data-index="4">
+                <span class="material-symbols-outlined text-base">contact_support</span> Contact Our QC Team
+              </a>
+            </nav>
+          </div>
+
+          <!-- Standards Ref Box -->
+          <div class="border border-outline-variant p-8 bg-white shadow-sm space-y-4">
+            <h3 class="font-label-md text-label-md text-primary uppercase tracking-widest mb-2">Standards Observed</h3>
+            <div class="space-y-3">
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">verified</span>
+                <div>
+                  <div class="font-label-sm text-label-sm text-on-surface font-bold">IS 800 : 2007</div>
+                  <div class="font-label-sm text-[11px] text-on-surface-variant">General Construction in Steel</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">verified</span>
+                <div>
+                  <div class="font-label-sm text-label-sm text-on-surface font-bold">IS 2062 : 2011</div>
+                  <div class="font-label-sm text-[11px] text-on-surface-variant">Hot Rolled Structural Steel</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">verified</span>
+                <div>
+                  <div class="font-label-sm text-label-sm text-on-surface font-bold">AWS D1.1</div>
+                  <div class="font-label-sm text-[11px] text-on-surface-variant">Structural Welding Code — Steel</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">verified</span>
+                <div>
+                  <div class="font-label-sm text-label-sm text-on-surface font-bold">ASME Section IX</div>
+                  <div class="font-label-sm text-[11px] text-on-surface-variant">Welding &amp; Brazing Qualifications</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">verified</span>
+                <div>
+                  <div class="font-label-sm text-label-sm text-on-surface font-bold">IS 7307 / IS 817</div>
+                  <div class="font-label-sm text-[11px] text-on-surface-variant">Welder Qualification Standards</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Zero Defect Callout -->
+          <div class="bg-primary text-white p-8 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-3xl text-on-tertiary-container" style='font-variation-settings:"FILL" 1;'>verified</span>
+              <div class="font-headline-sm text-headline-sm text-white">Zero-Defect Ambition</div>
+            </div>
+            <p class="font-body-md text-surface-variant leading-relaxed text-sm">Our quality team operates with one benchmark: every structure delivered must perform flawlessly over its entire service life. Rework is treated as a learning event, not an acceptable operational cost.</p>
+          </div>
+
+          <!-- Related links -->
+          <div class="border border-outline-variant p-8 bg-white shadow-sm">
+            <h3 class="font-label-md text-label-md text-primary uppercase tracking-widest mb-6">Related Documents</h3>
+            <div class="flex flex-col gap-3">
+              <a href="safety_policy.html" class="flex items-center gap-2 text-on-surface-variant hover:text-on-tertiary-container font-label-sm text-label-sm transition-colors">
+                <span class="material-symbols-outlined text-base">arrow_forward</span> Safety Policy
+              </a>
+              <a href="compliance.html" class="flex items-center gap-2 text-on-surface-variant hover:text-on-tertiary-container font-label-sm text-label-sm transition-colors">
+                <span class="material-symbols-outlined text-base">arrow_forward</span> MSME Compliance
+              </a>
+              <a href="services.html" class="flex items-center gap-2 text-on-surface-variant hover:text-on-tertiary-container font-label-sm text-label-sm transition-colors">
+                <span class="material-symbols-outlined text-base">arrow_forward</span> Services &amp; Capabilities
+              </a>
+              <a href="contact.html" class="flex items-center gap-2 text-on-surface-variant hover:text-on-tertiary-container font-label-sm text-label-sm transition-colors">
+                <span class="material-symbols-outlined text-base">arrow_forward</span> Contact Us
+              </a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary border-t-4 border-on-tertiary-container mt-24">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-margin-desktop py-20 max-w-container-max mx-auto items-start text-white">
+      <!-- Centered Company Name Branding -->
+      <div class="space-y-6 flex flex-col items-center justify-center text-center">
+        <img alt="Shreeji Construction Logo" class="h-12 w-auto object-contain mb-2" src="images/logo.png"/>
+        <span class="block font-headline-sm text-surface-bright uppercase font-bold text-2xl tracking-widest leading-none">SHREEJI</span>
+        <span class="block font-headline-sm text-on-tertiary-container uppercase font-bold text-2xl tracking-widest leading-none">CONSTRUCTION</span>
+        <p class="font-label-sm text-label-sm text-outline-variant leading-relaxed mt-4 max-w-xs">Strength Delivered, Precision Built. Building India's industrial backbone since 2007.</p>
+      </div>
+
+      <!-- CORPORATE HEADQUARTERS Section -->
+      <div class="space-y-6">
+        <h4 class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold border-b border-outline-variant/30 pb-2">CORPORATE HEADQUARTERS</h4>
+        <div class="text-outline-variant font-label-sm text-label-sm space-y-3 text-left">
+          <p class="leading-relaxed">R.S No - 471/2-3-4, Plot No 855/A to B-859/7, Shivay Bungalow, Sardar Patel Institute Road, Kaliya Bid, Bhavnagar - 346002, Gujarat, India</p>
+          <div class="pt-2 flex flex-col gap-2">
+            <a class="text-surface-bright font-bold hover:text-tertiary-fixed transition-colors flex items-center gap-2" href="tel:+919687375151">📱 +91-9687375151</a>
+            <a class="text-surface-bright font-bold hover:text-tertiary-fixed transition-colors flex items-center gap-2" href="mailto:shreejiconstruction2007@zohomail.in">✉ shreejiconstruction2007@zohomail.in</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPLIANCE Section -->
+      <div class="space-y-6">
+        <h4 class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold border-b border-outline-variant/30 pb-2">COMPLIANCE</h4>
+        <div class="flex flex-col gap-4">
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="https://udyamregistration.gov.in/" target="_blank" rel="noopener noreferrer">MSME Certified</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="https://services.gst.gov.in/services/searchtp" target="_blank" rel="noopener noreferrer">GST Registered</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm cursor-pointer" onclick="openComplianceModal('pf')">PF &amp; ESI Compliant</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm cursor-pointer" onclick="openComplianceModal('safety')">Safety Standards</a>
+        </div>
+      </div>
+
+      <!-- QUICK LINKS Section -->
+      <div class="space-y-6">
+        <h4 class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold border-b border-outline-variant/30 pb-2">QUICK LINKS</h4>
+        <div class="flex flex-col gap-4">
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="index.html">Home</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="who_we_are.html">Who We Are</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="services.html">Services</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="manpower.html">Manpower</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="compliance.html#compliance-details">MSME Compliance</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="safety_policy.html#safety-policy-details">Safety Policy</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="quality_control.html#quality-control-details">Quality Control</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="project_gallery.html">Project Gallery</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-outline-variant/20 py-8 px-margin-desktop max-w-container-max mx-auto text-center">
+      <p class="font-label-sm text-label-sm text-outline-variant opacity-60">© 2024 Shreeji Construction. Precision in Fabrication &amp; Erection and Manpower Supplier. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu -->
+  <div class="fixed inset-0 z-50 bg-primary/95 backdrop-blur-md flex flex-col justify-center items-center gap-8 text-white transition-all duration-300 transform translate-x-full lg:hidden" id="mobileMenu">
+    <button class="absolute top-6 right-6 text-white focus:outline-none" id="closeMobileMenu">
+      <span class="material-symbols-outlined text-4xl">close</span>
+    </button>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="index.html">Home</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="who_we_are.html">Who We Are</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="services.html">Services</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="manpower.html">Manpower</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="compliance.html">Compliance</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="contact.html">Contact</a>
+    <button class="bg-on-tertiary-container text-white px-8 py-4 font-label-md uppercase font-bold tracking-widest mt-4" onclick="location.href='contact.html'">Request Quote</button>
+  </div>
+
+  <script id="mobile-menu-script">
+    (function () {
+      const btn = document.getElementById('mobileMenuBtn');
+      const close = document.getElementById('closeMobileMenu');
+      const menu = document.getElementById('mobileMenu');
+      if (btn && menu) btn.addEventListener('click', () => menu.classList.remove('translate-x-full'));
+      if (close && menu) close.addEventListener('click', () => menu.classList.add('translate-x-full'));
+    })();
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.policy-card');
+      document.querySelectorAll('.qc-nav-link').forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const idx = parseInt(link.dataset.index);
+          if (cards[idx]) cards[idx].scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    });
+  </script>
+
+  <!-- Compliance Modal -->
+  <div id="complianceModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/60 backdrop-blur-sm">
+    <div class="bg-surface border border-outline-variant max-w-lg w-full mx-4 p-8 relative shadow-2xl">
+      <button class="absolute top-4 right-4 text-secondary hover:text-primary focus:outline-none" onclick="closeModal()">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+      <div id="complianceModalContent" class="text-on-surface"></div>
+    </div>
+  </div>
+  <script>
+    function openComplianceModal(type) {
+      const modal = document.getElementById('complianceModal');
+      const content = document.getElementById('complianceModalContent');
+      if (!modal || !content) return;
+      let html = '';
+      if (type === 'pf') {
+        html = `<div class="flex items-center gap-3 mb-6 text-primary"><span class="material-symbols-outlined text-3xl text-on-tertiary-container">verified_user</span><h3 class="font-headline-sm text-headline-sm font-bold uppercase tracking-tight">PF &amp; ESI Compliance</h3></div><div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed text-left"><p><strong>Shreeji Construction</strong> is fully registered with EPFO and ESIC.</p><p>We adhere to the <em>Employees' PF and Miscellaneous Provisions Act, 1952</em> and <em>ESI Act, 1948</em>.</p></div><div class="mt-8 flex justify-end"><button onclick="closeModal()" class="bg-primary text-white px-6 py-2.5 font-label-md uppercase tracking-wider text-sm hover:bg-on-tertiary-container transition-colors">Close</button></div>`;
+      } else if (type === 'safety') {
+        html = `<div class="flex items-center gap-3 mb-6 text-primary"><span class="material-symbols-outlined text-3xl text-on-tertiary-container">security</span><h3 class="font-headline-sm text-headline-sm font-bold uppercase tracking-tight">Safety Standards</h3></div><div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed text-left"><p>Zero-incident safety culture aligned to <em>Factories Act, 1948</em> and <em>BOCW Act, 1996</em>.</p><p>Daily TBT, HIRA, JSA — all field personnel use BIS-certified PPE.</p></div><div class="mt-8 flex justify-end"><button onclick="closeModal()" class="bg-primary text-white px-6 py-2.5 font-label-md uppercase tracking-wider text-sm hover:bg-on-tertiary-container transition-colors">Close</button></div>`;
+      } else if (type === 'terms') {
+        html = `<div class="flex items-center gap-3 mb-6 text-primary"><span class="material-symbols-outlined text-3xl text-on-tertiary-container">description</span><h3 class="font-headline-sm text-headline-sm font-bold uppercase tracking-tight">Terms of Service</h3></div><div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed text-left max-h-[350px] overflow-y-auto pr-2"><p><strong>1. Service Scope</strong><br>Integrated industrial solutions — workforce supply and structural engineering.</p><p><strong>2. Compliance</strong><br>Full GST, Labour Law, MSME, PF &amp; ESI compliance.</p><p><strong>3. Safety &amp; Quality</strong><br>Rigorous protocols across all sites.</p><p><strong>4. Confidentiality</strong><br>All client data treated with the highest confidentiality.</p></div><div class="mt-8 flex justify-end"><button onclick="closeModal()" class="bg-primary text-white px-6 py-2.5 font-label-md uppercase tracking-wider text-sm hover:bg-on-tertiary-container transition-colors">Close</button></div>`;
+      }
+      content.innerHTML = html;
+      modal.classList.remove('hidden');
+    }
+    function closeModal() {
+      const modal = document.getElementById('complianceModal');
+      if (modal) modal.classList.add('hidden');
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('complianceModal');
+      if (modal) modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+    });
+  </script>
+
+</body>
+</html>

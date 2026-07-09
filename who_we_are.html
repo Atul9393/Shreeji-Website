@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
+<html class="light" lang="en">
+<head>
+<title>Who We Are | Shreeji Construction</title>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Work+Sans:wght@400;500&amp;family=IBM+Plex+Sans:wght@500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
@@ -110,34 +112,31 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script></head>
 <body class="bg-background text-on-surface font-body-md industrial-pattern min-h-screen">
 <!-- Standardized TopNavBar -->
-<nav class="bg-surface top-0 sticky z-50 border-b border-outline-variant">
-<div class="max-w-container-max mx-auto px-margin-desktop py-4 flex items-center">
-<!-- Brand Left -->
-
-<a class="flex items-center gap-3 shrink-0" href="index.html">
-<img alt="Shreeji Construction Logo" class="h-12 w-auto object-contain" src="images/logo.png"/>
-<div class="flex flex-col justify-center">
-<span class="font-headline-sm text-[18px] lg:text-[20px] leading-tight font-bold text-primary tracking-tighter uppercase">SHREEJI CONSTRUCTION</span>
-<span class="font-label-sm text-[10px] lg:text-[11px] leading-tight text-on-tertiary-container tracking-widest font-semibold uppercase">Strength Delivered, Precision Built</span>
-</div>
-</a>
-
-<!-- Navigation Links Middle-Right -->
-<div class="flex-grow flex justify-end items-center mr-8">
-<div class="hidden lg:flex items-center gap-6">
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors" href="index.html">Home</a>
-<a class="font-label-md text-label-md text-on-tertiary-container font-bold border-b-2 border-on-tertiary-container" href="who_we_are.html">Who We Are</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors" href="services.html">Services</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors" href="manpower.html">Manpower</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors" href="compliance.html">Compliance</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors" href="contact.html">Contact</a>
-</div>
-</div>
-<!-- CTA Far Right -->
-<button class="bg-primary text-on-primary px-6 py-3 font-label-md text-label-md font-bold uppercase tracking-wider transition-all active:scale-95 whitespace-nowrap" onclick="location.href='contact.html'">Request Quote</button>
-<button class="lg:hidden ml-4 text-primary focus:outline-none" id="mobileMenuBtn">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
+<nav class="w-full sticky top-0 z-50 bg-surface border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-margin-desktop py-0 max-w-container-max mx-auto h-20">
+  <a class="flex items-center gap-2.5 shrink-0" href="index.html">
+    <img alt="Shreeji Construction Logo" class="h-10 w-auto object-contain" src="images/logo.png"/>
+    <div class="flex flex-col justify-center -space-y-0.5">
+      <span class="font-headline-sm text-[17px] lg:text-[19px] leading-tight font-bold text-primary tracking-tighter uppercase">SHREEJI CONSTRUCTION</span>
+      <span class="font-label-sm text-[9px] lg:text-[10px] leading-none text-on-tertiary-container tracking-widest font-bold uppercase">STRENGTH DELIVERED, PRECISION BUILT</span>
+    </div>
+  </a>
+  <div class="flex items-center h-full">
+    <div class="hidden lg:flex items-center gap-6 lg:gap-8 mr-8">
+      <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="index.html">Home</a>
+      <a class="font-label-md text-label-md text-on-tertiary-container font-bold border-b-2 border-on-tertiary-container py-1" href="who_we_are.html">Who We Are</a>
+      <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="services.html">Services</a>
+      <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="manpower.html">Manpower</a>
+      <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="compliance.html">Compliance</a>
+      <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="contact.html">Contact</a>
+    </div>
+    <button class="bg-primary text-white py-3 px-6 font-label-md text-label-md uppercase tracking-wider hover:bg-on-tertiary-container hover:text-white transition-all font-bold hidden sm:block whitespace-nowrap" onclick="location.href='contact.html'">
+      REQUEST QUOTE
+    </button>
+  </div>
+  <button class="lg:hidden ml-4 text-primary focus:outline-none" id="mobileMenuBtn">
+    <span class="material-symbols-outlined text-3xl">menu</span>
+  </button>
 </div>
 </nav>
 <main class="max-w-container-max mx-auto px-margin-desktop">
@@ -171,7 +170,7 @@
 <p class="font-label-sm text-label-sm text-outline leading-relaxed">Skilled technicians, engineers, and certified specialists.</p>
 </div>
 <div class="md:col-span-2 p-12 bg-primary text-on-primary flex flex-col justify-center items-center text-center space-y-6">
-<h3 class="font-headline-md text-headline-md leading-snug">Operational Excellence Across 15+ Major Projects Yearly.</h3>
+<h3 class="font-headline-md text-headline-md leading-snug">Operational Excellence Across 5+ Major Projects Yearly.</h3>
 <div class="h-1.5 bg-on-tertiary-container w-24"></div>
 <p class="font-body-md text-body-md text-outline-variant max-w-md">Our institutional trust is built on a foundation of rigorous safety standards and punctual delivery schedules.</p>
 </div>
@@ -275,51 +274,65 @@
 <div class="font-headline-sm text-[18px] text-primary font-bold">GST COMPLIANT SINCE INCEPTION</div>
 </div>
 <div class="space-y-3">
-<div class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Headquarters</div>
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-widest">CORPORATE HEADQUARTERS</div>
 <div class="font-headline-sm text-[18px] text-primary font-bold">BHAVNAGAR, GUJARAT, INDIA</div>
 </div>
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="bg-primary text-on-primary border-t-4 border-on-tertiary-container mt-24">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto">
-<div class="space-y-6">
-<div class="font-headline-sm text-headline-sm text-surface-bright uppercase">SHREEJI CONSTRUCTION</div>
-<p class="font-label-sm text-label-sm text-outline-variant leading-relaxed">Providing structural excellence since 2007. Precision in every weld, reliability in every structure and manpower supplier.</p>
-</div>
-<div class="space-y-4">
-<h4 class="font-label-md text-label-md font-bold uppercase text-surface-bright tracking-widest">Corporate Info</h4>
-<nav class="flex flex-col gap-3">
-<div class="font-label-sm text-label-sm text-outline-variant">Plot No 855/859, Shivay Bungalow, Bhavnagar, Gujarat, India </div>
-<a class="font-label-sm text-label-sm text-outline-variant hover:text-tertiary-fixed transition-colors" href="tel:+919687375151">+91-9687375151</a>
-<a class="font-label-sm text-label-sm text-outline-variant hover:text-tertiary-fixed transition-colors" href="mailto:shreejiconstruction2007@zohomail.in">shreejiconstruction2007@zohomail.in</a>
-</nav>
-</div>
-<div class="space-y-4">
-<h4 class="font-label-md text-label-md font-bold uppercase text-surface-bright tracking-widest">Compliance</h4>
-<nav class="flex flex-col gap-2">
-<div class="font-label-sm text-label-sm text-outline-variant">MSME Certified</div>
-<div class="font-label-sm text-label-sm text-outline-variant">GST Registered</div>
-<div class="font-label-sm text-label-sm text-outline-variant">PF &amp; ESI Registered</div>
-<a class="font-label-sm text-label-sm text-outline-variant hover:text-tertiary-fixed transition-colors" href="#">Terms of Service</a>
-</nav>
-</div>
-<div class="space-y-6">
-<h4 class="font-label-md text-label-md font-bold uppercase text-surface-bright tracking-widest">Global Standards</h4>
-<div class="flex gap-4">
-<div class="w-12 h-12 bg-on-primary-fixed-variant border border-outline flex items-center justify-center font-bold text-xs">ISO</div>
-<div class="w-12 h-12 bg-on-primary-fixed-variant border border-outline flex items-center justify-center font-bold text-xs">TUV</div>
-</div>
-</div>
-</div>
-<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-on-primary-fixed-variant flex flex-col md:flex-row justify-between items-center opacity-60">
-<div class="font-label-sm text-label-sm">© 2024 Shreeji Construction. Precision in Fabrication &amp; Erection and Manpower Supplier.</div>
-<div class="font-label-sm text-label-sm flex gap-4">
-<span class="">CIN: L45200</span>
-</div>
-</div>
-</footer>
+  <!-- Footer -->
+  <footer class="bg-primary border-t-4 border-on-tertiary-container mt-24">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-margin-desktop py-20 max-w-container-max mx-auto items-start text-white">
+      <!-- Centered Company Name Branding -->
+      <div class="space-y-6 flex flex-col items-center justify-center text-center">
+        <img alt="Shreeji Construction Logo" class="h-12 w-auto object-contain mb-2" src="images/logo.png"/>
+        <span class="block font-headline-sm text-surface-bright uppercase font-bold text-2xl tracking-widest leading-none">SHREEJI</span>
+        <span class="block font-headline-sm text-on-tertiary-container uppercase font-bold text-2xl tracking-widest leading-none">CONSTRUCTION</span>
+        <p class="font-label-sm text-label-sm text-outline-variant leading-relaxed mt-4 max-w-xs">Strength Delivered, Precision Built. Building India's industrial backbone since 2007.</p>
+      </div>
+
+      <!-- CORPORATE HEADQUARTERS Section -->
+      <div class="space-y-6">
+        <h4 class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold border-b border-outline-variant/30 pb-2">CORPORATE HEADQUARTERS</h4>
+        <div class="text-outline-variant font-label-sm text-label-sm space-y-3 text-left">
+          <p class="leading-relaxed">R.S No - 471/2-3-4, Plot No 855/A to B-859/7, Shivay Bungalow, Sardar Patel Institute Road, Kaliya Bid, Bhavnagar - 346002, Gujarat, India</p>
+          <div class="pt-2 flex flex-col gap-2">
+            <a class="text-surface-bright font-bold hover:text-tertiary-fixed transition-colors flex items-center gap-2" href="tel:+919687375151">📱 +91-9687375151</a>
+            <a class="text-surface-bright font-bold hover:text-tertiary-fixed transition-colors flex items-center gap-2" href="mailto:shreejiconstruction2007@zohomail.in">✉ shreejiconstruction2007@zohomail.in</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPLIANCE Section -->
+      <div class="space-y-6">
+        <h4 class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold border-b border-outline-variant/30 pb-2">COMPLIANCE</h4>
+        <div class="flex flex-col gap-4">
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="https://udyamregistration.gov.in/" target="_blank" rel="noopener noreferrer">MSME Certified</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="https://services.gst.gov.in/services/searchtp" target="_blank" rel="noopener noreferrer">GST Registered</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm cursor-pointer" onclick="openComplianceModal('pf')">PF &amp; ESI Compliant</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm cursor-pointer" onclick="openComplianceModal('safety')">Safety Standards</a>
+        </div>
+      </div>
+
+      <!-- QUICK LINKS Section -->
+      <div class="space-y-6">
+        <h4 class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold border-b border-outline-variant/30 pb-2">QUICK LINKS</h4>
+        <div class="flex flex-col gap-4">
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="index.html">Home</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="who_we_are.html">Who We Are</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="services.html">Services</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="manpower.html">Manpower</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="compliance.html#compliance-details">MSME Compliance</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="safety_policy.html#safety-policy-details">Safety Policy</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="quality_control.html#quality-control-details">Quality Control</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="project_gallery.html">Project Gallery</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-outline-variant/20 py-8 px-margin-desktop max-w-container-max mx-auto text-center">
+      <p class="font-label-sm text-label-sm text-outline-variant opacity-60">© 2024 Shreeji Construction. Precision in Fabrication &amp; Erection and Manpower Supplier. All rights reserved.</p>
+    </div>
+  </footer>
 <div class="fixed inset-0 z-50 bg-primary/95 backdrop-blur-md flex flex-col justify-center items-center gap-8 text-white transition-all duration-300 transform translate-x-full lg:hidden" id="mobileMenu">
 <button class="absolute top-6 right-6 text-white focus:outline-none" id="closeMobileMenu">
 <span class="material-symbols-outlined text-4xl">close</span>
@@ -349,5 +362,97 @@
             });
         }
     })();
+</script>
+<!-- Compliance Modal Component -->
+<div id="complianceModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/60 backdrop-blur-sm">
+  <div class="bg-surface border border-outline-variant max-w-lg w-full mx-4 p-8 relative shadow-2xl">
+    <button id="closeComplianceModal" class="absolute top-4 right-4 text-secondary hover:text-primary focus:outline-none" onclick="closeModal()">
+      <span class="material-symbols-outlined text-2xl">close</span>
+    </button>
+    <div id="complianceModalContent" class="text-on-surface">
+      <!-- Dynamic Content -->
+    </div>
+  </div>
+</div>
+<script>
+function openComplianceModal(type) {
+    const modal = document.getElementById('complianceModal');
+    const content = document.getElementById('complianceModalContent');
+    if (!modal || !content) return;
+    
+    let html = '';
+    if (type === 'pf') {
+        html = `
+            <div class="flex items-center gap-3 mb-6 text-primary">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container">verified_user</span>
+                <h3 class="font-headline-sm text-headline-sm font-bold uppercase tracking-tight">PF & ESI Compliance</h3>
+            </div>
+            <div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed text-left">
+                <p><strong>Shreeji Construction</strong> is fully registered and compliant with the Employees' Provident Fund Organisation (EPFO) and the Employees' State Insurance Corporation (ESIC).</p>
+                <p>We strictly adhere to all statutory provisions of the <em>Employees' Provident Funds and Miscellaneous Provisions Act, 1952</em>, and the <em>Employees' State Insurance Act, 1948</em>.</p>
+                <p>All contribution deposits are filed monthly, ensuring complete statutory protection, healthcare eligibility, and retirement benefit coverage for our deployed workforce.</p>
+            </div>
+            <div class="mt-8 flex justify-end">
+                <button onclick="closeModal()" class="bg-primary text-white px-6 py-2.5 font-label-md uppercase tracking-wider text-sm hover:bg-on-tertiary-container transition-colors">Close</button>
+            </div>
+        `;
+    } else if (type === 'safety') {
+        html = `
+            <div class="flex items-center gap-3 mb-6 text-primary">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container">security</span>
+                <h3 class="font-headline-sm text-headline-sm font-bold uppercase tracking-tight">Safety Standards</h3>
+            </div>
+            <div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed text-left">
+                <p>Our operations are guided by a zero-incident safety culture built around the standards of the <em>Factories Act, 1948</em>, and the <em>Building and Other Construction Workers (BOCW) Act, 1996</em>.</p>
+                <p>Every project site adheres to mandatory daily tool-box talks (TBT), routine Hazard Identification and Risk Assessments (HIRA), and comprehensive Job Safety Analysis (JSA) audits.</p>
+                <p>All field personnel are fully equipped with certified Personal Protective Equipment (PPE), supported by active on-site EHS training and inspection regimes.</p>
+            </div>
+            <div class="mt-8 flex justify-end">
+                <button onclick="closeModal()" class="bg-primary text-white px-6 py-2.5 font-label-md uppercase tracking-wider text-sm hover:bg-on-tertiary-container transition-colors">Close</button>
+            </div>
+        `;
+    } else if (type === 'terms') {
+        html = `
+            <div class="flex items-center gap-3 mb-6 text-primary">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container">description</span>
+                <h3 class="font-headline-sm text-headline-sm font-bold uppercase tracking-tight">Terms of Service</h3>
+            </div>
+            <div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed text-left max-h-[350px] overflow-y-auto pr-2 font-sans">
+                <p class="text-on-surface"><strong>1. Service Scope</strong><br>Shreeji Construction provides integrated industrial solutions, including the supply of vetted, skilled, and unskilled workforce (including but not limited to Helpers, Welders, Fitters, Riggers, and Housekeeping personnel) and structural engineering services such as fabrication and erection. All services are delivered to meet precise technical specifications and project timelines.</p>
+                <p class="text-on-surface"><strong>2. Compliance & Regulatory Commitment</strong><br>We operate with full transparency and adherence to all applicable Indian laws. This includes:<br>
+                - <strong>GST Compliance:</strong> All invoicing is fully compliant with the Goods and Services Tax regime.<br>
+                - <strong>Labour Law Adherence:</strong> We strictly follow Indian Labour and Contract Laws regarding the management and deployment of all personnel.<br>
+                - <strong>Statutory Registration:</strong> Shreeji Construction is an MSME-certified enterprise and maintains full PF (Provident Fund) and ESI (Employee State Insurance) registration for all active personnel.</p>
+                <p class="text-on-surface"><strong>3. Safety & Quality Standards</strong><br>Our operations are conducted in high-risk industrial environments. We enforce rigorous safety protocols and quality management systems across all concurrent project sites to ensure the integrity of our execution and the safety of our personnel and clients' facilities.</p>
+                <p class="text-on-surface"><strong>4. Confidentiality</strong><br>Shreeji Construction respects the sensitive nature of industrial operations. We treat all client project data, shutdown schedules, and proprietary site information with the highest level of professional confidentiality.</p>
+                <p class="text-on-surface"><strong>5. Payment & Invoicing</strong><br>We are committed to clear and consistent billing practices. All services are subject to the terms agreed upon in individual work orders and purchase orders, ensuring full financial transparency for our corporate partners.</p>
+            </div>
+            <div class="mt-8 flex justify-end">
+                <button onclick="closeModal()" class="bg-primary text-white px-6 py-2.5 font-label-md uppercase tracking-wider text-sm hover:bg-on-tertiary-container transition-colors">Close</button>
+            </div>
+        `;
+    }
+    content.innerHTML = html;
+    modal.classList.remove('hidden');
+}
+
+function closeModal() {
+    const modal = document.getElementById('complianceModal');
+    if (modal) {
+        modal.classList.add('hidden');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('complianceModal');
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+    }
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+});
 </script>
 </body></html>

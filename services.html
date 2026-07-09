@@ -1,355 +1,578 @@
-<html class="light" lang="en"><head><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script></head><body class="bg-surface text-on-surface font-body-md selection:bg-on-tertiary-container selection:text-white">```html
+<!DOCTYPE html>
+<html class="light" lang="en">
 
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600;700&amp;family=Work+Sans:wght@400;500&amp;family=IBM+Plex+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        try {
-            tailwind.config = {
-                darkMode: "class",
-                theme: {
-                    extend: {
-                        "colors": {
-                            "on-tertiary-fixed": "#351000",
-                            "background": "#f8f9fa",
-                            "on-background": "#191c1d",
-                            "outline-variant": "#c4c6cf",
-                            "on-tertiary-fixed-variant": "#7c2e00",
-                            "inverse-surface": "#2e3132",
-                            "error-container": "#ffdad6",
-                            "surface-container-low": "#f3f4f5",
-                            "on-secondary-fixed-variant": "#40484c",
-                            "on-primary-container": "#708ab5",
-                            "on-secondary": "#ffffff",
-                            "on-surface": "#191c1d",
-                            "tertiary-fixed-dim": "#ffb595",
-                            "on-primary": "#ffffff",
-                            "outline": "#74777f",
-                            "surface-dim": "#d9dadb",
-                            "on-tertiary": "#ffffff",
-                            "surface": "#f8f9fa",
-                            "primary-fixed": "#d6e3ff",
-                            "surface-container-highest": "#e1e3e4",
-                            "surface-tint": "#465f88",
-                            "on-primary-fixed-variant": "#2d476f",
-                            "on-error-container": "#93000a",
-                            "inverse-on-surface": "#f0f1f2",
-                            "secondary": "#585f64",
-                            "on-tertiary-container": "#e85d00",
-                            "error": "#ba1a1a",
-                            "secondary-fixed-dim": "#c0c8cd",
-                            "tertiary-container": "#3f1400",
-                            "primary-fixed-dim": "#aec7f6",
-                            "tertiary": "#1a0500",
-                            "on-primary-fixed": "#001b3d",
-                            "surface-container-lowest": "#ffffff",
-                            "on-error": "#ffffff",
-                            "secondary-fixed": "#dce4e9",
-                            "secondary-container": "#d9e1e6",
-                            "inverse-primary": "#aec7f6",
-                            "on-surface-variant": "#44474e",
-                            "on-secondary-fixed": "#151d21",
-                            "primary-container": "#002147",
-                            "surface-container": "#edeeef",
-                            "primary": "#000a1e",
-                            "surface-bright": "#f8f9fa",
-                            "on-secondary-container": "#5c6469",
-                            "surface-container-high": "#e7e8e9",
-                            "tertiary-fixed": "#ffdbcd",
-                            "surface-variant": "#e1e3e4"
-                        },
-                        "borderRadius": {
-                            "DEFAULT": "0.25rem",
-                            "lg": "0.5rem",
-                            "xl": "0.75rem",
-                            "full": "9999px"
-                        },
-                        "spacing": {
-                            "margin-desktop": "64px",
-                            "base": "8px",
-                            "container-max": "1280px",
-                            "margin-mobile": "16px",
-                            "gutter": "24px"
-                        },
-                        "fontFamily": {
-                            "headline-md": ["Libre Caslon Text"],
-                            "body-md": ["Work Sans"],
-                            "headline-lg": ["Libre Caslon Text"],
-                            "body-lg": ["Work Sans"],
-                            "headline-sm": ["Libre Caslon Text"],
-                            "label-md": ["IBM Plex Sans"],
-                            "display-lg": ["Libre Caslon Text"],
-                            "label-sm": ["IBM Plex Sans"]
-                        },
-                        "fontSize": {
-                            "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
-                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                            "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                            "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                            "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                            "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
-                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                            "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
-                        }
-                    }
-                }
+<head>
+  <title>Services &amp; Capabilities | Shreeji Construction</title>
+
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600;700&amp;family=Work+Sans:wght@400;500&amp;family=IBM+Plex+Sans:wght@500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    try {
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "on-tertiary-fixed": "#351000",
+              "background": "#f8f9fa",
+              "on-background": "#191c1d",
+              "outline-variant": "#c4c6cf",
+              "on-tertiary-fixed-variant": "#7c2e00",
+              "inverse-surface": "#2e3132",
+              "error-container": "#ffdad6",
+              "surface-container-low": "#f3f4f5",
+              "on-secondary-fixed-variant": "#40484c",
+              "on-primary-container": "#708ab5",
+              "on-secondary": "#ffffff",
+              "on-surface": "#191c1d",
+              "tertiary-fixed-dim": "#ffb595",
+              "on-primary": "#ffffff",
+              "outline": "#74777f",
+              "surface-dim": "#d9dadb",
+              "on-tertiary": "#ffffff",
+              "surface": "#f8f9fa",
+              "primary-fixed": "#d6e3ff",
+              "surface-container-highest": "#e1e3e4",
+              "surface-tint": "#465f88",
+              "on-primary-fixed-variant": "#2d476f",
+              "on-error-container": "#93000a",
+              "inverse-on-surface": "#f0f1f2",
+              "secondary": "#585f64",
+              "on-tertiary-container": "#e85d00",
+              "error": "#ba1a1a",
+              "secondary-fixed-dim": "#c0c8cd",
+              "tertiary-container": "#3f1400",
+              "primary-fixed-dim": "#aec7f6",
+              "tertiary": "#1a0500",
+              "on-primary-fixed": "#001b3d",
+              "surface-container-lowest": "#ffffff",
+              "on-error": "#ffffff",
+              "secondary-fixed": "#dce4e9",
+              "secondary-container": "#d9e1e6",
+              "inverse-primary": "#aec7f6",
+              "on-surface-variant": "#44474e",
+              "on-secondary-fixed": "#151d21",
+              "primary-container": "#002147",
+              "surface-container": "#edeeef",
+              "primary": "#000a1e",
+              "surface-bright": "#f8f9fa",
+              "on-secondary-container": "#5c6469",
+              "surface-container-high": "#e7e8e9",
+              "tertiary-fixed": "#ffdbcd",
+              "surface-variant": "#e1e3e4"
+            },
+            "borderRadius": {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+            "spacing": {
+              "margin-desktop": "64px",
+              "base": "8px",
+              "container-max": "1280px",
+              "margin-mobile": "16px",
+              "gutter": "24px"
+            },
+            "fontFamily": {
+              "headline-md": ["Libre Caslon Text"],
+              "body-md": ["Work Sans"],
+              "headline-lg": ["Libre Caslon Text"],
+              "body-lg": ["Work Sans"],
+              "headline-sm": ["Libre Caslon Text"],
+              "label-md": ["IBM Plex Sans"],
+              "display-lg": ["Libre Caslon Text"],
+              "label-sm": ["IBM Plex Sans"]
+            },
+            "fontSize": {
+              "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+              "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+              "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+              "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+              "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+              "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
+              "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+              "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }]
             }
-        } catch (_e) {}
-    </script>
-<!-- Standardized TopNavBar -->
-<nav class="docked full-width top-0 sticky z-50 bg-surface border-b border-outline-variant">
-<div class="flex justify-between items-center w-full px-margin-desktop py-3 max-w-container-max mx-auto">
-<!-- Branding Block -->
-<div class="flex items-center gap-4">
-
-<a class="flex items-center gap-3 shrink-0" href="index.html">
-<img alt="Shreeji Construction Logo" class="h-12 w-auto object-contain" src="images/logo.png"/>
-<div class="flex flex-col justify-center">
-<span class="font-headline-sm text-[18px] lg:text-[20px] leading-tight font-bold text-primary tracking-tighter uppercase">SHREEJI CONSTRUCTION</span>
-<span class="font-label-sm text-[10px] lg:text-[11px] leading-tight text-on-tertiary-container tracking-widest font-semibold uppercase">Strength Delivered, Precision Built</span>
-</div>
-</a>
-
-</div>
-<!-- Navigation Links -->
-<div class="hidden lg:flex flex-1 justify-end items-center px-12 gap-8">
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Home</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="who_we_are.html">Who We Are</a>
-<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary" href="services.html">Services</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="manpower.html">Manpower</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="compliance.html">Compliance</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="contact.html">Contact</a>
-</div>
-<!-- CTA Block -->
-<div class="flex items-center">
-<button class="bg-primary text-white px-8 py-3 font-label-md uppercase tracking-wider hover:bg-primary-container transition-all text-sm font-bold" onclick="location.href='contact.html'">Request Quote</button>
-<button class="lg:hidden ml-4 text-primary"><span class="material-symbols-outlined">menu</span></button>
-</div>
-<button class="lg:hidden ml-4 text-primary focus:outline-none" id="mobileMenuBtn">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
-</div>
-</nav>
-<main>
-<!-- Hero Section -->
-<section class="relative py-24 md:py-32 bg-primary text-white overflow-hidden">
-<div class="absolute inset-0 opacity-10 hero-pattern"></div>
-<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
-<div class="max-w-3xl">
-<span class="font-label-md text-on-tertiary-container uppercase tracking-[0.2em] mb-6 block">Precision Infrastructure</span>
-<h1 class="font-display-lg text-display-lg mb-8 leading-tight">Engineering the Future of Industrial Landscapes</h1>
-<p class="font-body-lg text-body-lg text-outline-variant max-w-2xl">
-                        From the specialized terrains of Dholera to complex Air Pre-Heater (APH) replacements, we deliver heavy-duty fabrication and erection services that define structural excellence.
-                    </p>
-</div>
-</div>
-</section>
-<!-- Portfolio Statistics -->
-<section class="bg-surface-container py-16 border-b border-outline-variant">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
-<div class="flex flex-col">
-<span class="font-headline-md text-headline-md text-primary">500+</span>
-<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-1">Tons Fabricated</span>
-</div>
-<div class="flex flex-col">
-<span class="font-headline-md text-headline-md text-primary">5+</span>
-<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-1">Mega Sites</span>
-</div>
-<div class="flex flex-col">
-<span class="font-headline-md text-headline-md text-primary">100%</span>
-<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-1">Safety Record</span>
-</div>
-<div class="flex flex-col">
-<span class="font-headline-md text-headline-md text-primary">24/7</span>
-<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-1">Operational Support</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Bento Portfolio Grid -->
-<section class="py-24 bg-surface">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-<div>
-<h2 class="font-headline-lg text-headline-lg text-primary">Project Showcase</h2>
-<p class="font-body-md text-body-md text-secondary mt-3">A record of structural integrity and technical mastery across heavy industrial sectors.</p>
-</div>
-<div class="flex gap-3">
-<button class="border border-outline px-6 py-2.5 font-label-md uppercase text-sm hover:bg-primary hover:text-white transition-all">All Projects</button>
-<button class="border border-outline px-6 py-2.5 font-label-md uppercase text-sm hover:bg-primary hover:text-white transition-all">Industrial</button>
-<button class="border border-outline px-6 py-2.5 font-label-md uppercase text-sm hover:bg-primary hover:text-white transition-all">Specialized</button>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<!-- Project 1: Dholera-->
-<div class="md:col-span-8 group relative overflow-hidden border border-outline-variant aspect-[16/9]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style='background-image: url("images/aph_unit.png"); background-size: cover; background-position: center;'></div>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
-<div class="absolute bottom-0 left-0 p-8 text-white">
-<span class="bg-on-tertiary-container px-3 py-1 font-label-sm uppercase tracking-tighter mb-4 inline-block">Featured Site</span>
-<h3 class="font-headline-md text-headline-md mb-2">Dholera Industrial Region</h3>
-<p class="font-body-md opacity-90 max-w-md">Comprehensive infrastructure development including groundwork, fabrication, and structural erection for a pioneering smart city project.</p>
-</div>
-</div>
-<!-- Project 2: APH Replacement -->
-<div class="md:col-span-4 group relative overflow-hidden border border-outline-variant aspect-[4/5] md:aspect-auto">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7E18N45skPXO5qDnt1EB8_nnSfp-IQ183hLLIxPKiseRQ9395yheHgSyMoliOReaMnq3sCZelrXdO2j0QeS7VMMBr-31NQnQjlk_MEjpopRuRwQu43KAIvYaOE1tthnxO7L4Irtc5H8Y6RL8lwTVcHtWGNmHZpxgGjY1DZN7tVpf5urbDexvBs_LdZ7qw0uRoAc5T3CAMBvS9a2VywXf-z565vkvyd4pK1A78O1rf9aMqemCt-vC9')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent opacity-60"></div>
-<div class="absolute bottom-0 left-0 p-8 text-white">
-<span class="border border-white/40 px-3 py-1 font-label-sm uppercase tracking-tighter mb-4 inline-block">Maintenance</span>
-<h3 class="font-headline-sm text-headline-sm mb-2">APH Replacements</h3>
-<p class="font-body-md opacity-90">Aditya Birla Group (Veraval) &amp; Nirma (Bhavnagar).</p>
-</div>
-</div>
-<!-- Project 3: Fabrication Shop -->
-<div class="md:col-span-4 group relative overflow-hidden border border-outline-variant aspect-square">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDAv1SyhMx5fkdBjIIhK9_ijpoUPZ3LCP5XyeYOY0imvWyPGirhkdunpvTUTbUuWj1KaHpsMlyAfC_MzbLu4yUSwC9x3ihjECVs0CjTazVU0MtEotD8SX-GbAkfGieA-JVpMdC5JApcCtEmM8KtrQdWIiPNwddwUKX4dxUzd9Kuk94TpwQ2ooJXJWXFy2QMZFlEVLTVDMnCHyzwVJZW_tr1TPQonxpTcxhUg8fq77_7RInxlyPUS2Zk')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent opacity-60"></div>
-<div class="absolute bottom-0 left-0 p-8 text-white">
-<h3 class="font-headline-sm text-headline-sm mb-2">Precision Fabrication</h3>
-<p class="font-body-sm text-label-sm opacity-90 uppercase tracking-widest">On-Site Client Facilities</p>
-</div>
-</div>
-<!-- Project 4: Structural Erection -->
-<div class="md:col-span-8 group relative overflow-hidden border border-outline-variant aspect-[21/9]">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAsUkH1x1a72hmf4osL8PEdR1lZyUkRfBHjpbihYEU75wX0W5kisJxgnxjhUNBF58le3sh2Ogm7dHWVe0ZVozBiBuktDr1rC9yf8fUQh8_MX3M1-Huo0WAGC3wnjnNWVcV4tDxqxInJBqtvHp0-I0dTSsEv8aMWVb1aJSVDZ3j0p0YBI6cQCGnv32DDPgoLpv69b7KvuSDlxY_9_gbPOejmdG5CPX6p_ISPnSAkniM3UNeXErKYQ9W')"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent opacity-60"></div>
-<div class="absolute bottom-0 left-0 p-8 text-white">
-<h3 class="font-headline-md text-headline-md mb-2">High-Rise Erection</h3>
-<p class="font-body-md opacity-90">Advanced erection techniques for heavy-duty industrial skeletons.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Service Capabilities -->
-<section class="py-24 md:py-32 bg-primary text-white">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-<div class="flex flex-col items-center lg:items-start">
-<h2 class="font-headline-lg text-headline-lg mb-16 text-center lg:text-left">Our Core Competencies</h2>
-<div class="space-y-12 w-full">
-<div class="flex flex-col items-center text-center lg:text-left lg:items-start lg:flex-row gap-8">
-<div class="w-16 h-16 bg-on-tertiary-container flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-white text-3xl">engineering</span>
-</div>
-<div class="flex-1">
-<h4 class="font-headline-sm text-headline-sm mb-3">Heavy Structure Fabrication</h4>
-<p class="font-body-md text-outline-variant max-w-md mx-auto lg:mx-0">Utilizing high-grade carbon steel and stainless steel for custom industrial frameworks and platforms.</p>
-</div>
-</div>
-<div class="flex flex-col items-center text-center lg:text-left lg:items-start lg:flex-row gap-8">
-<div class="w-16 h-16 bg-on-tertiary-container flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-white text-3xl">construction</span>
-</div>
-<div class="flex-1">
-<h4 class="font-headline-sm text-headline-sm mb-3">Site Infrastructure</h4>
-<p class="font-body-md text-outline-variant max-w-md mx-auto lg:mx-0">Complete site preparation and infrastructure deployment for large-scale industrial zones and SEZs.</p>
-</div>
-</div>
-<div class="flex flex-col items-center text-center lg:text-left lg:items-start lg:flex-row gap-8">
-<div class="w-16 h-16 bg-on-tertiary-container flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-white text-3xl">precision_manufacturing</span>
-</div>
-<div class="flex-1">
-<h4 class="font-headline-sm text-headline-sm mb-3">Maintenance &amp; Retrofitting</h4>
-<p class="font-body-md text-outline-variant max-w-md mx-auto lg:mx-0">Specialized APH replacements, ducting repairs, and structural reinforcements during shutdowns.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="relative border-4 border-on-tertiary-container p-4">
-<div class="aspect-square bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBytIhTqPYkHEhp9DUf509EdAn_SNEoIWSa-AGA78xpumluSIUfYYLSCKWVii9xp59BwW2HsA_q7w0W-boTIUyJhKqb-OFo1TJIpFksZLbRDXZhKIMTq2myyLY_MDw0iZ5FxAawjFYLaasuwVw0UB-AQZwDwNG_fx1HYrDMB3NC79wBDXs1GGCzgGpiGVZaLfmUwfVCEkIsoOfLd9MVkjt2DT2XtFn55nhRsX9qlaPY035ReLzB7iiT')"></div>
-<div class="absolute -bottom-8 -right-8 bg-on-tertiary-container p-10 hidden md:block">
-<p class="font-headline-md text-headline-md leading-none text-white italic">"Built to Last."</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Call to Action -->
-<section class="py-24 md:py-32 bg-surface text-center overflow-hidden relative">
-<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
-<div class="max-w-3xl mx-auto">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Ready to Start Your Next Build?</h2>
-<p class="font-body-lg text-body-lg text-secondary mb-12">Consult with our engineering team for specialized fabrication and site erection quotes tailored to your industrial requirements.</p>
-<div class="flex flex-col sm:flex-row gap-6 justify-center">
-<button class="bg-primary text-white px-12 py-4 font-label-md uppercase tracking-widest text-sm hover:bg-primary-container transition-all">Schedule Consultation</button>
-<button class="border-2 border-primary text-primary px-12 py-4 font-label-md uppercase tracking-widest text-sm hover:bg-primary hover:text-white transition-all">View Certifications</button>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="full-width bg-primary border-t-4 border-on-tertiary-container text-white">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto items-start">
-<div class="flex flex-col gap-6">
-<div class="font-headline-sm text-headline-sm text-surface-bright uppercase tracking-tight">SHREEJI CONSTRUCTION</div>
-<p class="font-body-md text-body-md text-outline-variant">Trusted precision in fabrication and structural erection for India's heavy industry sectors.</p>
-</div>
-<div class="flex flex-col gap-6">
-<h4 class="font-label-md text-label-md text-on-tertiary-container uppercase tracking-widest">Office</h4>
-<p class="font-body-md text-body-md text-outline-variant">Plot No 855/859, Shivay Bungalow, Bhavnagar, Gujarat, India </p>
-<div class="flex flex-col">
-<p class="font-body-md text-body-md text-white font-medium">+91-9687375151</p>
-<p class="font-body-md text-body-md text-outline-variant">shreejiconstruction2007@zohomail.in</p>
-</div>
-</div>
-<div class="flex flex-col gap-6">
-<h4 class="font-label-md text-label-md text-on-tertiary-container uppercase tracking-widest">Compliance</h4>
-<nav class="flex flex-col gap-3">
-<a class="font-label-sm text-label-sm text-outline-variant hover:text-tertiary-fixed transition-colors" href="#">MSME Certified</a>
-<a class="font-label-sm text-label-sm text-outline-variant hover:text-tertiary-fixed transition-colors" href="#">GST Registered</a>
-<a class="font-label-sm text-label-sm text-outline-variant hover:text-tertiary-fixed transition-colors" href="#">ISO 9001:2015</a>
-<a class="font-label-sm text-label-sm text-outline-variant hover:text-tertiary-fixed transition-colors" href="#">PF Certified</a>
-<a class="font-label-sm text-label-sm text-outline-variant hover:text-tertiary-fixed transition-colors" href="#">ESI Certified</a>
-</nav>
-</div>
-<div class="flex flex-col gap-6">
-<h4 class="font-label-md text-label-md text-on-tertiary-container uppercase tracking-widest">Links</h4>
-<nav class="flex flex-col gap-3">
-<a class="font-label-sm text-label-sm text-outline-variant hover:text-tertiary-fixed transition-colors" href="#">Privacy Policy</a>
-<a class="font-label-sm text-label-sm text-outline-variant hover:text-tertiary-fixed transition-colors" href="#">Terms of Service</a>
-</nav>
-</div>
-</div>
-<div class="border-t border-white/10 px-margin-desktop py-10 max-w-container-max mx-auto">
-<p class="font-label-sm text-label-sm text-outline-variant text-center">© 2024 Shreeji Construction, Precision in fabrication &amp; Erection and Manpower Supplier</p>
-</div>
-</footer>
-```
-<div class="fixed inset-0 z-50 bg-primary/95 backdrop-blur-md flex flex-col justify-center items-center gap-8 text-white transition-all duration-300 transform translate-x-full lg:hidden" id="mobileMenu">
-<button class="absolute top-6 right-6 text-white focus:outline-none" id="closeMobileMenu">
-<span class="material-symbols-outlined text-4xl">close</span>
-</button>
-<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="index.html">Home</a>
-<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="who_we_are.html">Who We Are</a>
-<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="services.html">Services</a>
-<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="manpower.html">Manpower</a>
-<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="compliance.html">Compliance</a>
-<a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="contact.html">Contact</a>
-<button class="bg-on-tertiary-container text-white px-8 py-4 font-label-md uppercase font-bold tracking-widest mt-4" onclick="location.href='contact.html'">Request Quote</button>
-</div>
-<script id="mobile-menu-script">
-    (function() {
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const closeMobileMenu = document.getElementById('closeMobileMenu');
-        const mobileMenu = document.getElementById('mobileMenu');
-        
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.remove('translate-x-full');
-            });
+          }
         }
-        if (closeMobileMenu && mobileMenu) {
-            closeMobileMenu.addEventListener('click', () => {
-                mobileMenu.classList.add('translate-x-full');
-            });
-        }
+      }
+    } catch (_e) { }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+</head>
+
+<body class="bg-surface text-on-surface font-body-md selection:bg-on-tertiary-container selection:text-white">
+  <!-- Standardized TopNavBar -->
+  <nav class="w-full sticky top-0 z-50 bg-surface border-b border-outline-variant">
+    <div class="flex justify-between items-center w-full px-margin-desktop py-0 max-w-container-max mx-auto h-20">
+      <a class="flex items-center gap-2.5 shrink-0" href="index.html">
+        <img alt="Shreeji Construction Logo" class="h-10 w-auto object-contain" src="images/logo.png" />
+        <div class="flex flex-col justify-center -space-y-0.5">
+          <span
+            class="font-headline-sm text-[17px] lg:text-[19px] leading-tight font-bold text-primary tracking-tighter uppercase">SHREEJI
+            CONSTRUCTION</span>
+          <span
+            class="font-label-sm text-[9px] lg:text-[10px] leading-none text-on-tertiary-container tracking-widest font-bold uppercase">STRENGTH
+            DELIVERED, PRECISION BUILT</span>
+        </div>
+      </a>
+      <div class="flex items-center h-full">
+        <div class="hidden lg:flex items-center gap-6 lg:gap-8 mr-8">
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1"
+            href="index.html">Home</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1"
+            href="who_we_are.html">Who We Are</a>
+          <a class="font-label-md text-label-md text-on-tertiary-container font-bold border-b-2 border-on-tertiary-container py-1"
+            href="services.html">Services</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1"
+            href="manpower.html">Manpower</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1"
+            href="compliance.html">Compliance</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1"
+            href="contact.html">Contact</a>
+        </div>
+        <button
+          class="bg-primary text-white py-3 px-6 font-label-md text-label-md uppercase tracking-wider hover:bg-on-tertiary-container hover:text-white transition-all font-bold hidden sm:block whitespace-nowrap"
+          onclick="location.href='contact.html'">
+          REQUEST QUOTE
+        </button>
+      </div>
+      <button class="lg:hidden ml-4 text-primary focus:outline-none" id="mobileMenuBtn">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+  </nav>
+  <main>
+    <!-- Hero Section -->
+    <section class="relative py-24 md:py-32 bg-primary text-white overflow-hidden">
+      <div class="absolute inset-0 opacity-10 hero-pattern"></div>
+      <div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+        <div class="max-w-3xl">
+          <span class="font-label-md text-on-tertiary-container uppercase tracking-[0.2em] mb-6 block">Precision
+            Infrastructure</span>
+          <h1 class="font-display-lg text-display-lg mb-8 leading-tight">Engineering the Future of Industrial Landscapes
+          </h1>
+          <p class="font-body-lg text-body-lg text-outline-variant max-w-2xl">
+            From the specialized terrains of Dholera to complex Air Pre-Heater (APH) replacements, we deliver heavy-duty
+            fabrication and erection services that define structural excellence.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio Statistics -->
+    <section class="bg-surface-container py-16 border-b border-outline-variant">
+      <div class="max-w-container-max mx-auto px-margin-desktop">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+          <div class="flex flex-col">
+            <span class="font-headline-md text-headline-md text-primary">500+</span>
+            <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-1">Tons
+              Fabricated</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-md text-headline-md text-primary">5+</span>
+            <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-1">Mega Sites</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-md text-headline-md text-primary">100%</span>
+            <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-1">Safety Record</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-md text-headline-md text-primary">24/7</span>
+            <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-1">Operational
+              Support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Bento Portfolio Grid -->
+    <section class="py-24 bg-surface">
+      <div class="max-w-container-max mx-auto px-margin-desktop">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+          <div>
+            <h2 class="font-headline-lg text-headline-lg text-primary">Project Showcase</h2>
+            <p class="font-body-md text-body-md text-secondary mt-3">A record of structural integrity and technical
+              mastery across heavy industrial sectors.</p>
+          </div>
+          <div class="flex gap-3 flex-wrap">
+            <button
+              class="border border-outline px-6 py-2.5 font-label-md uppercase text-sm hover:bg-primary hover:text-white transition-all bg-primary text-white">ALL
+              PROJECTS</button>
+            <button
+              class="border border-outline px-6 py-2.5 font-label-md uppercase text-sm hover:bg-primary hover:text-white transition-all">INDUSTRIAL
+              INFRASTRUCTURE</button>
+            <button
+              class="border border-outline px-6 py-2.5 font-label-md uppercase text-sm hover:bg-primary hover:text-white transition-all">MANPOWER
+              & MAINTENANCE</button>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+          <!-- Project 1: Dholera-->
+          <div
+            class="md:col-span-8 group relative border border-outline-variant bg-[#000a1e] p-8 md:p-12 flex flex-col justify-between aspect-[16/9] hover:border-on-tertiary-container transition-colors duration-300">
+            <div class="flex justify-between items-start">
+              <span
+                class="bg-on-tertiary-container text-white px-3 py-1 font-label-sm uppercase tracking-wider font-bold">Featured
+                Milestone</span>
+              <span class="material-symbols-outlined text-outline-variant text-4xl">domain</span>
+            </div>
+            <div class="mt-8">
+              <div
+                class="text-on-tertiary-container font-headline-lg text-4xl md:text-5xl font-bold tracking-tight mb-2">
+                450+ MT Fabricated</div>
+              <div
+                class="font-headline-sm text-surface-bright text-xl md:text-2xl font-bold uppercase tracking-tight mb-4">
+                Dholera Landmark Project</div>
+              <p class="font-body-md text-outline-variant/80 max-w-xl">Comprehensive groundwork, steel fabrication, and
+                structural erection for India's premier smart city industrial zone.</p>
+            </div>
+          </div>
+          <!-- Project 2: APH Replacement -->
+          <div
+            class="md:col-span-4 group relative border border-outline-variant bg-[#000a1e] p-8 flex flex-col justify-between aspect-[4/5] md:aspect-auto hover:border-on-tertiary-container transition-colors duration-300">
+            <div class="flex justify-between items-start">
+              <span
+                class="border border-white/20 text-surface-bright px-3 py-1 font-label-sm uppercase tracking-wider font-bold">Shutdown
+                Milestone</span>
+              <span class="material-symbols-outlined text-outline-variant text-4xl">build</span>
+            </div>
+            <div class="mt-8">
+              <div class="text-on-tertiary-container font-headline-sm text-3xl font-bold tracking-tight mb-2">Critical
+                Shutdown Operations</div>
+              <div class="font-headline-sm text-surface-bright text-lg font-bold uppercase tracking-tight mb-4">APH
+                Replacements</div>
+              <p class="font-body-md text-outline-variant/80">Specialized structural erection, ducting repairs, and
+                high-precision pre-heater replacements completed within zero-incident parameters.</p>
+            </div>
+          </div>
+          <!-- Project 3: Fabrication Shop -->
+          <div
+            class="md:col-span-4 group relative border border-outline-variant bg-[#000a1e] p-8 flex flex-col justify-between aspect-square hover:border-on-tertiary-container transition-colors duration-300">
+            <div class="flex justify-between items-start">
+              <span
+                class="border border-white/20 text-surface-bright px-3 py-1 font-label-sm uppercase tracking-wider font-bold">Quality
+                Standard</span>
+              <span class="material-symbols-outlined text-outline-variant text-4xl">verified</span>
+            </div>
+            <div class="mt-8">
+              <div class="text-on-tertiary-container font-headline-sm text-3xl font-bold tracking-tight mb-2">
+                0-Tolerance</div>
+              <div class="font-headline-sm text-surface-bright text-lg font-bold uppercase tracking-tight mb-4">On-Site
+                Client Facilities</div>
+              <p class="font-body-md text-outline-variant/80">Heavy carbon and stainless steel assemblies executed under
+                rigid zero-incident quality control protocols.</p>
+            </div>
+          </div>
+          <!-- Project 4: Structural Erection -->
+          <div
+            class="md:col-span-8 group relative border border-outline-variant bg-[#000a1e] p-8 md:p-12 flex flex-col justify-between aspect-[21/9] md:aspect-[2/1] hover:border-on-tertiary-container transition-colors duration-300">
+            <div class="flex justify-between items-start">
+              <span
+                class="border border-white/20 text-surface-bright px-3 py-1 font-label-sm uppercase tracking-wider font-bold">Execution
+                Milestone</span>
+              <span class="material-symbols-outlined text-outline-variant text-4xl">engineering</span>
+            </div>
+            <div class="mt-8">
+              <div
+                class="text-on-tertiary-container font-headline-lg text-4xl md:text-5xl font-bold tracking-tight mb-2">
+                40+ Meters</div>
+              <div
+                class="font-headline-sm text-surface-bright text-xl md:text-2xl font-bold uppercase tracking-tight mb-4">
+                High-Altitude skeletons</div>
+              <p class="font-body-md text-outline-variant/80 max-w-xl">Advanced crane rigging, structural engineering,
+                and heavy lifting for multi-story industrial columns and plants.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Service Capabilities -->
+    <section class="py-24 md:py-32 bg-primary text-white">
+      <div class="max-w-container-max mx-auto px-margin-desktop">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div class="flex flex-col items-center lg:items-start">
+            <h2 class="font-headline-lg text-headline-lg mb-16 text-center lg:text-left">Our Core Competencies</h2>
+            <div class="space-y-12 w-full">
+              <div class="flex flex-col items-center text-center lg:text-left lg:items-start lg:flex-row gap-8">
+                <div class="w-16 h-16 bg-on-tertiary-container flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-white text-3xl">engineering</span>
+                </div>
+                <div class="flex-1">
+                  <h4 class="font-headline-sm text-headline-sm mb-3">Heavy Structure Fabrication</h4>
+                  <p class="font-body-md text-outline-variant max-w-md mx-auto lg:mx-0">Utilizing high-grade carbon
+                    steel and stainless steel for custom industrial frameworks and platforms.</p>
+                </div>
+              </div>
+              <div class="flex flex-col items-center text-center lg:text-left lg:items-start lg:flex-row gap-8">
+                <div class="w-16 h-16 bg-on-tertiary-container flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-white text-3xl">construction</span>
+                </div>
+                <div class="flex-1">
+                  <h4 class="font-headline-sm text-headline-sm mb-3">Site Infrastructure</h4>
+                  <p class="font-body-md text-outline-variant max-w-md mx-auto lg:mx-0">Complete site preparation and
+                    infrastructure deployment for large-scale industrial zones and SEZs.</p>
+                </div>
+              </div>
+              <div class="flex flex-col items-center text-center lg:text-left lg:items-start lg:flex-row gap-8">
+                <div class="w-16 h-16 bg-on-tertiary-container flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-white text-3xl">precision_manufacturing</span>
+                </div>
+                <div class="flex-1">
+                  <h4 class="font-headline-sm text-headline-sm mb-3">Maintenance &amp; Retrofitting</h4>
+                  <p class="font-body-md text-outline-variant max-w-md mx-auto lg:mx-0">Specialized APH replacements,
+                    ducting repairs, and structural reinforcements during shutdowns.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative border-4 border-on-tertiary-container p-4">
+            <div class="aspect-square bg-cover bg-center"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBytIhTqPYkHEhp9DUf509EdAn_SNEoIWSa-AGA78xpumluSIUfYYLSCKWVii9xp59BwW2HsA_q7w0W-boTIUyJhKqb-OFo1TJIpFksZLbRDXZhKIMTq2myyLY_MDw0iZ5FxAawjFYLaasuwVw0UB-AQZwDwNG_fx1HYrDMB3NC79wBDXs1GGCzgGpiGVZaLfmUwfVCEkIsoOfLd9MVkjt2DT2XtFn55nhRsX9qlaPY035ReLzB7iiT')">
+            </div>
+            <div class="absolute -bottom-8 -right-8 bg-on-tertiary-container p-10 hidden md:block">
+              <p class="font-headline-md text-headline-md leading-none text-white italic">"Built to Last."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Call to Action -->
+    <section class="py-24 md:py-32 bg-surface text-center overflow-hidden relative">
+      <div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="font-headline-lg text-headline-lg text-primary mb-8">Ready to Start Your Next Build?</h2>
+          <p class="font-body-lg text-body-lg text-secondary mb-12">Consult with our engineering team for specialized
+            fabrication and site erection quotes tailored to your industrial requirements.</p>
+          <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <a class="bg-primary text-white px-12 py-4 font-label-md uppercase tracking-widest text-sm hover:bg-primary-container transition-all inline-block"
+              href="contact.html?subject=Consultation Request">Schedule Consultation</a>
+            <a class="border-2 border-primary text-primary px-12 py-4 font-label-md uppercase tracking-widest text-sm hover:bg-primary hover:text-white transition-all inline-block"
+              href="compliance.html">View Certifications</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-primary border-t-4 border-on-tertiary-container mt-24">
+    <div
+      class="grid grid-cols-1 md:grid-cols-4 gap-12 px-margin-desktop py-20 max-w-container-max mx-auto items-start text-white">
+      <!-- Centered Company Name Branding -->
+      <div class="space-y-6 flex flex-col items-center justify-center text-center">
+        <img alt="Shreeji Construction Logo" class="h-12 w-auto object-contain mb-2" src="images/logo.png" />
+        <span
+          class="block font-headline-sm text-surface-bright uppercase font-bold text-2xl tracking-widest leading-none">SHREEJI</span>
+        <span
+          class="block font-headline-sm text-on-tertiary-container uppercase font-bold text-2xl tracking-widest leading-none">CONSTRUCTION</span>
+        <p class="font-label-sm text-label-sm text-outline-variant leading-relaxed mt-4 max-w-xs">Strength Delivered,
+          Precision Built. Building India's industrial backbone since 2007.</p>
+      </div>
+
+      <!-- CORPORATE HEADQUARTERS Section -->
+      <div class="space-y-6">
+        <h4
+          class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold border-b border-outline-variant/30 pb-2">
+          CORPORATE HEADQUARTERS</h4>
+        <div class="text-outline-variant font-label-sm text-label-sm space-y-3 text-left">
+          <p class="leading-relaxed">R.S No - 471/2-3-4, Plot No 855/A to B-859/7, Shivay Bungalow, Sardar Patel
+            Institute Road, Kaliya Bid, Bhavnagar - 346002, Gujarat, India</p>
+          <div class="pt-2 flex flex-col gap-2">
+            <a class="text-surface-bright font-bold hover:text-tertiary-fixed transition-colors flex items-center gap-2"
+              href="tel:+919687375151">📱 +91-9687375151</a>
+            <a class="text-surface-bright font-bold hover:text-tertiary-fixed transition-colors flex items-center gap-2"
+              href="mailto:shreejiconstruction2007@zohomail.in">✉ shreejiconstruction2007@zohomail.in</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPLIANCE Section -->
+      <div class="space-y-6">
+        <h4
+          class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold border-b border-outline-variant/30 pb-2">
+          COMPLIANCE</h4>
+        <div class="flex flex-col gap-4">
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm"
+            href="https://udyamregistration.gov.in/" target="_blank" rel="noopener noreferrer">MSME Certified</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm"
+            href="https://services.gst.gov.in/services/searchtp" target="_blank" rel="noopener noreferrer">GST
+            Registered</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm cursor-pointer"
+            onclick="openComplianceModal('pf')">PF &amp; ESI Compliant</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm cursor-pointer"
+            onclick="openComplianceModal('safety')">Safety Standards</a>
+        </div>
+      </div>
+
+      <!-- QUICK LINKS Section -->
+      <div class="space-y-6">
+        <h4
+          class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold border-b border-outline-variant/30 pb-2">
+          QUICK LINKS</h4>
+        <div class="flex flex-col gap-4">
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm"
+            href="index.html">Home</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm"
+            href="who_we_are.html">Who We Are</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm"
+            href="services.html">Services</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm"
+            href="manpower.html">Manpower</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm"
+            href="compliance.html#compliance-details">MSME Compliance</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm"
+            href="safety_policy.html#safety-policy-details">Safety Policy</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm"
+            href="quality_control.html#quality-control-details">Quality Control</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm"
+            href="project_gallery.html">Project Gallery</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-outline-variant/20 py-8 px-margin-desktop max-w-container-max mx-auto text-center">
+      <p class="font-label-sm text-label-sm text-outline-variant opacity-60">© 2024 Shreeji Construction. Precision in
+        Fabrication &amp; Erection and Manpower Supplier. All rights reserved.</p>
+    </div>
+  </footer>
+  <div
+    class="fixed inset-0 z-50 bg-primary/95 backdrop-blur-md flex flex-col justify-center items-center gap-8 text-white transition-all duration-300 transform translate-x-full lg:hidden"
+    id="mobileMenu">
+    <button class="absolute top-6 right-6 text-white focus:outline-none" id="closeMobileMenu">
+      <span class="material-symbols-outlined text-4xl">close</span>
+    </button>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="index.html">Home</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="who_we_are.html">Who
+      We Are</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors"
+      href="services.html">Services</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors"
+      href="manpower.html">Manpower</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors"
+      href="compliance.html">Compliance</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors"
+      href="contact.html">Contact</a>
+    <button class="bg-on-tertiary-container text-white px-8 py-4 font-label-md uppercase font-bold tracking-widest mt-4"
+      onclick="location.href='contact.html'">Request Quote</button>
+  </div>
+  <script id="mobile-menu-script">
+    (function () {
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const closeMobileMenu = document.getElementById('closeMobileMenu');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.remove('translate-x-full');
+        });
+      }
+      if (closeMobileMenu && mobileMenu) {
+        closeMobileMenu.addEventListener('click', () => {
+          mobileMenu.classList.add('translate-x-full');
+        });
+      }
     })();
-</script>
-</body></html>
+  </script>
+  <!-- Compliance Modal Component -->
+  <div id="complianceModal"
+    class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/60 backdrop-blur-sm">
+    <div class="bg-surface border border-outline-variant max-w-lg w-full mx-4 p-8 relative shadow-2xl">
+      <button id="closeComplianceModal"
+        class="absolute top-4 right-4 text-secondary hover:text-primary focus:outline-none" onclick="closeModal()">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+      <div id="complianceModalContent" class="text-on-surface">
+        <!-- Dynamic Content -->
+      </div>
+    </div>
+  </div>
+  <script>
+    function openComplianceModal(type) {
+      const modal = document.getElementById('complianceModal');
+      const content = document.getElementById('complianceModalContent');
+      if (!modal || !content) return;
+
+      let html = '';
+      if (type === 'pf') {
+        html = `
+            <div class="flex items-center gap-3 mb-6 text-primary">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container">verified_user</span>
+                <h3 class="font-headline-sm text-headline-sm font-bold uppercase tracking-tight">PF & ESI Compliance</h3>
+            </div>
+            <div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed text-left">
+                <p><strong>Shreeji Construction</strong> is fully registered and compliant with the Employees' Provident Fund Organisation (EPFO) and the Employees' State Insurance Corporation (ESIC).</p>
+                <p>We strictly adhere to all statutory provisions of the <em>Employees' Provident Funds and Miscellaneous Provisions Act, 1952</em>, and the <em>Employees' State Insurance Act, 1948</em>.</p>
+                <p>All contribution deposits are filed monthly, ensuring complete statutory protection, healthcare eligibility, and retirement benefit coverage for our deployed workforce.</p>
+            </div>
+            <div class="mt-8 flex justify-end">
+                <button onclick="closeModal()" class="bg-primary text-white px-6 py-2.5 font-label-md uppercase tracking-wider text-sm hover:bg-on-tertiary-container transition-colors">Close</button>
+            </div>
+        `;
+      } else if (type === 'safety') {
+        html = `
+            <div class="flex items-center gap-3 mb-6 text-primary">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container">security</span>
+                <h3 class="font-headline-sm text-headline-sm font-bold uppercase tracking-tight">Safety & Quality Standards</h3>
+            </div>
+            <div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed text-left">
+                <p>Our operations are guided by a zero-incident safety culture built around the standards of the <em>Factories Act, 1948</em>, and the <em>Building and Other Construction Workers (BOCW) Act, 1996</em>.</p>
+                <p>We are fully aligned with global standard operating procedures, executing mandatory tool-box talks (TBT), comprehensive Hazard Identification and Risk Assessments (HIRA), and Job Safety Analysis (JSA).</p>
+                <p>All work is delivered in accordance with absolute compliance standards using certified Personal Protective Equipment (PPE).</p>
+            </div>
+            <div class="mt-8 flex justify-end">
+                <button onclick="closeModal()" class="bg-primary text-white px-6 py-2.5 font-label-md uppercase tracking-wider text-sm hover:bg-on-tertiary-container transition-colors">Close</button>
+            </div>
+        `;
+      } else if (type === 'terms') {
+        html = `
+            <div class="flex items-center gap-3 mb-6 text-primary">
+                <span class="material-symbols-outlined text-3xl text-on-tertiary-container">description</span>
+                <h3 class="font-headline-sm text-headline-sm font-bold uppercase tracking-tight">Terms of Service</h3>
+            </div>
+            <div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed text-left max-h-[350px] overflow-y-auto pr-2 font-sans">
+                <p class="text-on-surface"><strong>1. Service Scope</strong><br>Shreeji Construction provides integrated industrial solutions, including the supply of vetted, skilled, and unskilled workforce (including but not limited to Helpers, Welders, Fitters, Riggers, and Housekeeping personnel) and structural engineering services such as fabrication and erection. All services are delivered to meet precise technical specifications and project timelines.</p>
+                <p class="text-on-surface"><strong>2. Compliance & Regulatory Commitment</strong><br>We operate with full transparency and adherence to all applicable Indian laws. This includes:<br>
+                - <strong>GST Compliance:</strong> All invoicing is fully compliant with the Goods and Services Tax regime.<br>
+                - <strong>Labour Law Adherence:</strong> We strictly follow Indian Labour and Contract Laws regarding the management and deployment of all personnel.<br>
+                - <strong>Statutory Registration:</strong> Shreeji Construction is an MSME-certified enterprise and maintains full PF (Provident Fund) and ESI (Employee State Insurance) registration for all active personnel.</p>
+                <p class="text-on-surface"><strong>3. Safety & Quality Standards</strong><br>Our operations are conducted in high-risk industrial environments. We enforce rigorous safety protocols and quality management systems across all concurrent project sites to ensure the integrity of our execution and the safety of our personnel and clients' facilities.</p>
+                <p class="text-on-surface"><strong>4. Confidentiality</strong><br>Shreeji Construction respects the sensitive nature of industrial operations. We treat all client project data, shutdown schedules, and proprietary site information with the highest level of professional confidentiality.</p>
+                <p class="text-on-surface"><strong>5. Payment & Invoicing</strong><br>We are committed to clear and consistent billing practices. All services are subject to the terms agreed upon in individual work orders and purchase orders, ensuring full financial transparency for our corporate partners.</p>
+            </div>
+            <div class="mt-8 flex justify-end">
+                <button onclick="closeModal()" class="bg-primary text-white px-6 py-2.5 font-label-md uppercase tracking-wider text-sm hover:bg-on-tertiary-container transition-colors">Close</button>
+            </div>
+        `;
+      }
+      content.innerHTML = html;
+      modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('complianceModal');
+      if (modal) {
+        modal.classList.add('hidden');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('complianceModal');
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal();
+        });
+      }
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+      });
+    });
+  </script>
+</body>
+
+</html>

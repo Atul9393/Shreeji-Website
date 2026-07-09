@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+  <title>Project Gallery | Shreeji Construction</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Shreeji Construction project portfolio — detailed case studies on structural fabrication, erection, shutdown maintenance, and industrial infrastructure across Gujarat and across India." />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Work+Sans:wght@400;500&family=IBM+Plex+Sans:wght@500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    try {
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "on-tertiary-fixed": "#351000","background": "#f8f9fa","on-background": "#191c1d",
+              "outline-variant": "#c4c6cf","on-tertiary-fixed-variant": "#7c2e00","inverse-surface": "#2e3132",
+              "error-container": "#ffdad6","surface-container-low": "#f3f4f5","on-secondary-fixed-variant": "#40484c",
+              "on-primary-container": "#708ab5","on-secondary": "#ffffff","on-surface": "#191c1d",
+              "tertiary-fixed-dim": "#ffb595","on-primary": "#ffffff","outline": "#74777f",
+              "surface-dim": "#d9dadb","on-tertiary": "#ffffff","surface": "#f8f9fa",
+              "primary-fixed": "#d6e3ff","surface-container-highest": "#e1e3e4","surface-tint": "#465f88",
+              "on-primary-fixed-variant": "#2d476f","on-error-container": "#93000a","inverse-on-surface": "#f0f1f2",
+              "secondary": "#585f64","on-tertiary-container": "#e85d00","error": "#ba1a1a",
+              "secondary-fixed-dim": "#c0c8cd","tertiary-container": "#3f1400","primary-fixed-dim": "#aec7f6",
+              "tertiary": "#1a0500","on-primary-fixed": "#001b3d","surface-container-lowest": "#ffffff",
+              "on-error": "#ffffff","secondary-fixed": "#dce4e9","secondary-container": "#d9e1e6",
+              "inverse-primary": "#aec7f6","on-surface-variant": "#44474e","on-secondary-fixed": "#151d21",
+              "primary-container": "#002147","surface-container": "#edeeef","primary": "#000a1e",
+              "surface-bright": "#f8f9fa","on-secondary-container": "#5c6469","surface-container-high": "#e7e8e9",
+              "tertiary-fixed": "#ffdbcd","surface-variant": "#e1e3e4"
+            },
+            "borderRadius": {"DEFAULT": "0.25rem","lg": "0.5rem","xl": "0.75rem","full": "9999px"},
+            "spacing": {"margin-desktop": "64px","base": "8px","container-max": "1280px","margin-mobile": "16px","gutter": "24px"},
+            "fontFamily": {
+              "headline-md": ["Libre Caslon Text"],"body-md": ["Work Sans"],"headline-lg": ["Libre Caslon Text"],
+              "body-lg": ["Work Sans"],"headline-sm": ["Libre Caslon Text"],"label-md": ["IBM Plex Sans"],
+              "display-lg": ["Libre Caslon Text"],"label-sm": ["IBM Plex Sans"]
+            },
+            "fontSize": {
+              "headline-md": ["32px", {"lineHeight": "40px","fontWeight": "600"}],
+              "body-md": ["16px", {"lineHeight": "24px","fontWeight": "400"}],
+              "headline-lg": ["48px", {"lineHeight": "56px","fontWeight": "700"}],
+              "body-lg": ["18px", {"lineHeight": "28px","fontWeight": "400"}],
+              "headline-sm": ["24px", {"lineHeight": "32px","fontWeight": "600"}],
+              "label-md": ["14px", {"lineHeight": "20px","letterSpacing": "0.05em","fontWeight": "600"}],
+              "display-lg": ["64px", {"lineHeight": "72px","letterSpacing": "-0.02em","fontWeight": "700"}],
+              "label-sm": ["12px", {"lineHeight": "16px","fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    } catch (_e) {}
+  </script>
+  <style>
+    .industrial-pattern {
+      background-color: #f8f9fa;
+      background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+    }
+    /* Infographic stat card */
+    .stat-card {
+      background: #000a1e;
+      border: 1px solid rgba(255,255,255,0.12);
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+    .stat-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: #e85d00;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+    .stat-card:hover::after { transform: scaleX(1); }
+    .stat-card:hover { border-color: rgba(232,93,0,0.5); }
+    /* Project entry card */
+    .project-card {
+      border-left: 4px solid transparent;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover { border-left-color: #e85d00; box-shadow: 0 16px 48px rgba(0,0,0,0.08); }
+    /* Section tab underline */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #e85d00;
+      padding-bottom: 4px;
+      border-bottom: 2px solid #e85d00;
+      margin-bottom: 8px;
+    }
+    @keyframes fadeUp { from {opacity:0;transform:translateY(18px);} to {opacity:1;transform:translateY(0);} }
+    .fade-up { animation: fadeUp 0.6s ease both; }
+    .fade-up-1 { animation-delay: 0.05s; }
+    .fade-up-2 { animation-delay: 0.12s; }
+    .fade-up-3 { animation-delay: 0.20s; }
+    .fade-up-4 { animation-delay: 0.28s; }
+    /* Filter active state */
+    .filter-btn.active { background: #000a1e; color: #fff; }
+    /* CTA pulse */
+    @keyframes pulse-orange {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(232,93,0,0.3); }
+      50% { box-shadow: 0 0 0 8px rgba(232,93,0,0); }
+    }
+    .cta-pulse { animation: pulse-orange 2.5s ease infinite; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+</head>
+
+<body class="bg-background text-on-surface font-body-md industrial-pattern min-h-screen">
+
+  <!-- NAV -->
+  <nav class="w-full sticky top-0 z-50 bg-surface border-b border-outline-variant">
+    <div class="flex justify-between items-center w-full px-margin-desktop py-0 max-w-container-max mx-auto h-20">
+      <a class="flex items-center gap-2.5 shrink-0" href="index.html">
+        <img alt="Shreeji Construction Logo" class="h-10 w-auto object-contain" src="images/logo.png" />
+        <div class="flex flex-col justify-center -space-y-0.5">
+          <span class="font-headline-sm text-[17px] lg:text-[19px] leading-tight font-bold text-primary tracking-tighter uppercase">SHREEJI CONSTRUCTION</span>
+          <span class="font-label-sm text-[9px] lg:text-[10px] leading-none text-on-tertiary-container tracking-widest font-bold uppercase">STRENGTH DELIVERED, PRECISION BUILT</span>
+        </div>
+      </a>
+      <div class="flex items-center h-full">
+        <div class="hidden lg:flex items-center gap-6 lg:gap-8 mr-8">
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="index.html">Home</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="who_we_are.html">Who We Are</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="services.html">Services</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="manpower.html">Manpower</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="compliance.html">Compliance</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-tertiary-container transition-colors duration-200 py-1" href="contact.html">Contact</a>
+        </div>
+        <button class="bg-primary text-white py-3 px-6 font-label-md text-label-md uppercase tracking-wider hover:bg-on-tertiary-container hover:text-white transition-all font-bold hidden sm:block whitespace-nowrap" onclick="location.href='contact.html'">REQUEST QUOTE</button>
+        <button class="lg:hidden ml-4 text-primary focus:outline-none" id="mobileMenuBtn">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section class="relative py-24 md:py-28 overflow-hidden bg-primary text-white">
+      <div class="absolute inset-0 opacity-10" style="background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:28px 28px;"></div>
+      <div class="absolute left-0 top-0 bottom-0 w-2 bg-on-tertiary-container"></div>
+      <div class="relative max-w-container-max mx-auto px-margin-desktop">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-12">
+          <div class="space-y-6 max-w-3xl">
+            <span class="inline-flex items-center gap-2 py-1.5 px-4 bg-on-tertiary-container text-white font-label-sm uppercase tracking-widest">
+              <span class="material-symbols-outlined text-base" style='font-variation-settings:"FILL" 1;'>business_center</span>
+              Industrial Project Portfolio
+            </span>
+            <h1 class="font-headline-lg text-headline-lg leading-tight">Project Gallery</h1>
+            <p class="font-body-lg text-body-lg text-white/70 max-w-2xl">
+              Documented case studies of completed industrial projects. Each entry follows a <strong class="text-white">Client Need → Challenge → Solution → Impact</strong> structure so engineering and procurement teams can evaluate our capabilities against their specific requirements.
+            </p>
+          </div>
+          <!-- Portfolio summary stats -->
+          <div class="flex flex-wrap gap-0 shrink-0">
+            <div class="stat-card px-8 py-6 text-center fade-up fade-up-1">
+              <div class="text-on-tertiary-container font-headline-md text-headline-md font-bold">4</div>
+              <div class="font-label-sm text-label-sm uppercase tracking-widest text-white/70 mt-1">Projects Documented</div>
+            </div>
+            <div class="stat-card px-8 py-6 text-center fade-up fade-up-2">
+              <div class="text-on-tertiary-container font-headline-md text-headline-md font-bold">450+</div>
+              <div class="font-label-sm text-label-sm uppercase tracking-widest text-white/70 mt-1">MT Steel Fabricated</div>
+            </div>
+            <div class="stat-card px-8 py-6 text-center fade-up fade-up-3">
+              <div class="text-on-tertiary-container font-headline-md text-headline-md font-bold">Zero</div>
+              <div class="font-label-sm text-label-sm uppercase tracking-widest text-white/70 mt-1">Lost Time Injuries</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <div class="bg-surface border-b border-outline-variant sticky top-20 z-40">
+      <div class="max-w-container-max mx-auto px-margin-desktop py-4 flex items-center gap-3 flex-wrap">
+        <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mr-2">Filter:</span>
+        <button id="filter-all" class="filter-btn active border border-outline px-5 py-2 font-label-sm text-label-sm uppercase tracking-wider transition-all" data-filter="all">All Projects</button>
+        <button id="filter-fabrication" class="filter-btn border border-outline px-5 py-2 font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary hover:text-white transition-all" data-filter="fabrication">Fabrication</button>
+        <button id="filter-erection" class="filter-btn border border-outline px-5 py-2 font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary hover:text-white transition-all" data-filter="erection">Erection</button>
+        <button id="filter-shutdown" class="filter-btn border border-outline px-5 py-2 font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary hover:text-white transition-all" data-filter="shutdown">Shutdown / Maintenance</button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PROJECT ENTRIES
+    ═══════════════════════════════════════════ -->
+    <section class="py-20 max-w-container-max mx-auto px-margin-desktop space-y-12" id="projects-container">
+
+      <!-- ─────────────────────────────────────────
+           PROJECT 01 — DHOLERA SMART CITY STRUCTURAL PACKAGE
+      ───────────────────────────────────────── -->
+      <article class="project-card bg-white border border-outline-variant shadow-sm" data-category="fabrication erection" id="project-01">
+        <!-- Project Header / Infographic Card -->
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-0">
+          <!-- Data Infographic (dark card, col 2) -->
+          <div class="lg:col-span-2 bg-primary p-8 md:p-12 flex flex-col justify-between min-h-[320px] relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:20px 20px;"></div>
+            <div class="relative">
+              <span class="inline-block bg-on-tertiary-container text-white font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 mb-6">Featured Milestone</span>
+              <div class="text-on-tertiary-container font-display-lg text-5xl md:text-6xl font-bold tracking-tight leading-none mb-2">450+</div>
+              <div class="text-white/60 font-label-md text-label-md uppercase tracking-widest">MT Fabricated</div>
+            </div>
+            <div class="relative grid grid-cols-2 gap-4 mt-8 border-t border-white/10 pt-6">
+              <div>
+                <div class="text-on-tertiary-container font-bold text-xl">Zero LTI</div>
+                <div class="text-white/50 font-label-sm text-label-sm uppercase tracking-wide mt-0.5">Lost Time Injuries</div>
+              </div>
+              <div>
+                <div class="text-on-tertiary-container font-bold text-xl">IS 800</div>
+                <div class="text-white/50 font-label-sm text-label-sm uppercase tracking-wide mt-0.5">Code Compliance</div>
+              </div>
+              <div>
+                <div class="text-on-tertiary-container font-bold text-xl">40+</div>
+                <div class="text-white/50 font-label-sm text-label-sm uppercase tracking-wide mt-0.5">Field Personnel</div>
+              </div>
+              <div>
+                <div class="text-on-tertiary-container font-bold text-xl">On-Time</div>
+                <div class="text-white/50 font-label-sm text-label-sm uppercase tracking-wide mt-0.5">Project Handover</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Identity (right side) -->
+          <div class="lg:col-span-3 p-8 md:p-12 flex flex-col justify-between bg-surface-container-low">
+            <div>
+              <div class="flex items-center gap-3 mb-4 flex-wrap">
+                <span class="bg-surface-container border border-outline-variant font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 text-on-surface-variant">Project 01</span>
+                <span class="bg-primary-container/40 border border-primary-container font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 text-on-primary-container">Structural Fabrication</span>
+                <span class="bg-primary-container/40 border border-primary-container font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 text-on-primary-container">Erection</span>
+              </div>
+              <h2 class="font-headline-md text-headline-md text-primary mb-1 leading-snug">Dholera Smart City — Industrial Structural Package</h2>
+              <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Dholera, Gujarat · Structural Fabrication &amp; Erection</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Problem–Solution Body -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 divide-y md:divide-y-0 md:divide-x divide-outline-variant border-t border-outline-variant">
+
+          <!-- The Client Need -->
+          <div class="p-8 space-y-4">
+            <div class="section-label"><span class="material-symbols-outlined text-[14px]">person_raised_hand</span>The Client Need</div>
+            <p class="font-body-md text-on-surface-variant leading-relaxed text-sm">
+              A Dholera Special Investment Region (DSIR) infrastructure contractor required a single sub-contractor to deliver a full-scope structural steel package — from raw material procurement through to final erection — for a greenfield industrial facility within India's first smart city development zone. A fixed programme and zero tolerance for schedule overrun were contractual requirements.
+            </p>
+          </div>
+
+          <!-- The Challenge -->
+          <div class="p-8 space-y-4 bg-surface-container-low">
+            <div class="section-label"><span class="material-symbols-outlined text-[14px]">warning</span>The Challenge</div>
+            <ul class="space-y-3 font-body-md text-on-surface-variant text-sm">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">arrow_right</span>Coordinating 450+ MT of fabrication output with concurrent erection activities to avoid progress gaps.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">arrow_right</span>Logistics to a newly developed site with limited access infrastructure at project commencement.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">arrow_right</span>Maintaining IS 800 dimensional tolerances across large-span structural bays in field conditions.</li>
+            </ul>
+          </div>
+
+          <!-- Our Solution -->
+          <div class="p-8 space-y-4">
+            <div class="section-label"><span class="material-symbols-outlined text-[14px]">engineering</span>Our Solution</div>
+            <ul class="space-y-3 font-body-md text-on-surface-variant text-sm">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">check_circle</span>Deployed a dedicated 40+ member on-site team with a separate Bhavnagar fabrication crew operating in parallel.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">check_circle</span>Issued project-specific Inspection &amp; Test Plan (ITP) with client-acknowledged hold points at every critical weld joint.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">check_circle</span>Daily lookahead scheduling integrated with client's master programme — zero schedule slippage recorded.</li>
+            </ul>
+          </div>
+
+          <!-- Impact & Safety Stats -->
+          <div class="p-8 space-y-4 bg-surface-container-low">
+            <div class="section-label"><span class="material-symbols-outlined text-[14px]">bar_chart</span>Impact &amp; Safety Stats</div>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Steel Fabricated</span>
+                <span class="font-label-md text-label-md text-on-surface font-bold">450+ MT</span>
+              </div>
+              <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Lost Time Injuries</span>
+                <span class="font-label-md text-label-md text-on-tertiary-container font-bold">Zero</span>
+              </div>
+              <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Incident-Free Manhours</span>
+                <span class="font-label-md text-label-md text-on-surface font-bold">18,000+</span>
+              </div>
+              <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Schedule Deviation</span>
+                <span class="font-label-md text-label-md text-on-tertiary-container font-bold">Nil</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">NDT Rejection Rate</span>
+                <span class="font-label-md text-label-md text-on-surface font-bold">&lt; 0.8%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="border-t border-outline-variant px-8 py-6 bg-surface flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <p class="font-label-sm text-label-sm text-on-surface-variant max-w-md">Require a structural fabrication and erection partner for a greenfield or brownfield industrial project?</p>
+          <a id="cta-project-01" href="contact.html?subject=Industrial%20Project%20Inquiry%20-%20Structural%20Fabrication%20%26%20Erection" class="cta-pulse inline-flex items-center gap-3 bg-on-tertiary-container text-white px-8 py-3.5 font-label-md text-label-md uppercase tracking-wider hover:brightness-110 transition-all shrink-0">
+            <span class="material-symbols-outlined text-lg">send</span>
+            Inquire About Similar Work
+          </a>
+        </div>
+      </article>
+
+
+      <!-- ─────────────────────────────────────────
+           PROJECT 02 — APH REPLACEMENT & SHUTDOWN MAINTENANCE
+      ───────────────────────────────────────── -->
+      <article class="project-card bg-white border border-outline-variant shadow-sm" data-category="shutdown" id="project-02">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-0">
+          <!-- Infographic Card -->
+          <div class="lg:col-span-2 bg-primary p-8 md:p-12 flex flex-col justify-between min-h-[320px] relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:20px 20px;"></div>
+            <div class="relative">
+              <span class="inline-block border border-white/20 text-white/80 font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 mb-6">Shutdown Milestone</span>
+              <div class="text-on-tertiary-container font-display-lg text-5xl md:text-6xl font-bold tracking-tight leading-none mb-2">Zero</div>
+              <div class="text-white/60 font-label-md text-label-md uppercase tracking-widest">Incident Record</div>
+            </div>
+            <div class="relative grid grid-cols-2 gap-4 mt-8 border-t border-white/10 pt-6">
+              <div>
+                <div class="text-on-tertiary-container font-bold text-xl">On-Time</div>
+                <div class="text-white/50 font-label-sm text-label-sm uppercase tracking-wide mt-0.5">Handback to Client</div>
+              </div>
+              <div>
+                <div class="text-on-tertiary-container font-bold text-xl">100%</div>
+                <div class="text-white/50 font-label-sm text-label-sm uppercase tracking-wide mt-0.5">PPE Compliance</div>
+              </div>
+              <div>
+                <div class="text-on-tertiary-container font-bold text-xl">APH</div>
+                <div class="text-white/50 font-label-sm text-label-sm uppercase tracking-wide mt-0.5">Pre-Heater Replaced</div>
+              </div>
+              <div>
+                <div class="text-on-tertiary-container font-bold text-xl">48-hr</div>
+                <div class="text-white/50 font-label-sm text-label-sm uppercase tracking-wide mt-0.5">Emergency Response</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Identity -->
+          <div class="lg:col-span-3 p-8 md:p-12 flex flex-col justify-between bg-surface-container-low">
+            <div>
+              <div class="flex items-center gap-3 mb-4 flex-wrap">
+                <span class="bg-surface-container border border-outline-variant font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 text-on-surface-variant">Project 02</span>
+                <span class="bg-primary-container/40 border border-primary-container font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 text-on-primary-container">Shutdown / Maintenance</span>
+              </div>
+              <h2 class="font-headline-md text-headline-md text-primary mb-1 leading-snug">APH Replacement &amp; Ducting Repair — Thermal Power Facility</h2>
+              <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Gujarat · Shutdown Maintenance &amp; Structural Repairs</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Problem–Solution Body -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 divide-y md:divide-y-0 md:divide-x divide-outline-variant border-t border-outline-variant">
+
+          <div class="p-8 space-y-4">
+            <div class="section-label"><span class="material-symbols-outlined text-[14px]">person_raised_hand</span>The Client Need</div>
+            <p class="font-body-md text-on-surface-variant leading-relaxed text-sm">
+              A thermal power plant operator required complete replacement of a deteriorated Air Pre-Heater (APH) unit and repair of associated ducting during a fixed-window planned shutdown. The maintenance window was non-negotiable; any overrun would directly impact generation capacity and incur contractual penalties for the client.
+            </p>
+          </div>
+
+          <div class="p-8 space-y-4 bg-surface-container-low">
+            <div class="section-label"><span class="material-symbols-outlined text-[14px]">warning</span>The Challenge</div>
+            <ul class="space-y-3 font-body-md text-on-surface-variant text-sm">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">arrow_right</span>Confined-space and elevated work at operating plant — highest safety risk classification.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">arrow_right</span>Compressed shutdown window requiring 24-hour crew rotation to maintain progress.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">arrow_right</span>Precision alignment of the replacement APH unit critical to thermal efficiency performance post-startup.</li>
+            </ul>
+          </div>
+
+          <div class="p-8 space-y-4">
+            <div class="section-label"><span class="material-symbols-outlined text-[14px]">engineering</span>Our Solution</div>
+            <ul class="space-y-3 font-body-md text-on-surface-variant text-sm">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">check_circle</span>Deployed experienced shutdown crew with mandatory HIRA and PTW compliance enforced before every shift entry.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">check_circle</span>Pre-fabricated all replacement ducting sections off-site to eliminate field cutting time within the shutdown window.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">check_circle</span>Survey-instrument-verified APH alignment on installation — confirmed within ±1mm tolerance before handback.</li>
+            </ul>
+          </div>
+
+          <div class="p-8 space-y-4 bg-surface-container-low">
+            <div class="section-label"><span class="material-symbols-outlined text-[14px]">bar_chart</span>Impact &amp; Safety Stats</div>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Lost Time Injuries</span>
+                <span class="font-label-md text-label-md text-on-tertiary-container font-bold">Zero</span>
+              </div>
+              <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Shutdown Window</span>
+                <span class="font-label-md text-label-md text-on-surface font-bold">Met — No Overrun</span>
+              </div>
+              <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">APH Alignment Tolerance</span>
+                <span class="font-label-md text-label-md text-on-surface font-bold">±1 mm</span>
+              </div>
+              <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">PTW Compliance</span>
+                <span class="font-label-md text-label-md text-on-tertiary-container font-bold">100%</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Daily Toolbox Talks</span>
+                <span class="font-label-md text-label-md text-on-surface font-bold">Every Shift</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="border-t border-outline-variant px-8 py-6 bg-surface flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <p class="font-label-sm text-label-sm text-on-surface-variant max-w-md">Planning a plant shutdown? Require a team with proven zero-incident shutdown execution?</p>
+          <a id="cta-project-02" href="contact.html?subject=Industrial%20Project%20Inquiry%20-%20Shutdown%20Maintenance" class="cta-pulse inline-flex items-center gap-3 bg-on-tertiary-container text-white px-8 py-3.5 font-label-md text-label-md uppercase tracking-wider hover:brightness-110 transition-all shrink-0">
+            <span class="material-symbols-outlined text-lg">send</span>
+            Inquire About Similar Work
+          </a>
+        </div>
+      </article>
+
+
+      <!-- ─────────────────────────────────────────
+           PROJECT 03 — ON-SITE CLIENT FABRICATION FACILITY
+      ───────────────────────────────────────── -->
+      <article class="project-card bg-white border border-outline-variant shadow-sm" data-category="fabrication" id="project-03">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-0">
+          <!-- Infographic Card -->
+          <div class="lg:col-span-2 bg-primary p-8 md:p-12 flex flex-col justify-between min-h-[320px] relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:20px 20px;"></div>
+            <div class="relative">
+              <span class="inline-block border border-white/20 text-white/80 font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 mb-6">Quality Standard</span>
+              <div class="text-on-tertiary-container font-display-lg text-5xl md:text-6xl font-bold tracking-tight leading-none mb-2">0</div>
+              <div class="text-white/60 font-label-md text-label-md uppercase tracking-widest">Tolerance Defects</div>
+            </div>
+            <div class="relative grid grid-cols-2 gap-4 mt-8 border-t border-white/10 pt-6">
+              <div>
+                <div class="text-on-tertiary-container font-bold text-xl">Zero LTI</div>
+                <div class="text-white/50 font-label-sm text-label-sm uppercase tracking-wide mt-0.5">Zero-Incident</div>
+              </div>
+              <div>
+                <div class="text-on-tertiary-container font-bold text-xl">SS + CS</div>
+                <div class="text-white/50 font-label-sm text-label-sm uppercase tracking-wide mt-0.5">Material Grades</div>
+              </div>
+              <div>
+                <div class="text-on-tertiary-container font-bold text-xl">100%</div>
+                <div class="text-white/50 font-label-sm text-label-sm uppercase tracking-wide mt-0.5">VWE Inspected</div>
+              </div>
+              <div>
+                <div class="text-on-tertiary-container font-bold text-xl">ITP</div>
+                <div class="text-white/50 font-label-sm text-label-sm uppercase tracking-wide mt-0.5">Client-Approved Plan</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Identity -->
+          <div class="lg:col-span-3 p-8 md:p-12 flex flex-col justify-between bg-surface-container-low">
+            <div>
+              <div class="flex items-center gap-3 mb-4 flex-wrap">
+                <span class="bg-surface-container border border-outline-variant font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 text-on-surface-variant">Project 03</span>
+                <span class="bg-primary-container/40 border border-primary-container font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 text-on-primary-container">On-Site Fabrication</span>
+              </div>
+              <h2 class="font-headline-md text-headline-md text-primary mb-1 leading-snug">On-Site Client Fabrication Facility — Heavy Carbon &amp; Stainless Steel</h2>
+              <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Gujarat Industrial Site · Resident Fabrication Team</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Problem–Solution Body -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 divide-y md:divide-y-0 md:divide-x divide-outline-variant border-t border-outline-variant">
+
+          <div class="p-8 space-y-4">
+            <div class="section-label"><span class="material-symbols-outlined text-[14px]">person_raised_hand</span>The Client Need</div>
+            <p class="font-body-md text-on-surface-variant leading-relaxed text-sm">
+              A large industrial process facility required a resident fabrication contractor capable of operating within their live-plant boundary, fabricating replacement and new-build structural components to client-specified engineering drawings in both carbon steel and stainless steel, under the client's quality management system.
+            </p>
+          </div>
+
+          <div class="p-8 space-y-4 bg-surface-container-low">
+            <div class="section-label"><span class="material-symbols-outlined text-[14px]">warning</span>The Challenge</div>
+            <ul class="space-y-3 font-body-md text-on-surface-variant text-sm">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">arrow_right</span>Operating within a live industrial facility with concurrent production — strict hot work permit and isolation protocols required at all times.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">arrow_right</span>Bi-metallic fabrication (CS and SS) requiring separate welder qualifications and dedicated tooling to prevent contamination.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">arrow_right</span>Client's internal QA engineer stationed on-site — all work subject to real-time third-party inspection and hold points.</li>
+            </ul>
+          </div>
+
+          <div class="p-8 space-y-4">
+            <div class="section-label"><span class="material-symbols-outlined text-[14px]">engineering</span>Our Solution</div>
+            <ul class="space-y-3 font-body-md text-on-surface-variant text-sm">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">check_circle</span>Fielded a dedicated resident team with segregated CS and SS tooling sets and separately qualified welders for each material stream.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">check_circle</span>All fabrication executed under client-approved ITP; Visual Weld Examination (VWE) completed on 100% of joints before any client hold point was released.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">check_circle</span>Strict hot work PTW compliance maintained throughout — zero near-miss or safety events recorded across the engagement.</li>
+            </ul>
+          </div>
+
+          <div class="p-8 space-y-4 bg-surface-container-low">
+            <div class="section-label"><span class="material-symbols-outlined text-[14px]">bar_chart</span>Impact &amp; Safety Stats</div>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Lost Time Injuries</span>
+                <span class="font-label-md text-label-md text-on-tertiary-container font-bold">Zero</span>
+              </div>
+              <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">VWE Pass Rate</span>
+                <span class="font-label-md text-label-md text-on-surface font-bold">100%</span>
+              </div>
+              <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">NCRs Raised</span>
+                <span class="font-label-md text-label-md text-on-tertiary-container font-bold">Zero</span>
+              </div>
+              <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Material Grades</span>
+                <span class="font-label-md text-label-md text-on-surface font-bold">CS &amp; SS</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Client Hold Points</span>
+                <span class="font-label-md text-label-md text-on-surface font-bold">All Cleared</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="border-t border-outline-variant px-8 py-6 bg-surface flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <p class="font-label-sm text-label-sm text-on-surface-variant max-w-md">Need a resident fabrication team embedded within your facility, operating under your QMS?</p>
+          <a id="cta-project-03" href="contact.html?subject=Industrial%20Project%20Inquiry%20-%20On-Site%20Fabrication" class="cta-pulse inline-flex items-center gap-3 bg-on-tertiary-container text-white px-8 py-3.5 font-label-md text-label-md uppercase tracking-wider hover:brightness-110 transition-all shrink-0">
+            <span class="material-symbols-outlined text-lg">send</span>
+            Inquire About Similar Work
+          </a>
+        </div>
+      </article>
+
+
+      <!-- ─────────────────────────────────────────
+           PROJECT 04 — HIGH-ALTITUDE STRUCTURAL ERECTION
+      ───────────────────────────────────────── -->
+      <article class="project-card bg-white border border-outline-variant shadow-sm" data-category="erection" id="project-04">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-0">
+          <!-- Infographic Card -->
+          <div class="lg:col-span-2 bg-primary p-8 md:p-12 flex flex-col justify-between min-h-[320px] relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:20px 20px;"></div>
+            <div class="relative">
+              <span class="inline-block border border-white/20 text-white/80 font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 mb-6">Execution Milestone</span>
+              <div class="text-on-tertiary-container font-display-lg text-5xl md:text-6xl font-bold tracking-tight leading-none mb-2">40+</div>
+              <div class="text-white/60 font-label-md text-label-md uppercase tracking-widest">Metres Elevation</div>
+            </div>
+            <div class="relative grid grid-cols-2 gap-4 mt-8 border-t border-white/10 pt-6">
+              <div>
+                <div class="text-on-tertiary-container font-bold text-xl">Zero LTI</div>
+                <div class="text-white/50 font-label-sm text-label-sm uppercase tracking-wide mt-0.5">High-Work Safety</div>
+              </div>
+              <div>
+                <div class="text-on-tertiary-container font-bold text-xl">HIRA</div>
+                <div class="text-white/50 font-label-sm text-label-sm uppercase tracking-wide mt-0.5">Pre-Task Analysis</div>
+              </div>
+              <div>
+                <div class="text-on-tertiary-container font-bold text-xl">±5mm</div>
+                <div class="text-white/50 font-label-sm text-label-sm uppercase tracking-wide mt-0.5">Plumb Tolerance</div>
+              </div>
+              <div>
+                <div class="text-on-tertiary-container font-bold text-xl">CRN</div>
+                <div class="text-white/50 font-label-sm text-label-sm uppercase tracking-wide mt-0.5">Rigging Certified</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Identity -->
+          <div class="lg:col-span-3 p-8 md:p-12 flex flex-col justify-between bg-surface-container-low">
+            <div>
+              <div class="flex items-center gap-3 mb-4 flex-wrap">
+                <span class="bg-surface-container border border-outline-variant font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 text-on-surface-variant">Project 04</span>
+                <span class="bg-primary-container/40 border border-primary-container font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 text-on-primary-container">High-Altitude Erection</span>
+                <span class="bg-primary-container/40 border border-primary-container font-label-sm text-[10px] uppercase tracking-widest px-3 py-1 text-on-primary-container">Crane Rigging</span>
+              </div>
+              <h2 class="font-headline-md text-headline-md text-primary mb-1 leading-snug">High-Altitude Structural Erection — Multi-Storey Industrial Columns</h2>
+              <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Gujarat · Advanced Crane Rigging &amp; Structural Erection</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Problem–Solution Body -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 divide-y md:divide-y-0 md:divide-x divide-outline-variant border-t border-outline-variant">
+
+          <div class="p-8 space-y-4">
+            <div class="section-label"><span class="material-symbols-outlined text-[14px]">person_raised_hand</span>The Client Need</div>
+            <p class="font-body-md text-on-surface-variant leading-relaxed text-sm">
+              An industrial plant expansion required erection of multi-storey structural steel columns and beams at heights exceeding 40 metres. The primary client requirement was a contractor with proven high-altitude erection capability, crane rigging competency, and an unimpeachable safety record for working-at-height tasks.
+            </p>
+          </div>
+
+          <div class="p-8 space-y-4 bg-surface-container-low">
+            <div class="section-label"><span class="material-symbols-outlined text-[14px]">warning</span>The Challenge</div>
+            <ul class="space-y-3 font-body-md text-on-surface-variant text-sm">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">arrow_right</span>Achieving plumb and level tolerances on tall columns where minor base deviations are magnified significantly at top elevation.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">arrow_right</span>Crane positioning constrained by existing plant infrastructure — required detailed lift planning and ground-bearing assessment.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">arrow_right</span>Working-at-height risk at 40+ metres required mandatory harness, rescue plan, and exclusion zone protocols enforced without exception.</li>
+            </ul>
+          </div>
+
+          <div class="p-8 space-y-4">
+            <div class="section-label"><span class="material-symbols-outlined text-[14px]">engineering</span>Our Solution</div>
+            <ul class="space-y-3 font-body-md text-on-surface-variant text-sm">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">check_circle</span>Prepared a formal Lift Plan and Rigging Study reviewed by a certified rigging engineer prior to any crane mobilisation.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">check_circle</span>Installed temporary bracing after each column erection and performed theodolite plumb checks before proceeding to the next lift.</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 shrink-0">check_circle</span>Pre-task HIRA conducted before every shift; full-body harness and rescue-at-height equipment inspected daily by safety supervisor.</li>
+            </ul>
+          </div>
+
+          <div class="p-8 space-y-4 bg-surface-container-low">
+            <div class="section-label"><span class="material-symbols-outlined text-[14px]">bar_chart</span>Impact &amp; Safety Stats</div>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Lost Time Injuries</span>
+                <span class="font-label-md text-label-md text-on-tertiary-container font-bold">Zero</span>
+              </div>
+              <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Maximum Work Height</span>
+                <span class="font-label-md text-label-md text-on-surface font-bold">40+ Metres</span>
+              </div>
+              <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Column Plumb Tolerance</span>
+                <span class="font-label-md text-label-md text-on-surface font-bold">±5 mm</span>
+              </div>
+              <div class="flex items-center justify-between border-b border-outline-variant pb-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Near-Miss Events</span>
+                <span class="font-label-md text-label-md text-on-tertiary-container font-bold">Zero</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Harness Compliance</span>
+                <span class="font-label-md text-label-md text-on-surface font-bold">100%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="border-t border-outline-variant px-8 py-6 bg-surface flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <p class="font-label-sm text-label-sm text-on-surface-variant max-w-md">Need high-altitude erection with certified rigging teams and a demonstrated zero-incident record?</p>
+          <a id="cta-project-04" href="contact.html?subject=Industrial%20Project%20Inquiry%20-%20High-Altitude%20Erection" class="cta-pulse inline-flex items-center gap-3 bg-on-tertiary-container text-white px-8 py-3.5 font-label-md text-label-md uppercase tracking-wider hover:brightness-110 transition-all shrink-0">
+            <span class="material-symbols-outlined text-lg">send</span>
+            Inquire About Similar Work
+          </a>
+        </div>
+      </article>
+
+    </section><!-- /projects-container -->
+
+
+    <!-- ═══════════════════════════════════════════
+         BOTTOM GLOBAL CTA STRIP
+    ═══════════════════════════════════════════ -->
+    <section class="bg-primary py-20 mt-12">
+      <div class="max-w-container-max mx-auto px-margin-desktop text-center space-y-6">
+        <div class="inline-flex items-center gap-2 py-1.5 px-4 bg-on-tertiary-container text-white font-label-sm uppercase tracking-widest mb-2">
+          <span class="material-symbols-outlined text-base" style='font-variation-settings:"FILL" 1;'>verified</span>
+          Zero Lost Time Injuries Across All Projects
+        </div>
+        <h2 class="font-headline-lg text-headline-lg text-white leading-snug">Have a similar project requirement?</h2>
+        <p class="font-body-lg text-body-lg text-white/60 max-w-2xl mx-auto">Our engineering team reviews every enquiry and responds within 2 working days with a capability statement and indicative programme. No commitment required at enquiry stage.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+          <a id="cta-global-inquiry" href="contact.html?subject=Industrial%20Project%20Inquiry" class="inline-flex items-center gap-3 bg-on-tertiary-container text-white px-10 py-4 font-label-md text-label-md uppercase tracking-wider hover:brightness-110 transition-all">
+            <span class="material-symbols-outlined text-xl">send</span>
+            Submit a Project Inquiry
+          </a>
+          <a href="services.html" class="inline-flex items-center gap-3 border border-white/30 text-white px-10 py-4 font-label-md text-label-md uppercase tracking-wider hover:border-on-tertiary-container hover:text-on-tertiary-container transition-all">
+            <span class="material-symbols-outlined text-xl">category</span>
+            View All Services
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary border-t-4 border-on-tertiary-container mt-24">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-margin-desktop py-20 max-w-container-max mx-auto items-start text-white">
+      <!-- Centered Company Name Branding -->
+      <div class="space-y-6 flex flex-col items-center justify-center text-center">
+        <img alt="Shreeji Construction Logo" class="h-12 w-auto object-contain mb-2" src="images/logo.png"/>
+        <span class="block font-headline-sm text-surface-bright uppercase font-bold text-2xl tracking-widest leading-none">SHREEJI</span>
+        <span class="block font-headline-sm text-on-tertiary-container uppercase font-bold text-2xl tracking-widest leading-none">CONSTRUCTION</span>
+        <p class="font-label-sm text-label-sm text-outline-variant leading-relaxed mt-4 max-w-xs">Strength Delivered, Precision Built. Building India's industrial backbone since 2007.</p>
+      </div>
+
+      <!-- CORPORATE HEADQUARTERS Section -->
+      <div class="space-y-6">
+        <h4 class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold border-b border-outline-variant/30 pb-2">CORPORATE HEADQUARTERS</h4>
+        <div class="text-outline-variant font-label-sm text-label-sm space-y-3 text-left">
+          <p class="leading-relaxed">R.S No - 471/2-3-4, Plot No 855/A to B-859/7, Shivay Bungalow, Sardar Patel Institute Road, Kaliya Bid, Bhavnagar - 346002, Gujarat, India</p>
+          <div class="pt-2 flex flex-col gap-2">
+            <a class="text-surface-bright font-bold hover:text-tertiary-fixed transition-colors flex items-center gap-2" href="tel:+919687375151">📱 +91-9687375151</a>
+            <a class="text-surface-bright font-bold hover:text-tertiary-fixed transition-colors flex items-center gap-2" href="mailto:shreejiconstruction2007@zohomail.in">✉ shreejiconstruction2007@zohomail.in</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPLIANCE Section -->
+      <div class="space-y-6">
+        <h4 class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold border-b border-outline-variant/30 pb-2">COMPLIANCE</h4>
+        <div class="flex flex-col gap-4">
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="https://udyamregistration.gov.in/" target="_blank" rel="noopener noreferrer">MSME Certified</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="https://services.gst.gov.in/services/searchtp" target="_blank" rel="noopener noreferrer">GST Registered</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm cursor-pointer" onclick="openComplianceModal('pf')">PF &amp; ESI Compliant</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm cursor-pointer" onclick="openComplianceModal('safety')">Safety Standards</a>
+        </div>
+      </div>
+
+      <!-- QUICK LINKS Section -->
+      <div class="space-y-6">
+        <h4 class="text-surface-bright font-label-md text-label-md uppercase tracking-widest font-bold border-b border-outline-variant/30 pb-2">QUICK LINKS</h4>
+        <div class="flex flex-col gap-4">
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="index.html">Home</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="who_we_are.html">Who We Are</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="services.html">Services</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="manpower.html">Manpower</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="compliance.html#compliance-details">MSME Compliance</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="safety_policy.html#safety-policy-details">Safety Policy</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="quality_control.html#quality-control-details">Quality Control</a>
+          <a class="text-outline-variant hover:text-tertiary-fixed transition-colors font-label-sm text-label-sm" href="project_gallery.html">Project Gallery</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-outline-variant/20 py-8 px-margin-desktop max-w-container-max mx-auto text-center">
+      <p class="font-label-sm text-label-sm text-outline-variant opacity-60">© 2024 Shreeji Construction. Precision in Fabrication &amp; Erection and Manpower Supplier. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu -->
+  <div class="fixed inset-0 z-50 bg-primary/95 backdrop-blur-md flex flex-col justify-center items-center gap-8 text-white transition-all duration-300 transform translate-x-full lg:hidden" id="mobileMenu">
+    <button class="absolute top-6 right-6 text-white focus:outline-none" id="closeMobileMenu">
+      <span class="material-symbols-outlined text-4xl">close</span>
+    </button>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="index.html">Home</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="who_we_are.html">Who We Are</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="services.html">Services</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="manpower.html">Manpower</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="compliance.html">Compliance</a>
+    <a class="font-headline-sm text-2xl hover:text-on-tertiary-container transition-colors" href="contact.html">Contact</a>
+    <button class="bg-on-tertiary-container text-white px-8 py-4 font-label-md uppercase font-bold tracking-widest mt-4" onclick="location.href='contact.html'">Request Quote</button>
+  </div>
+
+  <script>
+    // Mobile menu
+    (function () {
+      const btn = document.getElementById('mobileMenuBtn');
+      const close = document.getElementById('closeMobileMenu');
+      const menu = document.getElementById('mobileMenu');
+      if (btn && menu) btn.addEventListener('click', () => menu.classList.remove('translate-x-full'));
+      if (close && menu) close.addEventListener('click', () => menu.classList.add('translate-x-full'));
+    })();
+
+    // Project filter
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projects = document.querySelectorAll('#projects-container article');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.dataset.filter;
+          projects.forEach(p => {
+            if (filter === 'all') {
+              p.style.display = '';
+            } else {
+              const cats = p.dataset.category || '';
+              p.style.display = cats.includes(filter) ? '' : 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+  <!-- Compliance Modal -->
+  <div id="complianceModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/60 backdrop-blur-sm">
+    <div class="bg-surface border border-outline-variant max-w-lg w-full mx-4 p-8 relative shadow-2xl">
+      <button class="absolute top-4 right-4 text-secondary hover:text-primary focus:outline-none" onclick="closeModal()">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+      <div id="complianceModalContent" class="text-on-surface"></div>
+    </div>
+  </div>
+  <script>
+    function openComplianceModal(type) {
+      const modal = document.getElementById('complianceModal');
+      const content = document.getElementById('complianceModalContent');
+      if (!modal || !content) return;
+      let html = '';
+      if (type === 'pf') {
+        html = `<div class="flex items-center gap-3 mb-6 text-primary"><span class="material-symbols-outlined text-3xl text-on-tertiary-container">verified_user</span><h3 class="font-headline-sm text-headline-sm font-bold uppercase tracking-tight">PF &amp; ESI Compliance</h3></div><div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed text-left"><p><strong>Shreeji Construction</strong> is fully registered with EPFO and ESIC.</p><p>We adhere to the <em>Employees' PF and Miscellaneous Provisions Act, 1952</em> and <em>ESI Act, 1948</em>.</p></div><div class="mt-8 flex justify-end"><button onclick="closeModal()" class="bg-primary text-white px-6 py-2.5 font-label-md uppercase tracking-wider text-sm hover:bg-on-tertiary-container transition-colors">Close</button></div>`;
+      } else if (type === 'safety') {
+        html = `<div class="flex items-center gap-3 mb-6 text-primary"><span class="material-symbols-outlined text-3xl text-on-tertiary-container">security</span><h3 class="font-headline-sm text-headline-sm font-bold uppercase tracking-tight">Safety Standards</h3></div><div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed text-left"><p>Zero-incident safety culture aligned to <em>Factories Act, 1948</em> and <em>BOCW Act, 1996</em>.</p><p>Daily TBT, HIRA, JSA — all field personnel use BIS-certified PPE.</p></div><div class="mt-8 flex justify-end"><button onclick="closeModal()" class="bg-primary text-white px-6 py-2.5 font-label-md uppercase tracking-wider text-sm hover:bg-on-tertiary-container transition-colors">Close</button></div>`;
+      } else if (type === 'terms') {
+        html = `<div class="flex items-center gap-3 mb-6 text-primary"><span class="material-symbols-outlined text-3xl text-on-tertiary-container">description</span><h3 class="font-headline-sm text-headline-sm font-bold uppercase tracking-tight">Terms of Service</h3></div><div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed text-left max-h-[350px] overflow-y-auto pr-2"><p><strong>1. Service Scope</strong><br>Integrated industrial solutions — workforce supply and structural engineering.</p><p><strong>2. Compliance</strong><br>Full GST, Labour Law, MSME, PF &amp; ESI compliance.</p><p><strong>3. Safety &amp; Quality</strong><br>Rigorous protocols across all sites.</p><p><strong>4. Confidentiality</strong><br>All client data treated with the highest confidentiality.</p></div><div class="mt-8 flex justify-end"><button onclick="closeModal()" class="bg-primary text-white px-6 py-2.5 font-label-md uppercase tracking-wider text-sm hover:bg-on-tertiary-container transition-colors">Close</button></div>`;
+      }
+      content.innerHTML = html;
+      modal.classList.remove('hidden');
+    }
+    function closeModal() {
+      const modal = document.getElementById('complianceModal');
+      if (modal) modal.classList.add('hidden');
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('complianceModal');
+      if (modal) modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+    });
+  </script>
+
+</body>
+</html>

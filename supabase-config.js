@@ -1,20 +1,58 @@
 // supabase-config.js
 
-// Supabase configuration - REPLACE these with your actual Supabase project credentials if available
-window.SUPABASE_URL = window.SUPABASE_URL || "";
-window.SUPABASE_ANON_KEY = window.SUPABASE_ANON_KEY || "";
+// Supabase configuration - values can be injected directly or loaded locally
+window.SUPABASE_URL = window.SUPABASE_URL || "https://rgzuxchfcmysszcqvkmm.supabase.co";
+window.SUPABASE_ANON_KEY = window.SUPABASE_ANON_KEY || "sb_publishable_JTE1q7p1Ik3WgwAf3UWGoA_M-OnGjyM";
 
 let supabaseClient = null;
 
-if (window.SUPABASE_URL && window.SUPABASE_ANON_KEY && typeof supabase !== 'undefined') {
-    try {
-        supabaseClient = supabase.createClient(window.SUPABASE_URL, window.SUPABASE_ANON_KEY);
-        console.log("Supabase initialized successfully.");
-    } catch (e) {
-        console.error("Failed to initialize Supabase client:", e);
+// Dynamically load from local .env ONLY during local development (localhost)
+async function initSupabase() {
+    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+    if (isLocalhost) {
+        try {
+            const response = await fetch('/.env');
+            if (response.ok) {
+                const text = await response.text();
+                const lines = text.split('\n');
+                for (const line of lines) {
+                    const trimmed = line.trim();
+                    if (!trimmed || trimmed.startsWith('#')) continue;
+                    const parts = trimmed.split('=');
+                    if (parts.length >= 2) {
+                        const key = parts[0].trim();
+                        const val = parts.slice(1).join('=').trim().replace(/^["']|["']$/g, '');
+                        if (key === 'SUPABASE_URL') window.SUPABASE_URL = val;
+                        if (key === 'SUPABASE_ANON_KEY') window.SUPABASE_ANON_KEY = val;
+                    }
+                }
+            }
+        } catch (e) {
+            console.log("Local .env file not loaded/accessible:", e.message);
+        }
     }
-} else {
-    console.warn("Supabase credentials missing or script not loaded. Running in local storage fallback mode.");
+
+    if (window.SUPABASE_URL && window.SUPABASE_ANON_KEY && typeof supabase !== 'undefined') {
+        try {
+            supabaseClient = supabase.createClient(window.SUPABASE_URL, window.SUPABASE_ANON_KEY);
+            console.log("Supabase initialized successfully.");
+        } catch (e) {
+            console.error("Failed to initialize Supabase client:", e);
+        }
+    } else {
+        console.warn("Using Local Storage Fallback Mode. Dynamic database entries will not sync to the cloud.");
+    }
+}
+
+// Run initialization
+initSupabase();
+
+// Wrapper helper to standardize error reporting and response objects
+function handleDatabaseError(error) {
+    console.error("Database operation failed:", error);
+    // User-friendly error message that hides sensitive Postgres database schemas
+    return new Error("We encountered a database error. Please verify your inputs and try again.");
 }
 
 // Submits a contact form inquiry
@@ -32,7 +70,7 @@ async function submitContactForm(data) {
                     created_at: new Date().toISOString()
                 }
             ]);
-        if (error) throw error;
+        if (error) throw handleDatabaseError(error);
         return { success: true, mode: 'supabase', data: resData };
     } else {
         // Fallback: save to LocalStorage so the form works in offline testing
@@ -64,7 +102,7 @@ async function submitManpowerApplication(data) {
                     created_at: new Date().toISOString()
                 }
             ]);
-        if (error) throw error;
+        if (error) throw handleDatabaseError(error);
         return { success: true, mode: 'supabase', data: resData };
     } else {
         // Fallback: save to LocalStorage
